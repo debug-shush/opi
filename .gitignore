@@ -83,7 +83,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-treasureHunt/
 
 # mkdocs documentation
 /site

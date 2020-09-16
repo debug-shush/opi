@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="en-US">
+<html>
 	<head>
 		<title>Gengen&ndash;a Kenken generator</title>
 		<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
@@ -56,8 +56,42 @@
 			</fieldset>
 			<button id="generate">Generate</button>
 			<button id="solve">Solve</button>
+			<p>Press solve then press checker to check ur accuracy :)</p>
+			<button id="checker">Checker</button>
+			<p id="accuracy"></p>
 		</div>
-
+		<label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label>
 		<table id="kenken"></table>
+		<script>
+			var hoursLabel = document.getElementById("hours");
+			var minutesLabel = document.getElementById("minutes");
+			var secondsLabel = document.getElementById("seconds");
+			var totalSeconds = 0;
+			setInterval(setTime, 1000);
+
+			var x = 0;
+
+			function setTime() {
+			++totalSeconds;
+			
+			secondsLabel.innerHTML = pad(totalSeconds % 60);
+			if (totalSeconds === 3600){
+				x++;
+				totalSeconds = 0 ;
+			}
+			minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+			hoursLabel.innerHTML = pad(parseInt(x + (totalSeconds / 3600)));
+			}
+
+			function pad(val) {
+			var valString = val + "";
+			if (valString.length < 2) {
+				return "0" + valString;
+			} else {
+				return valString;
+			}
+			}
+		</script>
+		
 	</body>
 </html>

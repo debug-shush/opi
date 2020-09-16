@@ -38,6 +38,7 @@ $(function () {
 	$("[type=checkbox]").button()
 	
 	$("#generate").button().on("click", function (){
+		
 		currentKenken = generateKenken({
 			size: $("#size").spinner("value"),
 			operations: {
@@ -61,5 +62,8 @@ $(function () {
 	
 	$("#solve").button().on("click", function () {
 		renderSolution(currentKenken)
+	})
+	$("#checker").button().on("click", function () {
+		outputfunc()
 	})
 })

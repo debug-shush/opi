@@ -9,6 +9,7 @@ function generateKenken (settings) {
 
 // A class for the ken ken board
 function Kenken (settings) {
+	
     var size = this.size = settings.size
     this.settings = settings
     this.board = []
