@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kenken',
     'slide_puzzle',
+    'payback',
 ]
 
 MIDDLEWARE = [
