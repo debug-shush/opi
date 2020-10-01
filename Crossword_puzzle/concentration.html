@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- Mirrored from www.brainmetrix.com/games/concentration.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Sep 2020 04:38:04 GMT -->
+<head>
+  <style type="text/css">
+    p.MsoNormal,li.MsoNormal,div.MsoNormal{margin:0;margin-bottom:.0001pt;font-size:12.0pt;font-family:"Times New Roman"}h2{margin-top:12.0pt;margin-right:0;margin-bottom:3.0pt;margin-left:0;page-break-after:avoid;font-size:14.0pt;font-family:Arial;font-style:italic}a:link,span.MsoHyperlink{color:blue;text-decoration:underline}a:visited,span.MsoHyperlinkFollowed{color:purple;text-decoration:underline}@page Section1{size:8.5in 11.0in;margin:1.0in 1.25in 1.0in 1.25in}div.Section1{page:Section1}body{background-color:#fefefe;color:black}input.play{font-family:monospace;font-weight:bold;font-size:125%;width:2em}div{text-align:left}div table{margin-left:auto;margin-right:auto;text-align:left}
+  </style>
+  <script type="text/javascript">
+    var Size=new Number(6);var Moves=new Array();var noGame=1;var FD;var Board=new function(){this.init=function(){var b;Solve.init();for(var c=0;c<Size*Size;this.set(c++,0)){}for(var c=0;c<3+3*FD.selectedIndex;c++){Board.clicked(b=Math.floor(Math.random()*Size)+"-"+Math.floor(Math.random()*Size),1);Solve.add(b)}};this.clicked=function(b,e){var a,d;this.change(a=parseInt(b.split("-")[0]),d=parseInt(b.split("-")[1]),e);this.change(a-1,d,e);this.change(a+1,d,e);this.change(a,d-1,e);this.change(a,d+1,e)};this.change=function(a,d,b){if(this.check(a,d)){this.set(a+Size*d,(parseInt(this.get(a,d))+b)&3)}};this.set=function(a,b){window.document.forms.playForm.elements[a].value=b};this.get=function(a,b){return(this.check(a,b)?window.document.forms.playForm.elements[a+Size*b].value:" ")};this.check=function(a,b){return(a>=0&&b>=0&&a<Size&&b<Size)}};var Counter=new function(){this.counter=0;this.counterID=0;this.set=function(a){this.stop();this.counter=a;this.show()};this.get=function(){return this.counter};this.show=function(){window.document.forms.CounterForm["Counter"].value=this.counter};this.add=function(a){if((this.counter+=a)<=0){this.set(0)}this.show()};this.start=function(){this.set(1000);this.counterID=setInterval("Counter.add(-1)",166)};this.stop=function(){if(this.counterID){clearInterval(this.counterID)}this.counterID=0}};var Solve=new function(){this.solve=new Array();this.solveID=0;this.init=function(){this.stop();this.solve.length=0;for(var a=0;a<9;window.document.forms.hintForm.elements[a++].value=" "){}};this.add=function(){for(var a=0;a<arguments.length;this.solve.push(arguments[a++])){}this.solve.sort();for(var a=0;a<=this.solve.length-4;a++){if(this.solve[a]==this.solve[a+1]&&this.solve[a]==this.solve[a+2]&&this.solve[a]==this.solve[a+3]){this.solve.splice(a--,4)}}return this.solve.length};this.start=function(){this.solveID=setInterval("Solve.run()",window.document.forms.solveForm.SolveSpeed.options[window.document.forms.solveForm.SolveSpeed.selectedIndex].value)};this.stop=function(){if(this.solveID){clearInterval(this.solveID)}this.solveID=0};this.run=function(){var a;if(a=this.solve.pop()){return Board.clicked(a,3)}this.stop()};this.hint=function(){var b=this.solve[Math.floor(Math.random()*this.solve.length)];var a=parseInt(b.split("-")[0]);var c=parseInt(b.split("-")[1]);window.document.forms.hintForm.elements[0].value=Board.get(a-1,c-1);window.document.forms.hintForm.elements[1].value=Board.get(a,c-1);window.document.forms.hintForm.elements[2].value=Board.get(a+1,c-1);window.document.forms.hintForm.elements[3].value=Board.get(a-1,c);window.document.forms.hintForm.elements[4].value=Board.get(a,c);window.document.forms.hintForm.elements[5].value=Board.get(a+1,c);window.document.forms.hintForm.elements[6].value=Board.get(a-1,c+1);window.document.forms.hintForm.elements[7].value=Board.get(a,c+1);window.document.forms.hintForm.elements[8].value=Board.get(a+1,c+1)}};var Highscores=new function(){this.highscores=new Array();this.init=function(){for(var b=0;b<FD.length;b++){this.highscores[b]=new Array(10);for(var a=0;a<10;this.highscores[b][a++]=1){}}};this.add=function(a){this.highscores[FD.selectedIndex].push(a);this.highscores[FD.selectedIndex].sort();this.highscores[FD.selectedIndex].reverse();this.highscores[FD.selectedIndex].pop();this.show(a)};this.show=function(c){for(var b=0,a="";b<10;a+=(b<9?" ":"")+(b+1)+": "+this.highscores[FD.selectedIndex][b]+(c==this.highscores[FD.selectedIndex][b++]?"  <--":"")+"\n"){}window.document.forms.scoreForm.Scores.value=a}};function buttonNew(){Board.init();Moves.length=window.document.forms.clicksForm.Clicks.value=0;Highscores.show(0);Counter.start();noGame=0}function buttonMove(a){if(noGame){return}Board.clicked(a,3);window.document.forms.clicksForm.Clicks.value=Moves.push(a);if(Solve.add(a,a,a)){return}noGame=1;Counter.stop();if((i=3+3*FD.selectedIndex-Moves.length)<0){Counter.add(7*i)}Highscores.add(Counter.get())}function buttonUndo(a){if(noGame){return}Counter.add(-20);while(a--&&(i=Moves.pop())){Board.clicked(i,1),Solve.add(i)}window.document.forms.clicksForm.Clicks.value=Moves.length}function buttonHint(){if(noGame){return}Counter.add(-35);Solve.hint()}function buttonSolve(){if(noGame){return}noGame=1;Counter.set(0);Solve.start()}function doOnload(){FD=window.document.forms.settingsForm["Difficulty"];Highscores.init()}window.onload=doOnload;
+  </script>
+  <title>Concentation</title>
+</head>
+
+<body>
+  <div>
+    <table border="0" cellpadding="0" cellspacing="5">
+      <tr>
+        <td colspan="2">
+          <form name="settingsForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="settingsForm">
+            <p>Difficulty setting: <select name="Difficulty" onchange="buttonNew()">
+              <option>
+                Huh, what ?
+              </option>
+              <option>
+                Dumb
+              </option>
+              <option>
+                Real easy
+              </option>
+              <option>
+                Easy
+              </option>
+              <option selected>
+                Normal
+              </option>
+              <option>
+                Hard
+              </option>
+              <option>
+                Real hard
+              </option>
+              <option>
+                Master
+              </option>
+              <option>
+                Impossible
+              </option>
+            </select> - <input type="button" value="New" onclick="buttonNew()" title="Start a new game"> - <input type="button" value="Restart" onclick="buttonUndo(-1);" title="Restart the board"> - <input type="button" value="Undo" onclick="buttonUndo(1);" title="Undo last move"></p>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form name="playForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="playForm">
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('0-0')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('1-0')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('2-0')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('3-0')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('4-0')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('5-0')"></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('0-1')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('1-1')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('2-1')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('3-1')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('4-1')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('5-1')"></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('0-2')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('1-2')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('2-2')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('3-2')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('4-2')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('5-2')"></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('0-3')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('1-3')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('2-3')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('3-3')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('4-3')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('5-3')"></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('0-4')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('1-4')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('2-4')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('3-4')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('4-4')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('5-4')"></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('0-5')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('1-5')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('2-5')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('3-5')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('4-5')"></td>
+                <td><input class="play" type="button" value="0" onclick="buttonMove('5-5')"></td>
+              </tr>
+            </table>
+          </form>
+        </td>
+        <td>
+          <form name="scoreForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="scoreForm">
+            <p>
+            <textarea name="Scores" rows="11" cols="18" readonly>
+Highscores
+
+since last reload
+
+</textarea></p>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form name="clicksForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="clicksForm">
+            <p>Clicks used: <input type="text" name="Clicks" value="0" size="3" readonly></p>
+          </form>
+        </td>
+        <td>
+          <form name="CounterForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="CounterForm">
+            <p>Current score: <input type="text" name="Counter" value="0" size="6" readonly></p>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form name="hintForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="hintForm">
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><input class="play" type="button" value=" "></td>
+                <td><input class="play" type="button" value=" "></td>
+                <td><input class="play" type="button" value=" "></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value=" "></td>
+                <td><input class="play" type="button" value=" "></td>
+                <td><input class="play" type="button" value=" "></td>
+              </tr>
+              <tr>
+                <td><input class="play" type="button" value=" "></td>
+                <td><input class="play" type="button" value=" "></td>
+                <td><input class="play" type="button" value=" "></td>
+              </tr>
+            </table>
+            <div>
+              <p><input type="button" value="Hint" onclick="buttonHint()"></p>
+            </div>
+          </form>
+        </td>
+        <td>
+          <form name="solveForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="solveForm">
+            <p>Solve speed: <select name="SolveSpeed">
+              <option value="500">
+                Fast
+              </option>
+              <option value="900" selected>
+                Normal
+              </option>
+              <option value="1300">
+                Slow
+              </option>
+            </select></p>
+            <p><input type="button" value="Solve" onclick="buttonSolve()"></p>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+<!-- Mirrored from www.brainmetrix.com/games/concentration.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Sep 2020 04:38:04 GMT -->
+</html>
