@@ -34,10 +34,14 @@ $(function () {
 	})
 	
 	$("#addition").attr("checked", true)
+	$("#subtraction").attr("checked", true)
+	$("#division").attr("checked", true)
+	$("#mod").attr("checked", true)
 	$("#multiplication").attr("checked", true)
 	$("[type=checkbox]").button()
 	
-	$("#generate").button().on("click", function (){
+	//$("#generate").button().on("click", function (){//
+	$( window ).on( "load", function() {
 		
 		currentKenken = generateKenken({
 			size: $("#size").spinner("value"),

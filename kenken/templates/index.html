@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<div id="controls" class="no-print">
-			Size: <input id="size" value="5"><br />
+			Size: <input id="size" value="9"><br />
 			Difficulty: <input id="difficulty" value="2"><br />
 			Max group size: <input id="groupSize" value="5">
 			<fieldset>
@@ -26,11 +26,11 @@
 				  <input type="checkbox" name="addition" id="addition">
 				  <label for="addition" checked="checked">+</label>
 				  <input type="checkbox" name="subtraction" id="subtraction">
-				  <label for="subtraction">-</label>
+				  <label for="subtraction" checked="checked">-</label>
 				  <input type="checkbox" name="multiplication" id="multiplication">
-				  <label for="multiplication">&times;</label>
+				  <label for="multiplication" checked="checked">&times;</label>
 				  <input type="checkbox" name="division" id="division">
-				  <label for="division">&divide;</label><br>
+				  <label for="division" checked="checked">&divide;</label><br>
 				  <input type="checkbox" name="min" id="min">
 				  <label for="min">Minimum</label>
 				  <input type="checkbox" name="max" id="max">
@@ -38,7 +38,7 @@
 				  <input type="checkbox" name="range" id="range">
 				  <label for="range">Range</label>
 				  <input type="checkbox" name="mod" id="mod">
-				  <label for="mod">Modulus</label><br>
+				  <label for="mod" checked="checked">Modulus</label><br>
 				  <input type="checkbox" name="avg" id="avg">
 				  <label for="avg">Average</label>
 				  <input type="checkbox" name="par" id="par">
@@ -91,6 +91,26 @@
 				return valString;
 			}
 			}
+		</script>
+		<div id ="instructions">
+			<h4>HOW TO PLAY</h4>
+			<p>
+				a)fill these boxes with digits 1-9 such that each row
+				 and each column has all 9 digits.
+                b)you should also satisfy the subgrid condition.
+                Ex:+16 means all the digits in that subgrid give a total sum of 16
+                + Indicates  sum,  -    indicates difference, *    indicates product, /    indicates quotient, % indicates modulus--means reminder when one of the digit is divided by other digit.
+                c) some of the grids are locked you need to unlock them by solving other puzzles. 
+                d) you will get hints for these puzzles inexchange to 25% points of that grid.
+
+
+			</p>
+		</div>
+		<input id = "task1" type="button" value="task1" onclick="redirect1();"/>
+		<script type="text/javascript"> 
+		function redirect1(){
+			window.location="http://127.0.0.1:8000/kenken/slide_puzzle/";
+		}
 		</script>
 		
 	</body>

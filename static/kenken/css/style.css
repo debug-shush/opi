@@ -6,10 +6,33 @@
     }
 }
 
+body{
+    background-image: url("../images/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height: 1200px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 #kenken {
-	float: right;
+    background-color: rgb(161, 118, 118);
 	border-collapse: collapse;
     border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+#instructions{
+    height: 200px;
+    width: 800px;
+    background-color: rgb(197, 177, 61);
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #kenken td {
@@ -22,7 +45,9 @@
 }
 
 #controls {
-	float: left;
+    float: left;
+    display:none;
+    
 }
 
 .hint {
