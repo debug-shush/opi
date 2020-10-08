@@ -34,15 +34,12 @@ $(function () {
 	})
 	
 	$("#addition").attr("checked", true)
-	$("#subtraction").attr("checked", true)
-	$("#division").attr("checked", true)
-	$("#mod").attr("checked", true)
 	$("#multiplication").attr("checked", true)
 	$("[type=checkbox]").button()
 	
-	//$("#generate").button().on("click", function (){//
+	// $("#generate").button().on("click", function (){
+	// function call_generate(){
 	$( window ).on( "load", function() {
-		
 		currentKenken = generateKenken({
 			size: $("#size").spinner("value"),
 			operations: {
@@ -62,6 +59,7 @@ $(function () {
 			maxGroupSize: $("#groupSize").spinner("value"),
 			torus: $("#torus").is(":checked")
 		})
+	// }
 	})
 	
 	$("#solve").button().on("click", function () {
