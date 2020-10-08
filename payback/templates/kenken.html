@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en-US">
+	<head>
+		<title>Gengen&ndash;a Kenken generator</title>
+		<script src="{% static 'kenken/js/jquery-3.1.1.min.js' %}"></script>
+		<script src="{% static 'kenken/js/jquery-ui.min.js'%}"></script>
+		<script src="{% static 'kenken/js/mersenne-twister.js'%}"></script>
+		<script src="{% static 'kenken/js/encode.js'%}"></script>
+		<script src="{% static 'kenken/js/operations.js'%}"></script>
+		<script src="{% static 'kenken/js/kenken.js' %}"></script>
+		<script src="{% static 'kenken/js/render.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'kenken/css/jquery-ui.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'kenken/css/style.css' %}" />
+		<script src="{% static 'kenken/js/ui.js'%}"></script>
+	</head>
+	<body>
+		<div id="name"> <h1><b>kenken</b></h1></div>
+		<div id="controls" class="no-print">
+			Size: <input id="size" value="9"><br />
+			Difficulty: <input id="difficulty" value="2"><br />
+			Max group size: <input id="groupSize" value="5">
+			<fieldset>
+			  <legend>Allowed operations</legend>
+			  <div id="operations">
+				  <input type="checkbox" name="addition" id="addition">
+				  <label for="addition" checked="checked">+</label>
+				  <input type="checkbox" name="subtraction" id="subtraction">
+				  <label for="subtraction" checked="checked">-</label>
+				  <input type="checkbox" name="multiplication" id="multiplication">
+				  <label for="multiplication" checked="checked">&times;</label>
+				  <input type="checkbox" name="division" id="division">
+				  <label for="division" checked="checked">&divide;</label><br>
+				  <input type="checkbox" name="min" id="min">
+				  <label for="min">Minimum</label>
+				  <input type="checkbox" name="max" id="max">
+				  <label for="max">Maximum</label>
+				  <input type="checkbox" name="range" id="range">
+				  <label for="range">Range</label>
+				  <input type="checkbox" name="mod" id="mod">
+				  <label for="mod" checked="checked">Modulus</label><br>
+				  <input type="checkbox" name="avg" id="avg">
+				  <label for="avg">Average</label>
+				  <input type="checkbox" name="par" id="par">
+				  <label for="par">Parity</label>
+				  <input type="checkbox" name="gcd" id="gcd">
+				  <label for="gcd">GCD</label>
+			  </div>
+			</fieldset>
+			<fieldset>
+			  <legend>Oddities</legend>
+			  <div id="operations">
+				  <input type="checkbox" name="torus" id="torus">
+				  <label for="torus">Torus</label>
+			  </div>
+			</fieldset>
+			<button id="generate">Generate</button>
+			<!-- <script src="{% static 'kenken/js/ui.js'%}">call_generate()</script> -->
+			<button id="solve">Solve</button>
+			<p>Press solve then press checker to check ur accuracy :)</p>
+			<button id="checker">Checker</button>
+			<p id="accuracy"></p>
+		</div>
+		<label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label>
+		<table id="kenken"></table>
+		<script>
+			var hoursLabel = document.getElementById("hours");
+			var minutesLabel = document.getElementById("minutes");
+			var secondsLabel = document.getElementById("seconds");
+			var totalSeconds = 0;
+			setInterval(setTime, 1000);
+
+			var x = 0;
+
+			function setTime() {
+			++totalSeconds;
+			
+			secondsLabel.innerHTML = pad(totalSeconds % 60);
+			if (totalSeconds === 3600){
+				x++;
+				totalSeconds = 0 ;
+			}
+			minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+			hoursLabel.innerHTML = pad(parseInt(x + (totalSeconds / 3600)));
+			}
+
+			function pad(val) {
+			var valString = val + "";
+			if (valString.length < 2) {
+				return "0" + valString;
+			} else {
+				return valString;
+			}
+			}
+		</script>
+		<div id ="instructions">
+			<p id="title">HOW TO PLAY</p>
+			<p>
+				a)fill these boxes with digits 1-9 such that each row
+				 and each column has all 9 digits.
+			</p>
+			
+            <p> b)you should also satisfy the subgrid condition.
+                Ex:+16 means all the digits in that subgrid give a total sum of 16
+				+ Indicates  sum,  -    indicates difference, *    indicates product, /    indicates quotient, % indicates modulus--means reminder when one of the digit is divided by other digit.
+			</p>
+			
+            <p> c) some of the grids are locked you need to unlock them by solving other puzzles. 
+			</p>
+			
+			<p>d) you will get hints for these puzzles inexchange to 25% points of that grid.
+			</p>
+		</div>
+		<input id = "task1" type="button" value="task1" onclick="redirect1();"/>
+		<script type="text/javascript"> 
+		function redirect1(){
+			// window.location="http://127.0.0.1:8000/kenken/slide_puzzle/";
+			window.location="../slidepuzzle/";
+
+		}
+		</script>
+		<input id = "task2" type="button" value="task2" onClick="redirect2();"/>
+		<script type="text/javascript"> 
+		function redirect2(){
+			// window.location="http://127.0.0.1:8000/kenken/slider/";
+			window.location="../slider/";
+		}
+		</script>
+		
+	</body>
+</html>
