@@ -17,3 +17,6 @@ def slidepuzzle(request):
 
 def slider(request):
     return render(request, 'slider.html')
+
+def tangram(request):
+    return render(request, 'tangram.html')

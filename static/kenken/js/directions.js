@@ -1,8 +1,10 @@
 $(function() {
 
-  var currentTemplate = $("#three");
-  var currentChoice = $("#3");
-  var convert = ["blank", "one", "two", "three", "four", "five", "six"];
+  var currentTemplate = $("#six");
+  var currentChoice = $("#6");
+  // var convert = ["blank", "one", "two", "three", "four", "five", "six"];
+  var convert = ["six"];
+
 
   $(document).ready(function(){
     $(".templates").hide();
