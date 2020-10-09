@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'kenken',
     'slide_puzzle',
     'payback',
+    'mystery_rooms',
 ]
 
 MIDDLEWARE = [
