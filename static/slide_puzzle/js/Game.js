@@ -381,7 +381,7 @@ class Game {
         this.isWin = true;
 
 
-        if (this.gameLevel !== 9) {
+        if (this.gameLevel !== 4) {
             this.localGameData[`${this.gameLevel + 1}`].isAccessible = true;
         }
         if (!this.localGameData[this.gameLevel].bestScore || this.moveCount < this.localGameData[this.gameLevel].bestScore) {
@@ -423,7 +423,7 @@ class Game {
                 localGameDataObject: this.localGameData,
             })
         });
-        if (!(this.gameLevel === 9)) {
+        if (!(this.gameLevel === 4)) {
             let nextLevelEl = createElement('div', {
                 className: 'win-controls__next'
             }, 'Next level')

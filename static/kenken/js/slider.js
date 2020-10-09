@@ -4,7 +4,7 @@ function swapTiles(cell1,cell2) {
     document.getElementById(cell2).className = temp;
   }
   
-window.onload = shuffle();
+window.onload = shuffle;
 
   function shuffle() {
   //Use nested loops to access each cell of the 3x3 grid
@@ -55,7 +55,7 @@ window.onload = shuffle();
     
   }
   
-
+/*
 
   function checking()
   {
@@ -90,4 +90,4 @@ window.onload = shuffle();
     redirect();
   }
       
-  }
+  }*/

@@ -101,7 +101,7 @@ function Kenken (settings) {
 		for(var y = 0; y < size; y++) {
 			if(this.board[x][y].cellGroup == undefined) {
 				// Generate a random integer in the range [minGroupSize,maxGroupSize] for the size of the group
-				var groupSize = Math.floor((this.maxGroupSize-this.minGroupSize+1)*this.seed.random()+(this.minGroupSize))
+				var groupSize = Math.floor((this.maxGroupSize-this.minGroupSize+1)*this.seed.random(1)+(this.minGroupSize))
 				// Create the new CellGroup object
 				var newCellGroup = new CellGroup(this, this.board[x][y], groupID)
 				// Grow the new cell group groupSize-1 times, only if the groupSize is not one (since it already has size one)
@@ -149,8 +149,8 @@ function shuffleBoard (size,board,seed) {
 	// Swap two columns and then two rows. Do this 'size' times to get a decent mix up of the board.
 	for (var i = 0; i < size; i++) {
 		// Generate two random integers in the range [0,size)
-		var column1 = Math.floor(size*seed.random())
-		var column2 = Math.floor(size*seed.random())
+		var column1 = Math.floor(size*seed.random(1))
+		var column2 = Math.floor(size*seed.random(1))
 		// Swap the two columns
 		for(var j = 0; j < size; j++) {
 			var tempCell = board[j][column1]
@@ -159,8 +159,8 @@ function shuffleBoard (size,board,seed) {
 		}
 		
 		// Generate two random integers in the range [0,size)
-		var row1 = Math.floor(size*seed.random())
-		var row2 = Math.floor(size*seed.random())
+		var row1 = Math.floor(size*seed.random(1))
+		var row2 = Math.floor(size*seed.random(1))
 		// Swap the two rows
 		for(var j = 0; j < size; j++) {
 			var tempCell = board[row1][j]
@@ -199,14 +199,14 @@ CellGroup.prototype.getAllValues = function() {
 // Returns true if growing was successful, false if it was unsuccessful
 CellGroup.prototype.grow = function() {
 	// Generate a random integer in range [0,cells.length-1] for which cell we should attempt to grow at first
-	var startingCellNumber = Math.floor(this.cells.length*this.kenken.seed.random())
+	var startingCellNumber = Math.floor(this.cells.length*this.kenken.seed.random(1))
 	var cellNum = startingCellNumber
 	while(true) {
 		var cellToGrowFrom = this.cells[cellNum]
 		// Get the array of neighbors of this cell
 		var cellNeighbors = cellToGrowFrom.getNeighbors()
 		//Generate a random integer in range [0,cellNeighbors.length-1]
-		var neighborCellNum = Math.floor(cellNeighbors.length*this.kenken.seed.random())
+		var neighborCellNum = Math.floor(cellNeighbors.length*this.kenken.seed.random(1))
 		// Go through each neighbor. If one is valid, make it the next cell in this group.
 		for(var i = 0; i < cellNeighbors.length; i++) {
 			var neighborCell = cellNeighbors[((i+neighborCellNum)%cellNeighbors.length)]
@@ -307,7 +307,7 @@ function shuffleInputArray(array, seed) {
 	for (var i = 0; i < array.length-1; i++) {
 		// Generate a random integer in the range [i,n-1]
 		// Since seed.random() generates a number in the range [0,1)
-		var randomNum = Math.floor((array.length-i)*seed.random()+i)
+		var randomNum = Math.floor((array.length-i)*seed.random(1)+i)
 		
 		//swap the array at spots i and randomNum
 		var numToSwap = array[i]

@@ -3,9 +3,12 @@ function renderBlank (size) {
 	var dimension = $(window).height() / size * .9;
 	
 	for (var i = 0; i < size; i++){
-		var tr = $('<tr />')
+		var tr = $('<tr></tr>')
 		for (var j = 0; j < size; j++) {
-			$("<td  />").width(dimension).height(dimension).appendTo(tr)
+			if(j%2==0)
+			$("<td />").width(dimension).height(dimension).appendTo(tr)
+			else
+			$("<td />").width(dimension).height(dimension).appendTo(tr)
 		}
 		$("#kenken").append(tr)
 	}
@@ -32,7 +35,7 @@ function renderCell (cell, dimension, solve,ha,har) {
 
 	if (cell.cellGroup.currentSize === 1) {td.html(cell.value); fixed++;}
 	else if (cell === cell.cellGroup.getTopLeft()) {
-		td.html("<div class='hint'>" + cell.cellGroup.operationDescription + "</div>" ); //(solve ? cell.value : "")
+		td.html("<div class='hint'>>" + cell.cellGroup.operationDescription + "</div>" ); //(solve ? cell.value : "")
 		if (ha >=0){
 		checker_list.push([cell.value,har,ha]);}
 	}

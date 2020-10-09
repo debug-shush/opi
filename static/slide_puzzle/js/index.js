@@ -9,21 +9,21 @@ function getLocalGameData() {
         '4': {
             isAccessible: false,
         },
-        '5': {
-            isAccessible: false,
-        },
-        '6': {
-            isAccessible: false,
-        },
-        '7': {
-            isAccessible: false,
-        },
-        '8': {
-            isAccessible: false,
-        },
-        '9': {
-            isAccessible: false,
-        },
+        // '5': {
+        //     isAccessible: false,
+        // },
+        // '6': {
+        //     isAccessible: false,
+        // },
+        // '7': {
+        //     isAccessible: false,
+        // },
+        // '8': {
+        //     isAccessible: false,
+        // },
+        // '9': {
+        //     isAccessible: false,
+        // },
     }
 }
 
@@ -60,8 +60,8 @@ function renderGameLevels(localGameDataObject, board) {
         levelEl.setAttribute('data-level', key);
         board.append(levelEl);
     }
-    if (board.lastChild.getAttribute('data-level') === '9' &&
-        board.lastChild.textContent !== '9x9') {
+    if (board.lastChild.getAttribute('data-level') === '4' &&
+        board.lastChild.textContent !== '4x4') {
         board.classList.add('game-over');
     }
 
