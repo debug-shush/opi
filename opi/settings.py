@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'slide_puzzle',
     'payback',
     'mystery_rooms',
+    'crossword_puzzle',
 ]
 
 MIDDLEWARE = [
