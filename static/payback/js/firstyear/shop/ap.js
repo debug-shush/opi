@@ -6019,6 +6019,7 @@ function my_card_back(e , elm){
 function myshop_func(e,elm){
 	calculateLoanAndApplyChange(50000 - shop_money);
 	loan = 50000 - shop_money;
+	
 }
 
 // shop js end here ========================================
@@ -6141,6 +6142,7 @@ function meals(x){
 		// Money code
 		calculateLoanAndApplyChange(loan + 10000);
 		loan = loan + 10000;
+		
 	}
 	else if(x ==1){
 		// Focus code =====================

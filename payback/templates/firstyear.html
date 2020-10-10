@@ -135,10 +135,8 @@
                     <div class="mascotTitle">Congragulations!!</div>
                     <!-- <div class="mascotCopy">You're a Iitian</div> -->
                     <div class="mascotCopy">You're An IITian <br> <br> Lets see how your are going to do as an Iitian by pursuing your engeneering .</div>
-                    <div class="button mascotPlaceholder" style="display: none;">Continue</div>   
-                    <a href="">
-                    <div class="button mascotBtn" data-direction="down" data-panel="panel-0" style="display: inline-block; opacity: 1;">Continue</div>
-                    </a>
+                    <div class="button mascotPlaceholder" style="display: none;">Continue</div>        
+                    <div class="button mascotBtn" data-direction="down" data-panel="panel-0" style="display: inline-block; opacity: 1;" onclick="document.getElementById('p3').scrollIntoView();">Continue</div>
                 </div>
             </div>
         </div>
@@ -153,43 +151,53 @@
 
 
 <div  class="svg-options-anim-1" style="top: 1390px; left: 50%; width: 3px; height: 220.4px; margin-left: -2px;"><div class="svg-down-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 220.40000915527344" preserveAspectRatio="xMidYMin slice"><line class="path" x1="1.5" y1="0" x2="1.5" y2="220.40000915527344" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="1.5" y1="0" x2="1.5" y2="220.40000915527344"></line></svg></div></div>
-<section  >
-    
-    <div id="optthree" class="optHolder" data-template="challenge">
-        <div class="contentWrap" style="margin-top: 1900px;margin-bottom:500px" >
-            <div class="questionWrapper" id="p3" >
-                <div class="question" style="background: #01b6ad;">
-                    <div class="borderTop"></div>
-                    <div class="borderLeft"></div>
-                    <div class="text label" style="background: #01b6ad;">
-                        When you get to college, you'll have to eat.
-                        <p style="background: none;" >Choose your meal plan.<br></p>			
+    <section id="p3" >
+        <div id="optthree" class="optHolder" data-template="challenge">
+            <div id="p2" style="padding: 100px;margin-top: 1800px;"></div>
+            <div class="contentWrap" style="margin-bottom:500px" >
+                <div class="questionWrapper" id="p3" >
+                    <div class="question" style="background: #01b6ad;">
+                        <div class="borderTop"></div>
+                        <div class="borderLeft"></div>
+                        <div class="text label" style="background: #01b6ad;">
+                            When you get to college, you'll have to eat.
+                            <p style="background: none;" >Choose your meal plan.<br></p>			
+                        </div>
+                    </div>
+                    <div class="borderRight"></div>
+                    <div class="borderBottom"></div>
+                    <div class="questionShadow"></div>
+                </div>
+                <div class="optionWrap left-opt" onclick="document.getElementById('p4').scrollIntoView();">
+                    <div class="opt options" onclick="meals(0)" data-direction="left" data-outcome="367" data-challenge="24">Like a Bird</div>
+                    <div class="optDebt" style="color: black;">$-1000</div>
+                    <div class="svg-opt-anim">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice">
+                            <line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line>
+                            <line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line>
+                        </svg>
                     </div>
                 </div>
-                <div class="borderRight"></div>
-                <div class="borderBottom"></div>
-                <div class="questionShadow"></div>
-            </div>
-            <div class="optionWrap left-opt">
-                <div class="opt options" onclick="meals(0)" data-direction="left" data-outcome="367" data-challenge="24">Like a Bird</div>
-                <div class="optDebt" style="color: black;">$-1000</div>
-                <div class="svg-opt-anim">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice">
-                        <line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line>
-                        <line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line>
-                    </svg>
+                <div class="optionWrap down-opt" onclick="document.getElementById('p4').scrollIntoView();">
+                    <div class="opt options" onclick="meals(1)" data-direction="down" data-outcome="366" data-challenge="24">The Standard</div>
+                    <div class="optDebt" style="color: black;">$0</div>
+                    <div class="svg-opt-anim svg-anim">
+                        <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
+                    -->
+                    </div>
+                </div>
+                <div class="optionWrap right-opt" onclick="document.getElementById('p4').scrollIntoView();">
+                    <div class="opt options" onclick="meals(2)" data-direction="right" data-outcome="365" data-challenge="24">Extra-Hungry</div>
+                    <div class="optDebt" style="color: black;">$1000</div>
+                    <div class="svg-opt-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
+                    </div>
                 </div>
             </div>
-            <div class="optionWrap down-opt">
-                <div class="opt options" onclick="meals(1)" data-direction="down" data-outcome="366" data-challenge="24">The Standard</div>
-                <div class="optDebt" style="color: black;">$0</div>
-                <div class="svg-opt-anim svg-anim">
-                    <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
-                 -->
-                </div>
+            <div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 220.4px; margin-left: -2px;"><div class="svg-down-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 220.40000915527344" preserveAspectRatio="xMidYMin slice"><line class="path" x1="1.5" y1="0" x2="1.5" y2="220.40000915527344" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="1.5" y1="0" x2="1.5" y2="220.40000915527344"></line></svg>
             </div>
-            <div class="optionWrap right-opt">
-                <div class="opt options" onclick="meals(2)" data-direction="right" data-outcome="365" data-challenge="24">Extra-Hungry</div><div class="optDebt" style="color: black;">$1000</div><div class="svg-opt-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg></div></div></div><div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 220.4px; margin-left: -2px;"><div class="svg-down-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 220.40000915527344" preserveAspectRatio="xMidYMin slice"><line class="path" x1="1.5" y1="0" x2="1.5" y2="220.40000915527344" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="1.5" y1="0" x2="1.5" y2="220.40000915527344"></line></svg></div></div></div></section>
+        </div>
+    </div>
+    </section>
 
 			
 <!-- page 3 end ================== -->
@@ -405,11 +413,9 @@
             </div>			
         </div>
     </div>
-    <a href="#p3">
-    <div class="answers">
+    <div class="answers" onclick="document.getElementById('p2').scrollIntoView();">
         <div class="options opt" onclick="myshop_func(event,this)" data-direction="down">Checkout</div> <!--  clickShoppingCart(event, this) -->
     </div>
-    </a>
 </div>
 
 <!-- page  2 - shopping ended     ============================================ -->
@@ -421,8 +427,8 @@
 
 
 <!-- page 4 ======================= -->
-
-<div id="opttwo" style="margin-top: 1400px;" class="optHolder" >
+<div id="p4" style="margin-top: 1400px;"></div>
+<div id="opttwo"  class="optHolder" >
     <div class="contentWrap">
         <div class="questionWrapper">
             <div class="question">
@@ -465,7 +471,7 @@
 <!-- page 5 ==================================== -->
 
 <div >
-<div style="margin-top: 2000px;" id="optthree" class="optHolder" data-template="challenge"><div class="contentWrap"><div class="questionWrapper"><div class="question"><div class="borderTop"></div><div class="borderLeft"></div><div class="text label" style="background: none;">															Freshman year is almost here. It's time to sign up for a dorm room.
+<div style="margin-top: 2000px;position: unset;" id="optthree" class="optHolder" data-template="challenge"><div class="contentWrap"><div class="questionWrapper"><div class="question"><div class="borderTop"></div><div class="borderLeft"></div><div class="text label" style="background: none;">															Freshman year is almost here. It's time to sign up for a dorm room.
 				
 				
 </div></div><div class="borderRight"></div><div class="borderBottom"></div><div class="questionShadow"></div></div><div class="optionWrap left-opt"><div class="opt options" onclick="clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="364" data-challenge="20">Stay in a Quad Room</div><div class="optDebt">$-750</div><div class="svg-opt-anim">
@@ -478,6 +484,20 @@
 
 
 
+<!-- page 6 ============================ -->
+
+<div >
+    <div style="margin-top: 100px;" id="optthree" class="optHolder" data-template="challenge"><div class="contentWrap"><div class="questionWrapper"><div class="question"><div class="borderTop"></div><div class="borderLeft"></div><div class="text label" style="background: none;">															Freshman year is almost here. It's time to sign up for a dorm room.
+                    
+                    
+    </div></div><div class="borderRight"></div><div class="borderBottom"></div><div class="questionShadow"></div></div><div class="optionWrap left-opt"><div class="opt options" onclick="clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="364" data-challenge="20">Stay in a Quad Room</div><div class="optDebt">$-750</div><div class="svg-opt-anim">
+    </div></div><div class="optionWrap down-opt"><div class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="362" data-challenge="20">Request a Single</div><div class="optDebt">$750</div><div class="svg-opt-anim svg-anim">
+    </div></div><div class="optionWrap right-opt"><div class="opt options" onclick="clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="363" data-challenge="20">Have a Roommate</div><div class="optDebt">$0</div><div class="svg-opt-anim">
+    </div></div></div><div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 240.4px; margin-left: -2px;"><div class="svg-down-anim"></div></div></div>
+    </div>
+
+
+<!-- page 6 end  ============================ -->
 
 
 
@@ -489,7 +509,7 @@
 
 <!-- scroll js here -->
 <!-- <script>
-    
+    onClick="document.getElementById('middle').scrollIntoView();"
     $cli = document.getElementById("b1")
     $cli.onclick = function () { window.scrollTo(0, 200); };
     $cli.onclick = calculateLoanAndApplyChange(5000)
