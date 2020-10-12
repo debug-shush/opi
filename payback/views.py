@@ -20,3 +20,6 @@ def slider(request):
 
 def tangram(request):
     return render(request, 'tangram.html')
+
+def secondyear(request):
+    return render(request, 'secondyear.html')

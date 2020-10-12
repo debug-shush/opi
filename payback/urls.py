@@ -9,5 +9,6 @@ urlpatterns =[
     path("slidepuzzle/",views.slidepuzzle,name="slidepuzzle"),
     path("slider/",views.slider,name="slider"),
     path("tangram/",views.tangram,name="tangram"),
+    path("secondyear/",views.secondyear,name='secondyear'),
 ]
 
