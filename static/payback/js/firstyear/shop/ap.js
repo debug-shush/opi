@@ -6017,8 +6017,8 @@ function my_card_back(e , elm){
 }
 
 function myshop_func(e,elm){
-	calculateLoanAndApplyChange(50000 - shop_money);
-	loan = 50000 - shop_money;
+	calculateLoanAndApplyChange(50000 + shop_money);
+	loan = 50000 + shop_money;
 	
 }
 
@@ -6064,7 +6064,8 @@ function myshop_func(e,elm){
 // }
 
 
-//  MEALS function 
+//  BICYCLE FUNCTION (p3) ========================
+
 
 function meals(x){
 	// console.log(x);
@@ -6250,7 +6251,12 @@ function meals(x){
 	
 }
 
-// Books function
+//  BICYCLE FUNCTION (p3)  end  ========================
+
+
+
+
+// Books function (p4) ========================================================
 
 function books(x){
 	// console.log(x);
@@ -6437,6 +6443,8 @@ function books(x){
 	}
 
 }
+
+// Books function (p4)  end    ========================================================
 
 
 // Seniors function
