@@ -10,7 +10,7 @@ urlpatterns =[
     path("slider/",views.slider,name="slider"),
     path("tangram/",views.tangram,name="tangram"),
     path("secondyear/",views.secondyear,name='secondyear'),
-    path("thirdyear/",views.secondyear,name='thirdyear'),
-    path("fourthyear/",views.secondyear,name='fourthyear'),
+    path("thirdyear/",views.thirdyear,name='thirdyear'),
+    path("fourthyear/",views.fourthyear,name='fourthyear'),
 ]
 

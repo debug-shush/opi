@@ -7098,7 +7098,7 @@ function kriti(x){
 
 
 
-
+// ============================  END TO START FUNC ==================================
 
 function end_to_start_ret(){
 
@@ -7166,6 +7166,12 @@ function end_to_start(){
 		$v = $("#happid")
 		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
 	}
+}
+
+
+// ============================  END TO START FUNC ==================================
+
+
 
 
 //  Transport FUNCTION (p3) ========================
