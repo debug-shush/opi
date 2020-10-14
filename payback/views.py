@@ -23,3 +23,9 @@ def tangram(request):
 
 def secondyear(request):
     return render(request, 'secondyear.html')
+
+def secondyear(request):
+    return render(request, 'thirdyear.html')
+
+def secondyear(request):
+    return render(request, 'fourthyear.html')

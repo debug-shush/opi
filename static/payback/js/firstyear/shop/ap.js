@@ -128,6 +128,7 @@ var introAnimation, //timeline for intro animation
 	whackAMoleTimerMax = 1250,
 	shop_money = 0,
 	loan = 100000,
+	first_year_score_storing_array = [0,0,0,0]// focus , conn, happ , debt ;
 	shoppingCartItems = [{
 		imageUrl: 'images/bath-towel.svg',
 		ChallengeOutcomes: [{
@@ -6019,6 +6020,11 @@ function my_card_back(e , elm){
 function myshop_func(e,elm){
 	calculateLoanAndApplyChange(50000 + shop_money);
 	loan = 50000 + shop_money;
+	$("#loid")[0].children[0].innerHTML = "+" + shop_money; 
+	$("#loid").css({"opacity" : "1"})
+	setTimeout(function () {
+		$("#loid").css({"opacity" : "0"});
+	}, 2000);
 	
 }
 
@@ -6082,21 +6088,22 @@ function meals(x){
 			$("#foid").css({"opacity" : "0"});
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#focid').css({"background" : "#9e2145" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#focid').css({"background" : "#01b6ad" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			var $v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+			// $v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6109,7 +6116,7 @@ function meals(x){
 		// if ($va_data < 200){
 		// 	$('#conid').css({"background" : "#9e2145" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
@@ -6132,7 +6139,7 @@ function meals(x){
 		// if ($va_data < 200){
 		// 	$('#happid').css({"background" : "#9e2145" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
@@ -6143,6 +6150,11 @@ function meals(x){
 		// Money code
 		calculateLoanAndApplyChange(loan + 10000);
 		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 		
 	}
 	else if(x ==1){
@@ -6160,7 +6172,7 @@ function meals(x){
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6199,19 +6211,19 @@ function meals(x){
 			$("#foid").css({"opacity" : "0"});
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#focid').css({"background" : "#9e2145" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#focid').css({"background" : "#01b6ad" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6236,7 +6248,7 @@ function meals(x){
 		// if ($va_data < 200){
 		// 	$('#happid').css({"background" : "#9e2145" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
@@ -6247,6 +6259,11 @@ function meals(x){
 		// Loan =======================
 		calculateLoanAndApplyChange(loan - 10000);
 		loan = loan - 10000;
+		$("#loid")[0].children[0].innerHTML = "-" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 	
 }
@@ -6277,7 +6294,7 @@ function books(x){
 		// if ($va_data < 200){
 		// 	$('#focid').css({"background" : "#9e2145" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
@@ -6288,7 +6305,7 @@ function books(x){
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6301,7 +6318,7 @@ function books(x){
 		// if ($va_data < 200){
 		// 	$('#conid').css({"background" : "#9e2145" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
@@ -6324,7 +6341,7 @@ function books(x){
 		// if ($va_data < 200){
 		// 	$('#happid').css({"background" : "#9e2145" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
@@ -6335,6 +6352,11 @@ function books(x){
 		// Money code
 		calculateLoanAndApplyChange(loan + 10000);
 		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 
 	}
 	else if(x ==1){
@@ -6352,7 +6374,7 @@ function books(x){
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6379,6 +6401,11 @@ function books(x){
 		// Loan =================
 		calculateLoanAndApplyChange(loan+2000);
 		loan = loan+2000
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 	else if(x ==2){
 		// Focus code =====================
@@ -6395,7 +6422,7 @@ function books(x){
 		// if ($va_data < 200){
 		// 	$('#focid').css({"background" : "#9e2145" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
@@ -6404,7 +6431,7 @@ function books(x){
 		// }
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6429,7 +6456,7 @@ function books(x){
 		// if ($va_data < 200){
 		// 	$('#happid').css({"background" : "#9e2145" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
@@ -6440,6 +6467,11 @@ function books(x){
 		// Loan =======================
 		calculateLoanAndApplyChange(loan + 2000);
 		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 
 }
@@ -6472,7 +6504,7 @@ function seniors(x){
 		if ($va_data < 200){
 			$('#focid').css({"background" : "#9e2145" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
@@ -6483,7 +6515,7 @@ function seniors(x){
 
 
 		// Connections code =====================
-		var $var = document.getElementsByClassName("meter-happiness")
+		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
 		$var[0].attributes[1].value = $va_data
@@ -6496,7 +6528,7 @@ function seniors(x){
 		if ($va_data < 200){
 			$('#conid').css({"background" : "#9e2145" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
@@ -6520,16 +6552,16 @@ function seniors(x){
 			$("#haid").css({"opacity" : "0"});
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Money code
 		// calculateLoanAndApplyChange(loan + 10000);
@@ -6552,10 +6584,20 @@ function seniors(x){
 			$("#foid").css({"opacity" : "0"});
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6610,7 +6652,7 @@ function job(x){
 		if ($va_data < 200){
 			$('#focid').css({"background" : "#9e2145" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
@@ -6621,7 +6663,7 @@ function job(x){
 
 
 		// Connections code =====================
-		var $var = document.getElementsByClassName("meter-happiness")
+		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += (0.2*$va_data)
 		$var[0].attributes[1].value = $va_data
@@ -6634,7 +6676,7 @@ function job(x){
 		if ($va_data < 200){
 			$('#conid').css({"background" : "#9e2145" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
@@ -6658,20 +6700,25 @@ function job(x){
 			$("#haid").css({"opacity" : "0"});
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Money code
 		calculateLoanAndApplyChange(loan + 5000);
 		loan = loan + 5000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 
 	}
 	//No
@@ -6694,7 +6741,7 @@ function job(x){
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6750,7 +6797,7 @@ function bbq(x){
 		if ($va_data < 200){
 			$('#focid').css({"background" : "#9e2145" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
@@ -6761,7 +6808,7 @@ function bbq(x){
 
 
 		// Connections code =====================
-		var $var = document.getElementsByClassName("meter-happiness")
+		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += (0.3*$va_data)
 		if($va_data>=500)
@@ -6778,7 +6825,7 @@ function bbq(x){
 		if ($va_data < 200){
 			$('#conid').css({"background" : "#9e2145" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
@@ -6803,20 +6850,25 @@ function bbq(x){
 			$("#haid").css({"opacity" : "0"});
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Money code
 		calculateLoanAndApplyChange(loan + 2000);
 		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 
 	}
 	//No
@@ -6839,7 +6891,7 @@ function bbq(x){
 
 
 		// Connections code =====================
-		var $var = document.getElementsByClassName("meter-happiness")
+		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= (0.3*$va_data)
 		if($va_data<=0)
@@ -6853,6 +6905,16 @@ function bbq(x){
 			$("#haid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Happiness code  ======================
 		// var $var = document.getElementsByClassName("meter-happiness")
@@ -6900,7 +6962,7 @@ function kriti(x){
 		if ($va_data < 200){
 			$('#focid').css({"background" : "#9e2145" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
@@ -6911,7 +6973,7 @@ function kriti(x){
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += (0.3*$va_data)
 		// if($va_data>=500)
@@ -6928,7 +6990,7 @@ function kriti(x){
 		// if ($va_data < 200){
 		// 	$('#conid').css({"background" : "#9e2145" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
@@ -6953,16 +7015,16 @@ function kriti(x){
 			$("#haid").css({"opacity" : "0"});
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Money code
 		// calculateLoanAndApplyChange(loan + 2000);
@@ -6986,10 +7048,20 @@ function kriti(x){
 			$("#foid").css({"opacity" : "0"});
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 
 		// // Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.3*$va_data)
 		// if($va_data<=0)
@@ -7024,3 +7096,77 @@ function kriti(x){
 
 }
 
+
+
+
+
+function end_to_start_ret(){
+
+var $var = document.getElementsByClassName("meter-focus")
+first_year_score_storing_array[0] =  parseInt($var[0].attributes[1].value);
+
+var $var = document.getElementsByClassName("meter-connections")
+first_year_score_storing_array[1] =  parseInt($var[0].attributes[1].value);
+
+var $var = document.getElementsByClassName("meter-happiness")
+first_year_score_storing_array[2] =  parseInt($var[0].attributes[1].value);
+
+
+first_year_score_storing_array[3] =  $("#loid")[0].children[0].innerHTML;
+}
+
+//  End func of First year    
+
+function end_to_start(){
+	console.log(1);
+	var $var = document.getElementsByClassName("meter-focus")
+	var $va_data =  first_year_score_storing_array[0];
+	$var[0].attributes[1].value = $va_data
+	$('#focid').css({ "width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#focid').css({"background" : "#9e2145" });
+		$v = $("#focid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#focid').css({"background" : "#01b6ad" });
+		$v = $("#focid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+	var $var = document.getElementsByClassName("meter-connections")
+	var $va_data =  first_year_score_storing_array[1]
+	$var[0].attributes[1].value = $va_data
+	$('#conid').css({"width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#conid').css({"background" : "#9e2145" });
+		$v = $("#conid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#conid').css({"background" : "#01b6ad" });
+		$v = $("#conid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+
+	var $var = document.getElementsByClassName("meter-happiness")
+	var $va_data =  first_year_score_storing_array[2]
+	$var[0].attributes[1].value = $va_data
+	$('#happid').css({"width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#happid').css({"background" : "#9e2145" });
+		$v = $("#happid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#happid').css({"background" : "#01b6ad" });
+		$v = $("#happid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+
+}
