@@ -81,10 +81,10 @@ var introAnimation, //timeline for intro animation
 	//outcomeIndex,
 	sectionCount, //how many sections are in the path
 	meterFocus = 500, //placeholder for focus meter start
-	meterHappiness = 500, //placeholder for happiness meter start
+	meterHappiness = 0, //placeholder for happiness meter start
 	meterLoans = 0, //placeholder for loan meter start
 	selectedCollegeCost,
-	meterConnections = 500, //placeholder for connections meter start
+	meterConnections = 0, //placeholder for connections meter start
 	meterCoinWaitTimeout = 1500,
 	currentView, //what template is currently displaying
 	optOn = false,
@@ -127,7 +127,8 @@ var introAnimation, //timeline for intro animation
 	whackAMoleTimerMin = 800,
 	whackAMoleTimerMax = 1250,
 	shop_money = 0,
-	loan = 50000,
+	loan = 100000,
+	first_year_score_storing_array = [0,0,0,0]// focus , conn, happ , debt ;
 	shoppingCartItems = [{
 		imageUrl: 'images/bath-towel.svg',
 		ChallengeOutcomes: [{
@@ -6017,8 +6018,14 @@ function my_card_back(e , elm){
 }
 
 function myshop_func(e,elm){
-	calculateLoanAndApplyChange(50000 - shop_money);
-	loan = 50000 - shop_money;
+	calculateLoanAndApplyChange(50000 + shop_money);
+	loan = 50000 + shop_money;
+	$("#loid")[0].children[0].innerHTML = "+" + shop_money; 
+	$("#loid").css({"opacity" : "1"})
+	setTimeout(function () {
+		$("#loid").css({"opacity" : "0"});
+	}, 2000);
+	
 }
 
 // shop js end here ========================================
@@ -6027,43 +6034,44 @@ function myshop_func(e,elm){
 
 //  MAKE CASH MEMORIES FUNCTION HERE
 
-function my_cash_func(x){
-	// console.log(x);
-	if ( x == 1){
-		var $var = document.getElementsByClassName("meter-happiness");
-		// var hapid = document.getElementById("happid");
-		var $hap_data =  parseInt($var[0].attributes[1].value);
-		$hap_data -= 50
-		$var[0].attributes[1].value = $hap_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
-		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
-		}, 2000);
-		// console.log($hap_data)
-		$('#happid').css({"transition" : "width 2s" , "width" : $hap_data/10+ "%"});
-		calculateLoanAndApplyChange(loan + 100);
-		loan = loan + 100;
-	}
-	else if(x ==2){
-		var $var = document.getElementsByClassName("meter-happiness");
-		// var hapid = document.getElementById("happid");
-		var $hap_data =  parseInt($var[0].attributes[1].value);
-		$hap_data += 50
-		$var[0].attributes[1].value = $hap_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
-		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
-		}, 2000);
-		// console.log($hap_data)
-		$('#happid').css({"transition" : "width 2s" , "width" : $hap_data/10+ "%"});
-	}
-	
-}
+// function my_cash_func(x){
+// 	// console.log(x);
+// 	if ( x == 1){
+// 		var $var = document.getElementsByClassName("meter-happiness");
+// 		// var hapid = document.getElementById("happid");
+// 		var $hap_data =  parseInt($var[0].attributes[1].value);
+// 		$hap_data -= 50
+// 		$var[0].attributes[1].value = $hap_data
+// 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+// 		$("#haid").css({"opacity" : "1"})
+// 		setTimeout(function () {
+// 			$("#haid").css({"opacity" : "0"});
+// 		}, 2000);
+// 		// console.log($hap_data)
+// 		$('#happid').css({"transition" : "width 2s" , "width" : $hap_data/10+ "%"});
+// 		calculateLoanAndApplyChange(loan + 100);
+// 		loan = loan + 100;
+// 	}
+// 	else if(x ==2){
+// 		var $var = document.getElementsByClassName("meter-happiness");
+// 		// var hapid = document.getElementById("happid");
+// 		var $hap_data =  parseInt($var[0].attributes[1].value);
+// 		$hap_data += 50
+// 		$var[0].attributes[1].value = $hap_data
+// 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+// 		$("#haid").css({"opacity" : "1"})
+// 		setTimeout(function () {
+// 			$("#haid").css({"opacity" : "0"});
+// 		}, 2000);
+// 		// console.log($hap_data)
+// 		$('#happid').css({"transition" : "width 2s" , "width" : $hap_data/10+ "%"});
+// 	}
+//
+// }
 
 
-//  MEALS function 
+//  BICYCLE FUNCTION (p3) ========================
+
 
 function meals(x){
 	// console.log(x);
@@ -6080,21 +6088,22 @@ function meals(x){
 			$("#foid").css({"opacity" : "0"});
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#focid').css({"background" : "#9e2145" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
-		// }
-		// else{
-		// 	$('#focid').css({"background" : "#01b6ad" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			var $v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+			// $v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6107,7 +6116,7 @@ function meals(x){
 		// if ($va_data < 200){
 		// 	$('#conid').css({"background" : "#9e2145" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
@@ -6117,20 +6126,20 @@ function meals(x){
 
 
 		// Happiness code  ======================
-		var $var = document.getElementsByClassName("meter-happiness")
-		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data -= 125
-		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
-		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
-		}, 2000);
-		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		// if ($va_data < 200){
 		// 	$('#happid').css({"background" : "#9e2145" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		// }
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
@@ -6141,6 +6150,12 @@ function meals(x){
 		// Money code
 		calculateLoanAndApplyChange(loan + 10000);
 		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+		
 	}
 	else if(x ==1){
 		// Focus code =====================
@@ -6157,7 +6172,7 @@ function meals(x){
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $var = document.getElementsByClassName("meter-connections")
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
@@ -6196,6 +6211,991 @@ function meals(x){
 			$("#foid").css({"opacity" : "0"});
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 150
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Loan =======================
+		calculateLoanAndApplyChange(loan - 10000);
+		loan = loan - 10000;
+		$("#loid")[0].children[0].innerHTML = "-" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+	
+}
+
+//  BICYCLE FUNCTION (p3)  end  ========================
+
+
+
+
+// Books function (p4) ========================================================
+
+function books(x){
+	// console.log(x);
+	//New books
+	if ( x == 0){
+
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#conid').css({"background" : "#9e2145" });
+		// 	$v = $("#conid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#conid').css({"background" : "#01b6ad" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Activities code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 10000);
+		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		calculateLoanAndApplyChange(loan+2000);
+		loan = loan+2000
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+	else if(x ==2){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 100
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 150
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Loan =======================
+		calculateLoanAndApplyChange(loan + 2000);
+		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+
+}
+
+// Books function (p4)  end    ========================================================
+
+
+// Seniors function
+
+function seniors(x){
+	// console.log(x);
+	//Yes
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-connections")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += 250
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+
+		$va_data += 250
+		if($va_data>=500)
+		{
+			$va_data = 500
+		}		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		// calculateLoanAndApplyChange(loan + 10000);
+		// loan = loan + 10000;
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.3*$va_data)
+		if($va_data<0)
+		{
+			$va_data=0
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		// calculateLoanAndApplyChange(loan+2000);
+		// loan = loan+2000
+	}
+
+}
+// JOB function
+
+function job(x){
+	// console.log(x);
+	//Yes
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.6*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-connections")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.2*$va_data)
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+
+		$va_data -= (0.5*$va_data)
+		if($va_data>=500)
+		{
+			$va_data = 500
+		}		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 5000);
+		loan = loan + 5000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+
+	}
+	//No
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.3*$va_data)
+		// if($va_data<0)
+		// {
+		// 	$va_data=0
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		// calculateLoanAndApplyChange(loan+2000);
+		// loan = loan+2000
+	}
+
+}
+
+// bbq function
+
+function bbq(x){
+	// console.log(x);
+	//Yes
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.2*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-connections")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data = 500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 2000);
+		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+
+	}
+	//No
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.3*$va_data)
+		// if($va_data<0)
+		// {
+		// 	$va_data=0
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-connections")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.3*$va_data)
+		if($va_data<=0)
+		{
+			$va_data=0
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		// calculateLoanAndApplyChange(loan+2000);
+		// loan = loan+2000
+	}
+
+}
+
+
+// kriti function
+
+function kriti(x){
+	// console.log(x);
+	//Yes
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.3*$va_data)
+		if($va_data<0)
+		{
+			$va_data=0;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#conid').css({"background" : "#9e2145" });
+		// 	$v = $("#conid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#conid').css({"background" : "#01b6ad" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data = 500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		// calculateLoanAndApplyChange(loan + 2000);
+		// loan = loan + 2000;
+
+	}
+	//No
+	else if(x ==1){
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// // Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.3*$va_data)
+		// if($va_data<=0)
+		// {
+		// 	$va_data=0
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		// calculateLoanAndApplyChange(loan+2000);
+		// loan = loan+2000
+	}
+
+}
+
+
+
+// ============================  END TO START FUNC ==================================
+
+function end_to_start_ret(){
+
+var $var = document.getElementsByClassName("meter-focus")
+first_year_score_storing_array[0] =  parseInt($var[0].attributes[1].value);
+
+var $var = document.getElementsByClassName("meter-connections")
+first_year_score_storing_array[1] =  parseInt($var[0].attributes[1].value);
+
+var $var = document.getElementsByClassName("meter-happiness")
+first_year_score_storing_array[2] =  parseInt($var[0].attributes[1].value);
+
+
+first_year_score_storing_array[3] =  $("#loid")[0].children[0].innerHTML;
+}
+
+//  End func of First year    
+
+function end_to_start(){
+	console.log(1);
+	var $var = document.getElementsByClassName("meter-focus")
+	var $va_data =  first_year_score_storing_array[0];
+	$var[0].attributes[1].value = $va_data
+	$('#focid').css({ "width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#focid').css({"background" : "#9e2145" });
+		$v = $("#focid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#focid').css({"background" : "#01b6ad" });
+		$v = $("#focid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+	var $var = document.getElementsByClassName("meter-connections")
+	var $va_data =  first_year_score_storing_array[1]
+	$var[0].attributes[1].value = $va_data
+	$('#conid').css({"width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#conid').css({"background" : "#9e2145" });
+		$v = $("#conid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#conid').css({"background" : "#01b6ad" });
+		$v = $("#conid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+
+	var $var = document.getElementsByClassName("meter-happiness")
+	var $va_data =  first_year_score_storing_array[2]
+	$var[0].attributes[1].value = $va_data
+	$('#happid').css({"width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#happid').css({"background" : "#9e2145" });
+		$v = $("#happid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#happid').css({"background" : "#01b6ad" });
+		$v = $("#happid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+}
+
+
+// ============================  END TO START FUNC ==================================
+
+
+
+
+//  Transport FUNCTION (p3) ========================
+
+
+function transport(x){
+	// console.log(x);
+	if ( x == 0){
+
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500;
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		// if ($va_data < 200){
 		// 	$('#focid').css({"background" : "#9e2145" });
 		// 	$v = $("#focid")
@@ -6206,6 +7206,506 @@ function meals(x){
 		// 	$v = $("#focid")
 		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
 		// }
+
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#conid').css({"background" : "#9e2145" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// }
+		// else{
+		// 	$('#conid').css({"background" : "#01b6ad" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 5000);
+		loan = loan + 5000;
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// // Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Loan =================
+		calculateLoanAndApplyChange(loan+3000);
+		loan+=3000;
+	}
+	else if(x ==2){
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.1*$va_data)
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 150
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Loan =======================
+		// calculateLoanAndApplyChange(loan - 10000);
+		// loan = loan - 10000;
+	}
+
+}
+
+//  research FUNCTION (p3)  end  ========================
+
+function research(x){
+	// console.log(x);
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.2*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		// calculateLoanAndApplyChange(loan + 5000);
+		// loan = loan + 5000;
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Loan =================
+		// calculateLoanAndApplyChange(loan+3000);
+		// loan+=3000;
+	}
+
+}
+
+
+function laptop(x){
+	// console.log(x);
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.1*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.2*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 60000);
+		loan = loan + 60000;
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Loan =================
+		calculateLoanAndApplyChange(loan+30000);
+		loan+=30000;
+	}
+	else if(x ==2){
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.3*$va_data)
+		if($va_data<0)
+		{
+			$va_data=0;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
 
 		// Connections code =====================
 		// var $var = document.getElementsByClassName("meter-happiness")
@@ -6222,7 +7722,7 @@ function meals(x){
 		// Happiness code  ======================
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += 150
+		$va_data -= (0.3*$va_data)
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -6230,6 +7730,155 @@ function meals(x){
 			$("#haid").css({"opacity" : "0"});
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Loan =======================
+		calculateLoanAndApplyChange(loan + 5000);
+		loan = loan + 5000;
+	}
+
+}
+
+function interiit(x){
+	// console.log(x);
+	if ( x == 0){
+
+		// Focus code =====================
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.3*$va_data)
+		if($va_data<0)
+		{
+			$va_data=0;
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+
+		// Connections code =====================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+		if($va_data>=500)
+		{
+			$va_data=500
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+
+		// Happiness code  ======================
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= (0.2*$va_data)
+		if($va_data<0)
+		{
+			$va_data=0
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#8a1c3d" });
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		}
+
+		// Money code
+		// calculateLoanAndApplyChange(loan + 5000);
+		// loan = loan + 5000;
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.3*$va_data)
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500
+		// }
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		// if ($va_data < 200){
 		// 	$('#happid').css({"background" : "#9e2145" });
 		// 	$v = $("#happid")
@@ -6241,9 +7890,10 @@ function meals(x){
 		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
 		// }
 
-		// Loan =======================
-		calculateLoanAndApplyChange(loan - 10000);
-		loan = loan - 10000;
+
+		// Loan =================
+		// calculateLoanAndApplyChange(loan+3000);
+		// loan+=3000;
 	}
-	
+
 }
