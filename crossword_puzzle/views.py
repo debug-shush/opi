@@ -9,5 +9,14 @@ import json
 from django.conf import settings
 from django.template.loader import render_to_string
 
-def home(request):
+def puzzle_view(request):
 	return render(request, 'index.html')
+
+def age_sum(request):
+	return render(request, 'agesum.html')
+
+def bridge_connect(request):
+	return render(request, 'bridgeconnect.html')
+
+def slither_link(request):
+	return render(request, 'slitherlink.html')
