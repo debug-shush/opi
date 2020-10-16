@@ -38,7 +38,7 @@ h1{
 #instructions{
     height: 200px;
     width: 800px;
-    background-color: rgb(197, 177, 61);
+    background-color: rgb(111, 197, 61);
     padding: 10px;
     overflow: hidden;
     overflow-y: scroll;
@@ -56,7 +56,7 @@ input[type=text] {
     height:40px;
     border-radius: 4px;
   }
-#kenken td {
+/*#kenken td {
 	border: 1px solid rgb(11, 8, 15);
 	text-align:center; 
     vertical-align:middle;
@@ -68,7 +68,7 @@ input[type=text] {
 #controls {
     float: left;
     display:none;
-}
+}*/
 #title{
     font-size: 35px;
 
@@ -77,14 +77,14 @@ p{
     font-size: 20px;
 }
 
-.hint {
+/*.hint {
     position: absolute;
     font-size: 60%;
     font-weight: bold;
     color: rgba(0, 0, 0, .8);
     top: 0px;
     left: 0px;
-}
+}*/
 
 input[type=button]{
     size:10;

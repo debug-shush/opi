@@ -6,6 +6,7 @@ function swapTiles(cell1,cell2) {
   
 window.onload = shuffle;
 
+
   function shuffle() {
   //Use nested loops to access each cell of the 3x3 grid
   for (var row=1;row<=3;row++) { //For each row of the 3x3 grid
@@ -55,7 +56,7 @@ window.onload = shuffle;
     
   }
   
-/*
+
 
   function checking()
   {
@@ -70,6 +71,7 @@ window.onload = shuffle;
   }
     if(check==8||check==9){
       redirect;
+      document.getElementById("myText").disabled = false;
     }
     else{
       alert("wrong combinations!!! try again");
@@ -88,6 +90,7 @@ window.onload = shuffle;
   var r=window.confirm("you will lose marks for task if you take help!!!");
   if(r==true){
     redirect();
+    document.getElementById("23").disabled = false;
   }
       
-  }*/
+  }
