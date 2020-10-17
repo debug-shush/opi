@@ -29,6 +29,9 @@
         background: none;
         margin: 0px;
     }
+    .button{
+        box-shadow: #fff0d2 5px 5px 0;
+    }
 </style>
 
 <!-- marks footer -->
@@ -189,13 +192,13 @@
 
 
 <!-- page 1   "opening"  (need to add media queries here :"REMEMBER"  ) ==================== -->
-<div style="padding-top: 200px;padding-bottom: 100px;background: #c6e2b6;">
+<div style="padding-top: 200px;padding-bottom: 100px;">
         
-        <div class="year-text" style="margin-left: 42%;background: #c6e2b6;color: black;font-size: 2.5rem;line-height: 3.75rem;letter-spacing: .04em;margin-bottom: 50px;">Year 4:</div>
+        <div class="year-text" style="margin-left: 42%;color: #fff0d2;font-size: 2.5rem;line-height: 3.75rem;letter-spacing: .04em;margin-bottom: 50px;">Year 4:</div>
     <!-- <svg version="1.1" id="Layer_1" style="margin-top: -400px;margin-left:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 530.2 530.2" preserveAspectRatio="xMidYMin slice"><circle class="path" cx="265.1" cy="265.1" r="264.1" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></circle><circle class="line" cx="265.1" cy="265.1" r="264.1"></circle></svg>
          -->
-         <div style="background: #c6e2b6;" >
-            <img src="{%static 'payback/images/firstyear/images/college-senior.png' %}" style="background:#c6e2b6;max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">
+         <div  >
+            <img src="{%static 'payback/images/firstyear/images/college-senior.png' %}" style="max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">
         </div> 
         <div class="button mascotPlaceholder" style="display: none;">Continue</div>
         <div class="button mascotBtn" data-direction="down" data-panel="panel-0"
@@ -215,7 +218,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #313d4c;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #313d4c;">										Terrible news: Your mom just lost her job. Which means your parents are going to be about $5000 short for your tuition. How will you make up the gap?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -223,24 +226,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt" >
-                <div  class="opt options" onclick="clickOutcome('left', 0, event, this); document.getElementById('p3').scrollIntoView();" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="clickOutcome('left', 0, event, this); document.getElementById('p3').scrollIntoView();" data-direction="left" data-outcome="222" data-challenge="28">Take Out More Loans</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="clickOutcome('down', 1, event, this);document.getElementById('p3').scrollIntoView();" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="clickOutcome('down', 1, event, this);document.getElementById('p3').scrollIntoView();" data-direction="down" data-outcome="223" data-challenge="28">Talk to the Aid Office</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt" >
-                <div class="opt options" onclick="clickOutcome('right', 2, event, this);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="clickOutcome('right', 2, event, this);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Earn More Money</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -267,7 +270,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #313d4c;;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #313d4c;;">Got 2000 in A sweater Which I Used to Wear Last Year .
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -275,24 +278,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p4').scrollIntoView(); clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <!-- <div  class="opt options" onclick="document.getElementById('p4').scrollIntoView(); clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
+                <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Yayy , Im Lucky !!</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <!-- <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
+                <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -318,7 +321,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #313d4c;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #313d4c;">There’s a career fair next week. What are you going to do for your resume?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -326,23 +329,23 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <!-- <div  class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
+                <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Make a LinkedIn Profile</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
+                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Fancy And Printed</div>
                 <div class="optDebt">$585</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
@@ -369,7 +372,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #313d4c;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #313d4c;">This is the last spring break you’ll ever have. How will you celebrate?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -377,24 +380,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Road Trip Any one!</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Find Me in Library</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Cacun, Here I come</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -420,7 +423,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #313d4c;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #313d4c;">You’re starting to line up interviews. But you can’t interview in jeans and a t-shirt.
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -428,24 +431,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Do It On Cheap</div>
+                <div class="optDebt">$500</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Whats Wrong On Jeans</div>
+                <div class="optDebt">$0</div>
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Great suit</div>
+                <div class="optDebt">$10000</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 

@@ -29,3 +29,9 @@ def thirdyear(request):
 
 def fourthyear(request):
     return render(request, 'fourthyear.html')
+
+def graduation(request):
+    return render(request, 'graduation.html')
+
+def game(request):
+    return render(request, 'game.html')
