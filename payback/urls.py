@@ -12,5 +12,7 @@ urlpatterns =[
     path("secondyear/",views.secondyear,name='secondyear'),
     path("thirdyear/",views.thirdyear,name='thirdyear'),
     path("fourthyear/",views.fourthyear,name='fourthyear'),
+    path("graduation/",views.graduation,name='graduation'),
+    path("game/",views.game,name='game'),
 ]
 

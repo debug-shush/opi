@@ -4758,7 +4758,6 @@ function loadRegisterTemplate(challenge, section) {
 
 	var panelNm = "#panel-" + section;
 	var elm = $(panelNm).html(window["app-templates"]["../client/features/templates/optRegister" + currentLanguage + ".html"]);
-
 	var label = challenge['label' + currentLanguage];
 	$(panelNm + ' .label').html(label),
 		section = $(panelNm);
@@ -4824,6 +4823,7 @@ function clickStartRegisterClasses(e, elm) {
 			//turn countdown number teal when reach 0
 			$(".progressbar-text").css('color', '#03d7c3');
 			$('#optRegister .piece').css('fill', '#03d7c3');
+			console.log(1);
 			return;
 		}
 	}
@@ -5989,6 +5989,84 @@ function toggleElementVisibility() {
 // $c2 = document.getElementById("b2")
 // $c2.onclick = function () { window.scrollTo(0, 500); };
 
+
+
+
+// ============================  END TO START FUNC ==================================
+
+function end_to_start_ret(){
+
+	var $var = document.getElementsByClassName("meter-focus")
+	first_year_score_storing_array[0] =  parseInt($var[0].attributes[1].value);
+	
+	var $var = document.getElementsByClassName("meter-connections")
+	first_year_score_storing_array[1] =  parseInt($var[0].attributes[1].value);
+	
+	var $var = document.getElementsByClassName("meter-happiness")
+	first_year_score_storing_array[2] =  parseInt($var[0].attributes[1].value);
+	
+	
+	first_year_score_storing_array[3] =  $("#loid")[0].children[0].innerHTML;
+}
+	
+	//  End func of First year    
+	
+function end_to_start(){
+	// console.log(1);
+	var $var = document.getElementsByClassName("meter-focus")
+	var $va_data =  first_year_score_storing_array[0];
+	$var[0].attributes[1].value = $va_data
+	$('#focid').css({ "width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#focid').css({"background" : "#9e2145" });
+		$v = $("#focid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#focid').css({"background" : "#01b6ad" });
+		$v = $("#focid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+	var $var = document.getElementsByClassName("meter-connections")
+	var $va_data =  first_year_score_storing_array[1]
+	$var[0].attributes[1].value = $va_data
+	$('#conid').css({"width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#conid').css({"background" : "#9e2145" });
+		$v = $("#conid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#conid').css({"background" : "#01b6ad" });
+		$v = $("#conid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+
+
+
+	var $var = document.getElementsByClassName("meter-happiness")
+	var $va_data =  first_year_score_storing_array[2]
+	$var[0].attributes[1].value = $va_data
+	$('#happid').css({"width" : $va_data/10+ "%"});
+	if ($va_data < 200){
+		$('#happid').css({"background" : "#9e2145" });
+		$v = $("#happid")
+		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+	}
+	else{
+		$('#happid').css({"background" : "#01b6ad" });
+		$v = $("#happid")
+		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+	}
+}
+	
+	
+// ============================  END TO START FUNC ==================================
+	
+
+
 // My payback javascript 
 
 
@@ -7096,83 +7174,12 @@ function kriti(x){
 
 }
 
-
-
-// ============================  END TO START FUNC ==================================
-
-function end_to_start_ret(){
-
-var $var = document.getElementsByClassName("meter-focus")
-first_year_score_storing_array[0] =  parseInt($var[0].attributes[1].value);
-
-var $var = document.getElementsByClassName("meter-connections")
-first_year_score_storing_array[1] =  parseInt($var[0].attributes[1].value);
-
-var $var = document.getElementsByClassName("meter-happiness")
-first_year_score_storing_array[2] =  parseInt($var[0].attributes[1].value);
-
-
-first_year_score_storing_array[3] =  $("#loid")[0].children[0].innerHTML;
-}
-
-//  End func of First year    
-
-function end_to_start(){
-	console.log(1);
-	var $var = document.getElementsByClassName("meter-focus")
-	var $va_data =  first_year_score_storing_array[0];
-	$var[0].attributes[1].value = $va_data
-	$('#focid').css({ "width" : $va_data/10+ "%"});
-	if ($va_data < 200){
-		$('#focid').css({"background" : "#9e2145" });
-		$v = $("#focid")
-		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-	}
-	else{
-		$('#focid').css({"background" : "#01b6ad" });
-		$v = $("#focid")
-		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-	}
-
-
-	var $var = document.getElementsByClassName("meter-connections")
-	var $va_data =  first_year_score_storing_array[1]
-	$var[0].attributes[1].value = $va_data
-	$('#conid').css({"width" : $va_data/10+ "%"});
-	if ($va_data < 200){
-		$('#conid').css({"background" : "#9e2145" });
-		$v = $("#conid")
-		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-	}
-	else{
-		$('#conid').css({"background" : "#01b6ad" });
-		$v = $("#conid")
-		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-	}
+// =================== FIRST YEAR END ==========================================
 
 
 
-	var $var = document.getElementsByClassName("meter-happiness")
-	var $va_data =  first_year_score_storing_array[2]
-	$var[0].attributes[1].value = $va_data
-	$('#happid').css({"width" : $va_data/10+ "%"});
-	if ($va_data < 200){
-		$('#happid').css({"background" : "#9e2145" });
-		$v = $("#happid")
-		$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-	}
-	else{
-		$('#happid').css({"background" : "#01b6ad" });
-		$v = $("#happid")
-		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-	}
-}
 
-
-// ============================  END TO START FUNC ==================================
-
-
-
+// ===================   SECOND YEAR ===========================================
 
 //  Transport FUNCTION (p3) ========================
 
@@ -7894,6 +7901,627 @@ function interiit(x){
 		// Loan =================
 		// calculateLoanAndApplyChange(loan+3000);
 		// loan+=3000;
+	}
+
+}
+
+// ================  SECOND YEAR END ==============================
+
+
+
+// =================== THIRD YEAR START ================================
+
+
+// ===  credit card func ===
+
+function creditcard(x){
+	// console.log(x);
+	//New books
+	if ( x == 0){
+
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#conid').css({"background" : "#9e2145" });
+		// 	$v = $("#conid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#conid').css({"background" : "#01b6ad" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Activities code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 10000);
+		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		calculateLoanAndApplyChange(loan+2000);
+		loan = loan+2000
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+	else if(x ==2){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 100
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 150
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Loan =======================
+		calculateLoanAndApplyChange(loan + 2000);
+		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+
+}
+
+
+// ===  techniche func ===
+
+function techniche(x){
+	// console.log(x);
+	//New books
+	if ( x == 0){
+
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#conid').css({"background" : "#9e2145" });
+		// 	$v = $("#conid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#conid').css({"background" : "#01b6ad" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Activities code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 10000);
+		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		calculateLoanAndApplyChange(loan+2000);
+		loan = loan+2000
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+	else if(x ==2){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 100
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 150
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Loan =======================
+		calculateLoanAndApplyChange(loan + 2000);
+		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+
+}
+
+
+
+
+
+// ===  stay in out func ===
+
+function stayinout(x){
+	// console.log(x);
+	//New books
+	if ( x == 0){
+
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#conid').css({"background" : "#9e2145" });
+		// 	$v = $("#conid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#conid').css({"background" : "#01b6ad" });
+		// 	$v = $("#conid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+
+		// Activities code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += (0.1*$va_data)
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Money code
+		calculateLoanAndApplyChange(loan + 10000);
+		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+
+	}
+	else if(x ==1){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 200
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+
+		// Loan =================
+		calculateLoanAndApplyChange(loan+2000);
+		loan = loan+2000
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
+	}
+	else if(x ==2){
+		// Focus code =====================
+		// var $var = document.getElementsByClassName("meter-focus")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 100
+		// $var[0].attributes[1].value = $va_data
+		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#foid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#foid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#focid').css({"background" : "#9e2145" });
+		// 	$v = $("#focid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#focid').css({"background" : "#01b6ad" });
+		// 	$v = $("#focid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Connections code =====================
+		// var $var = document.getElementsByClassName("meter-connections")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data -= 125
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+
+		// Happiness code  ======================
+		// var $var = document.getElementsByClassName("meter-happiness")
+		// var $va_data =  parseInt($var[0].attributes[1].value);
+		// $va_data += 150
+		// $var[0].attributes[1].value = $va_data
+		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		// $("#haid").css({"opacity" : "1"})
+		// setTimeout(function () {
+		// 	$("#haid").css({"opacity" : "0"});
+		// }, 2000);
+		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		// if ($va_data < 200){
+		// 	$('#happid').css({"background" : "#9e2145" });
+		// 	$v = $("#happid")
+		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		// }
+		// else{
+		// 	$('#happid').css({"background" : "#01b6ad" });
+		// 	$v = $("#happid")
+		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// }
+
+		// Loan =======================
+		calculateLoanAndApplyChange(loan + 2000);
+		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 
 }

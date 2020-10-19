@@ -189,17 +189,17 @@
 
 
 <!-- page 1   "opening"  (need to add media queries here :"REMEMBER"  ) ==================== -->
-<div style="padding-top: 200px;padding-bottom: 100px;background: #fff0d2;">
+<div style="padding-top: 200px;padding-bottom: 100px;">
         
-        <div class="year-text" style="margin-left: 42%;background: #fff0d2;color: black;font-size: 2.5rem;line-height: 3.75rem;letter-spacing: .04em;margin-bottom: 50px;">Year 2:</div>
+        <div class="year-text" style="margin-left: 42%;;color: #9e2145;font-size: 2.5rem;line-height: 3.75rem;letter-spacing: .04em;margin-bottom: 50px;">Year 3:</div>
     <!-- <svg version="1.1" id="Layer_1" style="margin-top: -400px;margin-left:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 530.2 530.2" preserveAspectRatio="xMidYMin slice"><circle class="path" cx="265.1" cy="265.1" r="264.1" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></circle><circle class="line" cx="265.1" cy="265.1" r="264.1"></circle></svg>
          -->
-         <div style="background: #fff0d2;" >
-            <img src="{%static 'payback/images/firstyear/images/college-junior.png' %}" style="background: #fff0d2;max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">
+         <div  >
+            <img src="{%static 'payback/images/firstyear/images/college-junior.png' %}" style="max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">
         </div> 
         <div class="button mascotPlaceholder" style="display: none;">Continue</div>
         <div class="button mascotBtn" data-direction="down" data-panel="panel-0"
-            style="display: inline-block; opacity: 1;margin-left: 40%;margin-top: 180px;"
+            style="display: inline-block; opacity: 1;margin-left: 40%;margin-top: 80px;background: #01b6ad;box-shadow:  5px 5px 0;"
             onclick="document.getElementById('p2').scrollIntoView(); ">Continue
         </div>
         
@@ -215,7 +215,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">You are 21 now, which means you're eligible to apply for a credit card. What's in your wallet?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -223,27 +223,27 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt" >
-                <div  class="opt options" onclick="clickOutcome('left', 0, event, this); document.getElementById('p3').scrollIntoView();" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="creditcard(0); document.getElementById('p3').scrollIntoView();" data-direction="left" data-outcome="222" data-challenge="28">Credit Cards are Scary</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
-                
+                    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
+                 -->
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="clickOutcome('down', 1, event, this);document.getElementById('p3').scrollIntoView();" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="creditcard(1);document.getElementById('p3').scrollIntoView();" data-direction="down" data-outcome="223" data-challenge="28">Maybe One Card</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt" >
-                <div class="opt options" onclick="clickOutcome('right', 2, event, this);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="creditcard(2);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Give Me All the Cards</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
-                
+                    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
+                 -->
                 </div>
             </div>
         </div>
@@ -267,7 +267,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">Techniche is around for a week and there are exams at the end of month, but you responsibility for organizing the fest . What would you do? 
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -275,24 +275,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p4').scrollIntoView(); clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="document.getElementById('p4').scrollIntoView(); techniche(0)" data-direction="left" data-outcome="222" data-challenge="28">Study for Exam</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();techniche(1)" data-direction="down" data-outcome="223" data-challenge="28">Help in Organizing <br> the Fest </div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();techniche(0)" data-direction="right" data-outcome="221" data-challenge="28">May be Once</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -318,7 +318,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">Your school offers the option to move off campus for your last two years. Your friends are getting an apartment and there's a room for you if you want it.
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -326,24 +326,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="document.getElementById('p5').scrollIntoView();stayinout(0)" data-direction="left" data-outcome="222" data-challenge="28">Move Of Campus</div>
+                <div class="optDebt">-$1000</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Stay In The Dorms</div>
+                <div class="optDebt">$0</div>
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <!-- <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
+                <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -369,7 +369,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">While patrolling the dorms, you bust a bunch of freshmen getting drunk. They beg you not to report them.
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -377,24 +377,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Keep It Quiet</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">File a Report</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <!-- <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
+                <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -420,7 +420,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background:#9F2046;">Junior year is the best time to study abroad. A semester away will cost about $2500 more than what you’d spend if you stay in the States.
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -428,24 +428,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div  class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Stay Put</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Apply for Scholarship</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Use loan</div>
+                <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -471,7 +471,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">If you never go off campus, you might lose your mind. How will you get around?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -524,7 +524,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">If you never go off campus, you might lose your mind. How will you get around?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -576,7 +576,7 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">If you never go off campus, you might lose your mind. How will you get around?
+                    <div class="text label" style="background: #9F2046;">If you never go off campus, you might lose your mind. How will you get around?
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -619,163 +619,47 @@
 
 <!-- Page 9 end ================================ -->
 
-
-<!-- loan should decrease -->
-
-<div id="rangeholder"><input type="range" min="0" max="30" step="1" value="0" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0"><div class="rangeslider__fill" style="width: 37px;"></div><div class="rangeslider__handle" style="left: 0px;"><span class="handle__text">0</span></div></div></div>
-
-<div class="money_stack"><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div><div class="dollar" style="opacity: 0;"><img src="/images/slider_dollar.svg"></div></div>
-
-
-
-<!-- burn out wala -->
-<section id="panel-19" class="direction-down panel bck-3 main-down current" data-view="challenge" style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);"><div class="svg-minigame-anim-R"><svg version="1.1" id="minigame-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1091 722" preserveAspectRatio="xMidYMin slice"><polyline id="outline-path" class="path" points="545.5,0,545.5,143,1030,143,1030,715,545.5,715" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></polyline><polyline id="outline" class="line" points="545.5,0,545.5,143,1030,143,1030,715,545.5,715"></polyline></svg></div><div class="svg-minigame-anim"><svg version="1.1" id="minigame-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1091 722" preserveAspectRatio="xMidYMin slice"><polyline id="outline-path" class="path" points="545.5,0,545.5,143,1030,143,1030,715,545.5,715" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></polyline><polyline id="outline" class="line" points="545.5,0,545.5,143,1030,143,1030,715,545.5,715"></polyline></svg></div><div id="optWhackAMole" data-template="whackamole"><div class="whack-a-mole-header"><h3 class="text">DON'T GET BURNED OUT!</h3><h4 class="sub-text">Tap each icon as it lights up. But get ready, because balancing all this isn't easy.</h4></div><div class="whack-a-mole-start"><div class="opt options" onclick="clickWhackAMoleStartGame(event, this);">Play</div></div><div class="whack-a-mole-items"><div class="whack-a-mole-item" data-opacity=".5" onclick="clickWhackAMoleOption(event, this)" data-direction="left"><img class="highlighted" src="images/whack-a-mole/SchoolIcon.svg"> <img class="whack-a-mole-error selection" src="images/whack-a-mole/Ex.svg"> <img class="whack-a-mole-success selection" src="images/whack-a-mole/Check.svg"><div class="whack-a-mole-item-name">School</div></div><div class="whack-a-mole-item" data-opacity=".5" onclick="clickWhackAMoleOption(event, this)" data-direction="down"><img class="highlighted" src="images/whack-a-mole/JobIcon.svg"> <img class="whack-a-mole-error selection" src="images/whack-a-mole/Ex.svg"> <img class="whack-a-mole-success selection" src="images/whack-a-mole/Check.svg"><div class="whack-a-mole-item-name">Work</div></div><div class="whack-a-mole-item" data-opacity=".5" onclick="clickWhackAMoleOption(event, this)" data-direction="down"><img class="highlighted" src="images/whack-a-mole/HomeIcon.svg"> <img class="whack-a-mole-error selection" src="images/whack-a-mole/Ex.svg"> <img class="whack-a-mole-success selection" src="images/whack-a-mole/Check.svg"><div class="whack-a-mole-item-name">Home</div></div><div class="whack-a-mole-item" data-opacity=".5" onclick="clickWhackAMoleOption(event, this)" data-direction="right"><img class="highlighted" src="images/whack-a-mole/FriendsIcon.svg"> <img class="whack-a-mole-error selection" src="images/whack-a-mole/Ex.svg"> <img class="whack-a-mole-success selection" src="images/whack-a-mole/Check.svg"><div class="whack-a-mole-item-name">Fun</div></div></div><div class="whack-a-mole-meter"><div class="bar bar-whack-a-mole"><div class="bar-text">BURNOUT</div><div class="value"><img src="images/whack-a-mole/MeterIcon.svg"></div></div></div></div></section>
-
-<!-- register  -->
-<div id="optRegister" data-template="register"><div class="register-header"><h3 class="text">TIME TO REGISTER FOR CLASSES</h3><h4 class="sub-text">The courses you need fill up quickly. Tap or click the screen as fast as you can to get all four classes before time runs out.</h4></div><div class="register-timer"><div class="countdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 112"><rect class="piece" x="2" y="2" width="120" height="56" rx="28" ry="28" fill="#1e2633" style="fill: rgb(159, 32, 70);"></rect><path class="piece" d="M62,30h0A18.05,18.05,0,0,1,80,48v64H44V48A18.05,18.05,0,0,1,62,30Z" fill="#1e2633" style="fill: rgb(159, 32, 70);"></path></svg></div><div class="timer" style="position: relative;"><svg viewBox="0 0 100 100" style="width: 100%; height: 100%;"><path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#9F2046" stroke-width="8" fill-opacity="0"></path><path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#03d7c3" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.067, 289.067; stroke-dashoffset: 289.067;"></path></svg><div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(159, 32, 70);">30</div></div><div class="options opt" id="timerForRegisterClasses" onclick="clickStartRegisterClasses(event, this)" data-direction="down">Register</div></div><div class="register-progress"><div class="bar bar-register"><div class="bar-text"><div class="border-container"><div class="border"></div><div class="border"></div><div class="border"></div><div class="border"></div></div><div class="class-text"><div>CLASS 1</div><div>CLASS 2</div><div>CLASS 3</div><div>CLASS 4</div></div></div><div class="value"></div></div></div></div>
-
-
-<!-- minor  -->
-<section id="panel-42" class="direction-down panel bck-2 main-down current" data-view="challenge" style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);">
-    <div class="svg-minigame-anim-R">
-        <svg version="1.1" id="minigame-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1162 722" preserveAspectRatio="xMidYMin slice"><polyline id="outline-path" class="path" points="581,0,581,98,1120.275,98,1120.275,587.8,581,587.8" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></polyline><polyline id="outline" class="line" points="581,0,581,98,1120.275,98,1120.275,587.8,581,587.8"></polyline></svg></div><div class="svg-minigame-anim"><svg version="1.1" id="minigame-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1162 722" preserveAspectRatio="xMidYMin slice"><polyline id="outline-path" class="path" points="581,0,581,98,1120.275,98,1120.275,587.8,581,587.8" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></polyline><polyline id="outline" class="line" points="581,0,581,98,1120.275,98,1120.275,587.8,581,587.8"></polyline></svg>
-        </div>
-        <div id="optMajors" data-template="majors">
+<!-- third year original  -->
+<!-- <section class="bck-3">
+    <div id="optthree" style="position: unset;" class="optHolder" data-template="challenge">
+        <div class="contentWrap">
             <div class="questionWrapper">
                 <div class="question">
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label">You can't be undecided forever. What's your major going to be?</div>
+                    <div class="text label" style="background: #9F2046;">You are 21 now, which means you're eligible to apply for a credit card. What's in your wallet?</div>
                 </div>
                 <div class="borderRight"></div>
                 <div class="borderBottom"></div>
                 <div class="questionShadow"></div>
             </div>
-            <div class="majors-slick slick-initialized slick-slider">
-                <button class="slick-prev slick-arrow" aria-label="Previous" type="button">Previous</button>
-                <div class="slick-list draggable">
-                    <div class="slick-track" style="opacity: 1; width: 19530px; transform: translate3d(-8370px, 0px, 0px);">
-                        <div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="27" data-slick-index="-3" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">PUBLIC HEALTH</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$39,034</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">9.5%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="28" data-slick-index="-2" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">SOCIOLOGY</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$37,930</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">17.6%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="29" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 288px;">				
-                            <div class="major-name">VISUAL &amp; PERFORMING ARTS</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$39,035</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">13.2%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="0" data-slick-index="0" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">AGRICULTURE</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$38,906</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">13.2%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="1" data-slick-index="1" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">ARCHITECTURE</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$43,850</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">16.9%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="2" data-slick-index="2" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">BIOLOGY</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$40,800</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">12.0%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="3" data-slick-index="3" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">BUSINESS</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$45,400</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">11.9%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="4" data-slick-index="4" aria-hidden="true" style="width: 288px;" tabindex="-1">				
-                            <div class="major-name">COMMUNICATIONS</div>				
-                            <div class="major-detail">				
-                                <div class="md-salary">					
-                                    <div class="md-label">starting salary</div>
-                                    <div class="value">$40,574</div>				
-                                </div>				
-                                <div class="md-employmentrate">					
-                                    <div class="md-label">unemployment rate</div>
-                                    <div class="value">13.5%</div>				
-                                </div>				
-                            </div>			
-                        </div>
-                        <div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="5" data-slick-index="5" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">COMPUTER SCIENCE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$65,300</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">10.6%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="6" data-slick-index="6" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">CRIMINAL JUSTICE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,000</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">14.7%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="7" data-slick-index="7" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">CULTURAL STUDIES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$41,000</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.5%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="8" data-slick-index="8" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ECONOMICS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$53,488</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.0%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="9" data-slick-index="9" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">EDUCATION</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,193</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">15.5%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="10" data-slick-index="10" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ENGINEERING</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$63,764</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.5%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="11" data-slick-index="11" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ENGLISH</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,563</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">14.0%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="12" data-slick-index="12" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">FOREIGN LANGUAGES &amp; LINGUISTICS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$40,519</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.6%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="13" data-slick-index="13" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">HEALTH AND FITNESS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$34,086</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">8.6%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="14" data-slick-index="14" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">HISTORY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$40,568</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.9%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="15" data-slick-index="15" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">HUMAN DEVELOPMENT</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$34,090</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">9.2%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="16" data-slick-index="16" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">LAW</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$38,900</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">8.5%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="17" data-slick-index="17" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">LIBERAL ARTS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,100</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.0%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="18" data-slick-index="18" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">MATH AND STATISTICS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$56,127</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">10.4%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="19" data-slick-index="19" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">NATURAL RESOURCES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,368</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">17.9%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="20" data-slick-index="20" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">NURSING</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$55,342</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.3%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="21" data-slick-index="21" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">NUTRITION</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$38,584</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">8.9%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="22" data-slick-index="22" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PHILOSOPHY &amp; RELIGIOUS STUDIES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$42,821</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.4%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="23" data-slick-index="23" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PHYSICAL SCIENCES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$45,507</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.2%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-current slick-active" onclick="clickMajor(event, this)" data-index="24" data-slick-index="24" aria-hidden="false" style="width: 288px;" tabindex="0">				<div class="major-name">POLITICAL SCIENCE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$42,804</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.4%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-active" onclick="clickMajor(event, this)" data-index="25" data-slick-index="25" aria-hidden="false" style="width: 288px;" tabindex="0">				<div class="major-name">PSYCHOLOGY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$36,551</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.7%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-active" onclick="clickMajor(event, this)" data-index="26" data-slick-index="26" aria-hidden="false" style="width: 288px;" tabindex="0">				<div class="major-name">PUBLIC ADMINISTRATION</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,619</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.8%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="27" data-slick-index="27" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PUBLIC HEALTH</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,034</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">9.5%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="28" data-slick-index="28" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">SOCIOLOGY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,930</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">17.6%</div>				</div>				</div>			</div><div class="major-group slick-slide" onclick="clickMajor(event, this)" data-index="29" data-slick-index="29" aria-hidden="true" tabindex="-1" style="width: 288px;">				<div class="major-name">VISUAL &amp; PERFORMING ARTS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,035</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.2%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="0" data-slick-index="30" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">AGRICULTURE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$38,906</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.2%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="1" data-slick-index="31" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ARCHITECTURE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$43,850</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">16.9%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="2" data-slick-index="32" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">BIOLOGY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$40,800</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.0%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="3" data-slick-index="33" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">BUSINESS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$45,400</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.9%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="4" data-slick-index="34" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">COMMUNICATIONS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$40,574</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.5%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="5" data-slick-index="35" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">COMPUTER SCIENCE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$65,300</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">10.6%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="6" data-slick-index="36" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">CRIMINAL JUSTICE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,000</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">14.7%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="7" data-slick-index="37" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">CULTURAL STUDIES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$41,000</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.5%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="8" data-slick-index="38" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ECONOMICS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$53,488</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.0%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="9" data-slick-index="39" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">EDUCATION</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,193</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">15.5%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="10" data-slick-index="40" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ENGINEERING</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$63,764</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.5%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="11" data-slick-index="41" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">ENGLISH</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,563</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">14.0%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="12" data-slick-index="42" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">FOREIGN LANGUAGES &amp; LINGUISTICS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$40,519</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.6%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="13" data-slick-index="43" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">HEALTH AND FITNESS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$34,086</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">8.6%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="14" data-slick-index="44" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">HISTORY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$40,568</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.9%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="15" data-slick-index="45" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">HUMAN DEVELOPMENT</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$34,090</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">9.2%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="16" data-slick-index="46" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">LAW</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$38,900</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">8.5%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="17" data-slick-index="47" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">LIBERAL ARTS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,100</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">12.0%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="18" data-slick-index="48" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">MATH AND STATISTICS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$56,127</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">10.4%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="19" data-slick-index="49" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">NATURAL RESOURCES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,368</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">17.9%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="20" data-slick-index="50" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">NURSING</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$55,342</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.3%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="21" data-slick-index="51" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">NUTRITION</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$38,584</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">8.9%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="22" data-slick-index="52" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PHILOSOPHY &amp; RELIGIOUS STUDIES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$42,821</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.4%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="23" data-slick-index="53" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PHYSICAL SCIENCES</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$45,507</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.2%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="24" data-slick-index="54" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">POLITICAL SCIENCE</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$42,804</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.4%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="25" data-slick-index="55" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PSYCHOLOGY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$36,551</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.7%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="26" data-slick-index="56" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PUBLIC ADMINISTRATION</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,619</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">11.8%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="27" data-slick-index="57" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">PUBLIC HEALTH</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,034</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">9.5%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="28" data-slick-index="58" aria-hidden="true" style="width: 288px;" tabindex="-1">				<div class="major-name">SOCIOLOGY</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$37,930</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">17.6%</div>				</div>				</div>			</div><div class="major-group slick-slide slick-cloned" onclick="clickMajor(event, this)" data-index="29" data-slick-index="59" aria-hidden="true" tabindex="-1" style="width: 288px;">				<div class="major-name">VISUAL &amp; PERFORMING ARTS</div>				<div class="major-detail">				<div class="md-salary">					<div class="md-label">starting salary</div><div class="value">$39,035</div>				</div>				<div class="md-employmentrate">					<div class="md-label">unemployment rate</div><div class="value">13.2%</div>				</div>				</div>			</div></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button">Next</button></div></div></section>
+            <div class="optionWrap left-opt">
+                <div class="opt options" onclick="clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="452" data-challenge="92">Credit Cards are Scary</div>
+                <div class="optDebt">$585</div>
+                <div class="svg-opt-anim">
+                </div>
+            </div>
+            <div class="optionWrap down-opt">
+                <div class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="453" data-challenge="92">Maybe One Card</div>
+                <div class="optDebt">$585</div>
+                <div class="svg-opt-anim svg-anim">
+                </div>
+            </div>
+            <div class="optionWrap right-opt">
+                <div class="opt options" onclick="clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="454" data-challenge="92">Give Me All the Cards</div>
+                <div class="optDebt">$585</div>
+                <div class="svg-opt-anim">
+                </div>
+            </div>
+        </div>
+        <div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 216px; margin-left: -2px;">
+            <div class="svg-down-anim">
+            </div>
+        </div>
+    </div>
+</section> -->
 
-
-
-
-
-
-
-
-
-
-
-<!-- third year original  -->
-<section class="bck-3">
-<div id="optthree" style="position: unset;" class="optHolder" data-template="challenge"><div class="contentWrap"><div class="questionWrapper"><div class="question"><div class="borderTop"></div><div class="borderLeft"></div><div class="text label">You are 21 now, which means you're eligible to apply for a credit card. What's in your wallet?</div></div><div class="borderRight"></div><div class="borderBottom"></div><div class="questionShadow"></div></div><div class="optionWrap left-opt"><div class="opt options" onclick="clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="452" data-challenge="92">Credit Cards are Scary</div><div class="svg-opt-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg></div></div><div class="optionWrap down-opt"><div class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="453" data-challenge="92">Maybe One Card</div><div class="svg-opt-anim svg-anim"><svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg></div></div><div class="optionWrap right-opt"><div class="opt options" onclick="clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="454" data-challenge="92">Give Me All the Cards</div><div class="svg-opt-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg></div></div></div><div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 216px; margin-left: -2px;"><div class="svg-down-anim"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 216" preserveAspectRatio="xMidYMin slice"><line class="path" x1="1.5" y1="0" x2="1.5" y2="216" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="1.5" y1="0" x2="1.5" y2="216"></line></svg></div></div></div>
-</section>
-
+<!--   GAME PAGE  -->
 
 
 <!-- END OF Third YEAR ============================== -->
@@ -789,8 +673,11 @@
 
 
 <!-- shop js here -->
+<script src="{% static 'payback/js/firstyear/shop/templates.js' %}"></script>
 <script src="{% static 'payback/js/firstyear/shop/libraries.js' %}"></script>
 <script src="{% static 'payback/js/firstyear/shop/ap.js' %}"></script>
+
+
 <!-- shop js here -->
 
 
@@ -798,7 +685,7 @@
 
 <script>
     $( window ).on( "load", end_to_start());
-    
+    // $( window ).on( "load", loadRegisterTemplate());
     
     </script>
     
