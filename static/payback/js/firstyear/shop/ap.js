@@ -127,7 +127,9 @@ var introAnimation, //timeline for intro animation
 	whackAMoleTimerMin = 800,
 	whackAMoleTimerMax = 1250,
 	shop_money = 0,
+	scor = ""
 	loan = 100000,
+	sh_v = 0
 	first_year_score_storing_array = [0,0,0,0]// focus , conn, happ , debt ;
 	shoppingCartItems = [{
 		imageUrl: 'images/bath-towel.svg',
@@ -8526,8 +8528,18 @@ function stayinout(x){
 
 }
 
+function callfunc(x){
+	scor = x;
+	console.log(x);
+	sh_v = 1
+	window.location = "../secondyear/#p9"
+	
+}
+function nextfunc(){
+	if (sh_v === 1){
+		document.getElementById('p9').scrollIntoView();
+	}
+	
+}
 
 
-var scor = require("./game.js").scor;
-
-console.log(scor)

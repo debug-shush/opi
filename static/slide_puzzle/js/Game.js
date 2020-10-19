@@ -426,7 +426,7 @@ class Game {
         if (!(this.gameLevel === 4)) {
             let nextLevelEl = createElement('div', {
                 className: 'win-controls__next'
-            }, 'Next level')
+            }, 'Submit')
             nextLevelEl.addEventListener('click', () => {
                 this.isWin = true;
                 startGame({
