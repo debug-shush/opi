@@ -1,16 +1,19 @@
 var $, TweenLite, con = console, z = 50, x, y = z/2;
 con.log(x,y,z)
+var scor = $('.score .current').text()
+
 $ ? con.log('jquery ready') : con.log('jquery failed');
 TweenLite ? con.log('gsap ready') : con.log('gsap failed')
 /////////////////////////////////////////////////////////////
 //--------------------------------------------------
 
 $('.start-button').click(function(){
+  // return scor
   var x = $('.main-screen');
   h = x.height();h2=0-h;
   TweenLite.to(x,1,{top:h2,ease:Power3.easeInOut,onComplete:theGame})
 })
- 
+
 //--------------------------------------------------
 function theGame(){
 
@@ -76,9 +79,9 @@ function theGame(){
       }
       else{
         console.log('missed');
-        scorePopUp(curmp.x,curmp.y,1,'-');
+        scorePopUp(curmp.x,curmp.y,4,'-');
         var x = Number($('.score span.current').text());
-        if(x>0)x--;
+        if(x>4){x-=4;}
         $('.score span .current').text(x);
         logScore(x);
       }
@@ -129,4 +132,9 @@ function endScreen(){
       "This Round's Score: <br />"+$('.score .current').text()+'<br /><br />'
     )
   },1000);
+
+  
+  module.exports.scor = scor;
 }
+
+

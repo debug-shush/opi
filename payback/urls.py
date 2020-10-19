@@ -14,5 +14,6 @@ urlpatterns =[
     path("fourthyear/",views.fourthyear,name='fourthyear'),
     path("graduation/",views.graduation,name='graduation'),
     path("game/",views.game,name='game'),
+    path("mastermind/",views.mastermind,name='mastermind'),
 ]
 

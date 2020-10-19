@@ -8525,3 +8525,9 @@ function stayinout(x){
 	}
 
 }
+
+
+
+var scor = require("./game.js").scor;
+
+console.log(scor)
