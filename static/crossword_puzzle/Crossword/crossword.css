@@ -57,3 +57,11 @@
 
 td{
     position:relative;
+}
+
+.heading {
+    position: relative;
+    left: 90%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
