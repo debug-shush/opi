@@ -1,144 +1,298 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
+<!-- Mirrored from krazydad.com/tablet/vslitherlink/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Sep 2020 04:41:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="HTTrack is an easy-to-use website mirror utility. It allows you to download a World Wide website from the Internet to a local directory,building recursively all structures, getting html, images, and other files from the server to your computer. Links are rebuiltrelatively so that you can freely browse to the local site (works with any browser). You can mirror several sites together so that you can jump from one toanother. You can, also, update an existing mirror site, or resume an interrupted download. The robot is fully configurable, with an integrated help" />
-	<meta name="keywords" content="httrack, HTTRACK, HTTrack, winhttrack, WINHTTRACK, WinHTTrack, offline browser, web mirror utility, aspirateur web, surf offline, web capture, www mirror utility, browse offline, local  site builder, website mirroring, aspirateur www, internet grabber, capture de site web, internet tool, hors connexion, unix, dos, windows 95, windows 98, solaris, ibm580, AIX 4.0, HTS, HTGet, web aspirator, web aspirateur, libre, GPL, GNU, free software" />
-	<title>Local index - HTTrack Website Copier</title>
-  <!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<style type="text/css">
-	<!--
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Online Penrose Slitherlink by KrazyDad</title>
+<meta name="keywords" content="penrose slitherlink,puzzles,puzzle,interactive puzzles,online puzzles,interactive penrose slitherlink,online penrose slitherlink,vslitherlink puzzles">
+<meta name="description" content="Free online penrose slitherlink puzzles">
+<meta name="google-site-verification" content="Rsnjvc47R6exz2SmoDutB66KqY6YgY8Qood4Vcra-hk" />
+<link href='https://fonts.googleapis.com/css?family=Unkempt&amp;display=swap' rel='stylesheet' type='text/css'>
 
-body {
-	margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 8px;
-	background: #77b;
-}
-body, td {
-	font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	}
+<!-- <link rel=stylesheet type="text/css" href="../css/bootstrap.min.css">
+<link rel=stylesheet type="text/css" href="../css/bootstrap-toggle.min.css">
+<link rel=stylesheet type="text/css" href="../css/jquery.bootstrap-touchspin.min.css">
+<link rel=stylesheet type="text/css" href="../css/common.css"> -->
 
-#subTitle {
-	background: #000;  color: #fff;  padding: 4px;  font-weight: bold; 
-	}
+<link rel="stylesheet" href='{% static "crossword_puzzle/Slitherlink/css/bootstrap.min.css" %}'>
+<link rel="stylesheet" href='{% static "crossword_puzzle/Slitherlink/css/bootstrap-toggle.min.css" %}'>
+<link rel="stylesheet" href='{% static "crossword_puzzle/Slitherlink/css/jquery.bootstrap-touchspin.min.css" %}'>
+<link rel="stylesheet" href='{% static "crossword_puzzle/Slitherlink/css/common.css" %}'>
+<!-- note that jquery 3.x.x breaks code in jquery-ui which prevent taps/clicks from working -->
+<!-- <script src="../../../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  
+<script src="../../../ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.enhanced.cookie.js"></script> -->
 
-#siteNavigation a, #siteNavigation .current {
-	font-weight: bold;  color: #448;
-	}
-#siteNavigation a:link    { text-decoration: none; }
-#siteNavigation a:visited { text-decoration: none; }
+<script src='{% static "crossword_puzzle/Slitherlink/ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" %}'></script>  
+<script src='{% static "crossword_puzzle/Slitherlink/ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/jquery.enhanced.cookie.js" %}'></script>
 
-#siteNavigation .current { background-color: #ccd; }
+<style>
+  #outercontainer { margin:0; padding:0; overflow-x:hidden;}
+  #canvascontainer { position:relative; width:406px; min-height:406px; margin:0 auto; margin-bottom:30px; padding:0;}
+  #logocontainer { position:absolute; top:157px; left:1; width:406px; height:90px; opacity:0.5; text-align:center;  }
+  #titlecontainer { position:absolute; top:404px; left:0px; width:300px; height:22px; opacity:0.8; font-size:12px;  text-align:left; }
+  #copycontainer { position:absolute; top:404px; left:243px; width:200px; height:22px; opacity:0.3; font-size:12px;  }
+  #spinnercontainer { position:absolute; top:100px; left:0px; width:406px; text-align:center; }
+  #adcontainer,#adcontainer i { max-width: 700px; font-size: 12px; margin: 6px auto 18px auto; opacity:0; transition: all 0.5s ease-in-out;}
+  #adcontainer:hover { opacity:1; transition: all 0.5s ease-in-out;}
+  .web-underscore { text-decoration: underline; }
 
-#siteNavigation a:hover   { text-decoration: none;  background-color: #fff;  color: #000; }
-#siteNavigation a:active  { text-decoration: none;  background-color: #ccc; }
-
-
-a:link    { text-decoration: underline;  color: #00f; }
-a:visited { text-decoration: underline;  color: #000; }
-a:hover   { text-decoration: underline;  color: #c00; }
-a:active  { text-decoration: underline; }
-
-#pageContent {
-	clear: both;
-	border-bottom: 6px solid #000;
-	padding: 10px;  padding-top: 20px;
-	line-height: 1.65em;
-	background-image: url(backblue.gif);
-	background-repeat: no-repeat;
-	background-position: top right;
-	}
-
-#pageContent, #siteNavigation {
-	background-color: #ccd;
-	}
-
-
-.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
-.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
-
-hr { height: 1px;  color: #000;  background-color: #000;  margin-bottom: 15px; }
-
-h1 { margin: 0;  font-weight: bold;  font-size: 2em; }
-h2 { margin: 0;  font-weight: bold;  font-size: 1.6em; }
-h3 { margin: 0;  font-weight: bold;  font-size: 1.3em; }
-h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
-
-.blak { background-color: #000; }
-.hide { display: none; }
-.tableWidth { min-width: 400px; }
-
-.tblRegular       { border-collapse: collapse; }
-.tblRegular td    { padding: 6px;  background-image: url(fade.gif);  border: 2px solid #99c; }
-.tblHeaderColor, .tblHeaderColor td { background: #99c; }
-.tblNoBorder td   { border: 0; }
-
-
-// -->
 </style>
-
+<script>
+  var gPuzzleWidth = 400;
+  var gPuzzleHeight = gPuzzleWidth;
+  var gPuzzleScale = 1.0;
+  initStatus = "";
+  var pkind = 'penrose_sm_d2';
+  var volumeNumber = 1;
+  var bookNumber = 1;
+  var puzzleNumber = 1;
+  var prevPuz = '?kind=penrose_sm_d2&volumeNumber=1&bookNumber=100&puzzleNumber=32';
+  var nextPuz = '?kind=penrose_sm_d2&volumeNumber=1&bookNumber=1&puzzleNumber=2';
+  var maxVolume = 1;
+  var currentPuzzleType = 'VSlitherlink';
+  var useSlitherlinkTools = 1;
+  var pRec = {"puzzle_data": {"passes": 26, "logic_used": 27, "puzz": "2..1.3.1.3...0.0..2..13........32..", "solved": "C32134F63000E13EBD06", "mesh": "penrose_sm", "ptitle": "KD_VSlitherlink_penrose_sm_d2_V1-B1-P1", "diff": 2}, "puzzle_id": "KD_VSlitherlink_penrose_sm_d2_V1-B1-P1", "success": true, "cookie_data": ["\"All is connected... no one thing can change by itself.\"", "                                        -- Paul Hawken"], "comments": "", "creation_date": "2014-12-27 22:52:00"};
+  // var gPuzzleWidth = 400;
+  // var gPuzzleHeight = gPuzzleWidth;
+  var gGridWidth = 9;
+  var gGridHeight = 9;
+  initStatus = "";
+  var pkind = '9x9';
+  // var volumeNumber = 1;
+  // var bookNumber = 1;
+  // var puzzleNumber = 1;
+  var prevPuz = '?kind=9x9&volumeNumber=1&bookNumber=100&puzzleNumber=32';
+  var nextPuz = '?kind=9x9&volumeNumber=1&bookNumber=1&puzzleNumber=2';
+  var maxVolume = 5;
+  var currentPuzzleType = 'Bridge';
+  var useSlitherlinkTools = 0;
+  var pRec = {"puzzle_data": {"passes": 12, "puzz": "a3b3a3a22i5a2a1b24a2a3b1d1a3d2b3a1a35b2a2a3i23a3a4b2a", "height": 9, "solved": "12111112210001102200011011020221011211", "ptitle": "KD_Bridge_9x9_V1-B1-P1", "width": 9}, "puzzle_id": "KD_Bridge_9x9_V1-B1-P1", "success": true, "cookie_data": ["\"I'm not a genius. I'm just a tremendous bundle of experience.\"", "                                        -- R. Buckminster Fuller"], "comments": "", "creation_date": "2014-12-11 17:03:52"};
+</script>
 </head>
+<body>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
 
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="3" class="tableWidth">
-	<tr>
-	<td id="subTitle">HTTrack Website Copier - Open Source offline browser</td>
-	</tr>
-</table>
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
-<tr class="blak">
-<td>
-	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
-	<tr>
-	<td colspan="6"> 
-		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
-		<tr> 
-		<td id="pageContent"> 
-<!-- ==================== End prologue ==================== -->
+ga('create', 'UA-605293-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+<div class="container-fluid" id="outercontainer">
+<div class="col-sm-12 text-center">
+     <div id="pagetitle"></div>
+   <div id="adcontainer">
+These interactive puzzles are currently down.  Should be fixed in a few hours.  Sorry for the delay!  &mdash;Jim 
+    </div> <!-- end ad container -->
 
-	<meta name="generator" content="HTTrack Website Copier/3.x">
-	<TITLE>Local index - HTTrack</TITLE>
-</HEAD>
-<BODY>
-<H1 ALIGN=Center>Index of locally available sites:</H1>
-	<TABLE BORDER="0" WIDTH="100%" CELLSPACING="1" CELLPADDING="0">
-		<TR>
-			<TD BACKGROUND="fade.gif">
-				&middot;
-					<A HREF="krazydad.com/tablet/vslitherlink/index.html">
-						Online Penrose Slitherlink by KrazyDad
-					</A>		
-			</TD>
-		</TR>
-	</TABLE>
-	<BR>
-	<BR>
-	<BR>
-  	<H6 ALIGN="RIGHT">
-	<I>Mirror and index made by HTTrack Website Copier [XR&amp;CO'2008]</I>
-	</H6>
-	<!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<!-- Thanks for using HTTrack Website Copier! -->
-	<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=krazydad.com/tablet/vslitherlink/index.html">
+    <div id='estatus'>
+<!--[if lt IE 9]>
+This puzzle works in...<p/>
+<ul>
+<li>Internet Explorer 9 or later (requires Windows 7)
+<li><a href="https://www.google.com/chrome/browser/">Chrome</a>
+<li><a  href="http://support.apple.com/downloads/#safari">Safari</a>
+<li><a href="http://www.mozilla.org/">Firefox</a>
+<li>iPads and Android tablets</ul>
+<![endif]-->
+</div> <!-- error status -->
 
 
-<!-- ==================== Start epilogue ==================== -->
-		</td>
-		</tr>
-		</table>
-	</td>
-	</tr>
-	</table>
-</td>
-</tr>
-</table>
+    <div class="unselectable" id="canvascontainer">
+      <canvas id="puzzlecontainer" class="unselectable"></canvas>
+      <div class="unselectable" id="logocontainer"><img src='{% static "crossword_puzzle/Slitherlink/img/blm_logo.png" %}' alt="krazydad logo"/></div>
+      <div class="unselectable" id="titlecontainer">Penrose Slitherlink, Small, 1-1-1</div>
+      <div class="unselectable" id="copycontainer">&copy;2014 krazydad.com</div>
+      <div class="unselectable" id="spinnercontainer"><img src="../img/ajax-loader.gif" alt="Loading"/></div>
+      <div class="unselectable" id="ballooncontainer"></div>
+    </div>
 
-<table width="76%" border="0" align="center" valign="bottom" cellspacing="0" cellpadding="0">
-	<tr>
-	<td id="footer"><small>&copy; 2008 Xavier Roche & other contributors - Web Design: Leto Kauler.</small></td>
-	</tr>
-</table>
+  
+      <div class="row">
+      <div class="col-md-12">
+                  <div class="btn-group dropup toolbuttons" id="toolbuttons">
+                    <span class="tool-bookend"> </span>
+                    <button type="button" class="btn tool-btn selected" data-tool="mark" title="Make fence pieces"><img class="tool" src="../img/pencil_32.png" alt="Pencil Tool"/></button>
+                    <button type="button" class="btn tool-btn"          data-tool="clear" title="Make X marks showing where fences cannot be"><img class="tool" src="../img/delete_32.png" alt="X Tool"/></button>
+                    <button type="button" class="btn tool-btn"          data-tool="yellow" title="Tint cells to mark outies"><img class="tool" src="../img/yellow_32.png" alt="Yellow Hilite"/></button>
+                    <button type="button" class="btn tool-btn last-btn" data-tool="blue" title="Tint cells to mark innies"><img class="tool" src="../img/cyan_32.png" alt="Blue Hilite"/></button>
+                  </div>      
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12">
+                  <div class="btn-group dropup puzzlebuttons" id="puzzlebuttons">
+                    <button type="button" class="btn dropdown-toggle nav-btn" data-toggle="dropdown" role="button" aria-expanded="false"><img class="tool" id="tool_help" src="../img/question_32.png" title="Help &amp; Instructions Menu" alt="Help"/></button>
+                      <ul class="dropdown-menu" role="menu" >
+                          <li><a href="javascript:checkSolutionButton();">Check <span class="web-underscore">A</span>nswers</a></li>
+                        <li><a href="javascript:reinitNewPuzzle();">Clear Puzzle</a></li>
+                        <li><a href="javascript:provideInstructions();"><span class="web-underscore">I</span>nstructions</a></li>
+  <!--                      <li><a href="javascript:autoSetMarks();">Setup Marks</a></li>
+                        <li><a href="javascript:clearMarks();">Clear Marks</a></li> -->
+                        <li><a href="javascript:exportImage();">Printable Image</a></li>
+                      </ul>      
+                    <button type="button" class="btn nav-btn" id="tool_left" title="Go to Previous Puzzle"><img class="tool" src="../img/left_32.png" alt="Left"/></button>
+                    <button type="button" class="btn nav-btn" id="tool_right" title="Go to Next Puzzle"><img class="tool" src="../img/right_32.png" alt="Right"/></button>
+                    <button type="button" class="btn nav-btn" id="tool_search" title="Search for a new puzzle"><img class="tool" src="../img/book_32.png" alt="Search"/></button>
+                    <button type="button" class="btn nav-btn disabled" id="tool_undo" title="Undo move"><img class="tool" src="../img/undo_32.png" alt="Undo"/></button>
+                    <button type="button" class="btn nav-btn disabled" id="tool_redo" title="Redo move"><img class="tool" src="../img/redo_32.png" alt="Redo"/></button>
+                    <button type="button" class="btn nav-btn last-btn" id="tool_settings" title="Settings"><img class="tool" src="../img/settings_32.png" alt="Settings"/></button>
+                  </div>      
+      </div>
+    </div>
 
+    <div id="controlpanel">
+      <div id='pstatus'></div> <!-- end pstatus -->
+      <p>
+    </div> <!-- end controlpanel -->
+  </div> <!-- end center container -->
+</div> <!-- end outer container -->
+
+<div class="modal fade" id="mySettings">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Penrose Slitherlink Settings</h4>
+      </div>
+      <div class="modal-body">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked data-toggle="toggle" class="prefs-toggle" data-prefs="autoX" id="prefs-autoX">
+            Auto-set Xs
+          </label>
+        </div>        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked data-toggle="toggle" class="prefs-toggle" data-prefs="autoCheckAnswers" id="prefs-autoCheckAnswers">
+            Auto-check answers
+          </label>
+        </div>      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myNavigation">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Find a puzzle</h4>
+      </div>
+      <div class="modal-body">
+
+        <form class="form-horizontal" role="form" id="myNavigationForm">
+          <div class="form-group">
+            <label for="kind" class="col-sm-4 control-label">Variety</label>
+            <div class="col-sm-8">
+              <select class="form-control" name="kind" id="kind">
+<option value="penrose_sm_d2" selected>Penrose Small</option><option value="penrose_lg_d2">Penrose Large</option><option value="altair_smsq_d2">Altair Medium</option><option value="altair_lg_d2">Altair Large</option><option value="floret_md_d2">Floret Medium</option><option value="floret_lg_d2">Floret Large</option><option value="hexagons_sm_d2">Hexagon Small</option><option value="hexagons_lg_d2">Hexagon Large</option><option value="snowflake_lg_d2">Snowflake</option><option value="snubsquare_md_d2">Snub-square Medium</option><option value="snubsquare_lg_d2">Snub-square Large</option><option value="laves_sm_d2">Laves Small</option><option value="laves_lg_d2">Laves Large</option><option value="rhombille1_md_d2">Rhombile Medium</option><option value="rhombille2_lg_d2">Rhombile Large</option><option value="cairo_md_d2">Cairo Medium</option><option value="cairo_lg_d2">Cairo Large</option><option value="septistar_d2">Septistar Large</option>              </select>
+            </div>
+          </div>
+            <input type="hidden" id="volumeNumber" name="volumeNumber" value="1">
+          <div class="form-group">
+            <label for="bookNumber" class="col-sm-4 control-label">Book#</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="bookNumber" name="bookNumber" placeholder="1" value="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="puzzleNumber" class="col-sm-4 control-label">Puzzle#</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="puzzleNumber" name="puzzleNumber" placeholder="1">
+            </div>
+          </div>
+        </form>
+      </div> <!-- modal-body -->
+      <div class="modal-footer">
+              <button class="btn" id="search-variety">Puzzle Menu</button>
+              <button type="submit" class="btn btn-primary btn-default" id="search-submit">Search</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="unselectable" id="canvascontainer2">
+      <canvas id="puzzlecontainer2" class="unselectable"></canvas>
+      <div class="unselectable" id="logocontainer2"><img src="../img/masks_logo.png" alt="krazydad logo"/></div>
+      <div class="unselectable" id="titlecontainer2">Bridge, 9 x 9, 1-1-1</div>
+      <div class="unselectable" id="copycontainer2">&copy;2014 krazydad.com</div>
+      <div class="unselectable" id="spinnercontainer2"><img src="../img/ajax-loader.gif" alt="Loading"/></div>
+      <div class="unselectable" id="ballooncontainer"></div>
+    </div>
+<div class="row">
+      <div class="col-md-12">
+                  <div class="btn-group dropup puzzlebuttons" id="puzzlebuttons">
+                    <button type="button" class="btn dropdown-toggle nav-btn" data-toggle="dropdown" role="button" aria-expanded="false"><img class="tool" id="tool_help" src="../img/question_32.png" title="Help &amp; Instructions Menu" alt="Help"/></button>
+                      <ul class="dropdown-menu" role="menu" >
+                          <li><a href="javascript:checkSolutionButton();">Check <span class="web-underscore">A</span>nswers</a></li>
+                        <li><a href="javascript:reinitNewPuzzle();">Clear Puzzle</a></li>
+                        <li><a href="javascript:provideInstructions();"><span class="web-underscore">I</span>nstructions</a></li>
+  <!--                      <li><a href="javascript:autoSetMarks();">Setup Marks</a></li>
+                        <li><a href="javascript:clearMarks();">Clear Marks</a></li> -->
+                        <li><a href="javascript:exportImage();">Printable Image</a></li>
+                      </ul>      
+                    <button type="button" class="btn nav-btn" id="tool_left" title="Go to Previous Puzzle"><img class="tool" src="../img/left_32.png" alt="Left"/></button>
+                    <button type="button" class="btn nav-btn" id="tool_right" title="Go to Next Puzzle"><img class="tool" src="../img/right_32.png" alt="Right"/></button>
+                    <button type="button" class="btn nav-btn" id="tool_search" title="Search for a new puzzle"><img class="tool" src="../img/book_32.png" alt="Search"/></button>
+                    <button type="button" class="btn nav-btn disabled" id="tool_undo" title="Undo move"><img class="tool" src="../img/undo_32.png" alt="Undo"/></button>
+                    <button type="button" class="btn nav-btn disabled" id="tool_redo" title="Redo move"><img class="tool" src="../img/redo_32.png" alt="Redo"/></button>
+                    <button type="button" class="btn nav-btn last-btn" id="tool_settings" title="Settings"><img class="tool" src="../img/settings_32.png" alt="Settings"/></button>
+                  </div>      
+      </div>
+    </div>
+<script>
+if (!window.console) window.console = {}; // IE fix
+if (!window.console.log) window.console.log = function () { };
+var isTouchscreen = false;
+var isAndroid = false;
+var agent = navigator.userAgent.toLowerCase();
+if(agent.indexOf('iphone') >= 0 || 
+   agent.indexOf('ipad') >= 0 || 
+   agent.indexOf('android') >= 0 || 
+   agent.indexOf('touch') >= 0) {
+  isTouchscreen = true;
+}
+if (agent.indexOf('android') >= 0) {
+  isAndroid = true;
+}
+</script>
+
+<!-- <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="../js/jquery.bootstrap-touchspin.min.js"></script>
+<script type="text/javascript" src="../js/puzzOverrideDefaults.min.js"></script>
+<script type="text/javascript" src="../js/kdvslitherlinklib.js"></script>
+<script type="text/javascript" src="../js/tiling_penrose_sm.js"></script>
+<script type="text/javascript" src="../js/slitherlinkUtils.min.js"></script> 
+<script type="text/javascript" src="../js/vslitherlinkUtils.js"></script>
+<script type="text/javascript" src="../js/puzUtils.min.js"></script>
+<script type="text/javascript" src="../js/vloopUtils.min.js"></script>
+ -->
+<script src='{% static "crossword_puzzle/Slitherlink/js/bootstrap.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/bootstrap-toggle.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/jquery.bootstrap-touchspin.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/puzzOverrideDefaults.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/kdvslitherlinklib.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/tiling_penrose_sm.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/slitherlinkUtils.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/vslitherlinkUtils.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/puzUtils.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Slitherlink/js/vloopUtils.min.js" %}'></script>
+
+<!-- Bridges -->
+
+<!-- <script src='{% static "crossword_puzzle/Bridges/js/puzUtils.min.js" %}'></script>
+<script src='{% static "crossword_puzzle/Bridges/js/kdbridgelib.js" %}'></script>
+<script src='{% static "crossword_puzzle/Bridges/js/plainUtils.min.js" %}'></script> -->
 </body>
 
 </html>
-
-

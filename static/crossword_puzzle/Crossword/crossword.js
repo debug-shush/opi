@@ -1,93 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Crossword</title>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <style>
-        #puzzle {
-	width:100%;
-	margin: 0;
-	padding: 10px;
-	border: 1px solid black;
-}
-
-.square{
-	width:30px;
-	height:30px;
-	margin: 0;
-	padding: 0;
-	border-collapse: collapse;
-    position: relative;
-}
-
-.empty{
-    background-color:white;
-}
-
-.letter{
-    border: 1px solid black;
-    text-align: center;
-    cursor: pointer;
-}
-
-#puzzle_container{
-	float: left;
-	width:50%
-	height: 50%;
-}
-
-#hints_container{
-	float: left;
-	width:50%
-	height: 50%;
-    margin-left: 25px;
-}
-
-#buttons_container{
-    clear: both;
-    padding-top: 20px;
-    margin-left: 50px;
-}
-
-.active{
-    border-color: red;
-}
-
-.question_number{
-    position: absolute;
-    font-size: 12px;
-    color: grey;
-    left: 3px;
-    top: 3px;
-}
-
-td{
-    position:relative;
-}
-    </style>
-    
-    </head>
-  <body>
-    <div id="puzzle_container">
-        <table id="puzzle">
-        </table>
-    </div>
-
-    <div id="hints_container">
-        <h3>Vertical</h3>
-            <div id="vertical_hints_container"></div>
-        <h3>Horizontal</h3>
-            <div id="horizontal_hints_container"></div>
-    </div>
-
-    <div id="buttons_container">
-        <button id="clear_all">Clear All</button>
-        <button id="check">Check</button>
-        <button id="solve">Solve</button>
-        <button id="clue">Clue</button>
-    </div>
-<script>
-        var grid = [    [0, '1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         var grid = [    [0, '1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                         [0, '1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                         [0, '1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                         [0, '1', 0, 0, 0, 0, 0, 0, 0, 0, '2', 0, 0, 0, 0],
@@ -115,15 +26,15 @@ var clues = ["bee",
              "End is the beginning and beginning is the end"
             ];
 
-var answers = ["pollinate",
-             "hearing",
-             "notch",
-             "inmates",
-             "trace",
-             "conceal",
-             "target",
-             "Linear",
-             "technothlon"
+var answers = ["POLLINATE",
+             "HEARING",
+             "NOTCH",
+             "INMATES",
+             "TRACE",
+             "CONCEAL",
+             "TARGET",
+             "LINEAR",
+             "TECHNOTHLON"
             ];
 
 //Draw grid
@@ -323,14 +234,19 @@ function checkAnswer(question_number){
     
     if(direction == "horizontal"){
         for(var i = 0; i < answer_letters.length; i++){
+            var x  = $("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").text();
+            console.log(x)
             if($("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").text() != question_answer[i] && $("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").text() != ""){
                 $("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").css("color","red");
+
             }
         }
          
     }
     else if(direction == "vertical"){
         for(var i = 0; i < answer_letters.length; i++){
+            var y  = $("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").text();
+            console.log(y)
             if($("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").text() != question_answer[i] && $("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").text() != ""){
                 $("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").css("color","red");
             }
@@ -352,9 +268,3 @@ function showClue(question_number,i,j){
         $("#puzzle tr:nth-child("+(j+1)+") td:nth-child("+(i+1)+") div").text(answer_letters[j - startpos[1]]).css("color","initial");
     }
 }
-
-    </script>
-  </body>      
-
-
-</html>

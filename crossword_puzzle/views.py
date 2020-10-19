@@ -10,7 +10,7 @@ from django.conf import settings
 from django.template.loader import render_to_string
 
 def puzzle_view(request):
-	return render(request, 'crossword_begining.html')
+	return render(request, 'crossword_begining.html', {'row': 15})
 
 def age_sum(request):
 	return render(request, 'agesum.html')
