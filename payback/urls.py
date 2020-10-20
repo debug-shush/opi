@@ -17,5 +17,8 @@ urlpatterns =[
     path("mastermind/",views.mastermind,name='mastermind'),
     path("crossword/",views.crossword,name='crossword'),
     path("mysteryroom/",views.mysteryroom,name='mysteryroom'),
+    path("login/", views.login, name='login'),
+    path("firstyearsubmission/", views.firstyear_submission, name='firstyearsubmission'),
+
 ]
 
