@@ -27,8 +27,8 @@
 
   <!-- Add your site or application content here -->
   <header>
-    <h1>Mastermind</h1>
-    <button id="newGame" class="green">Submit</button>
+    <h1 style="color: tomato;"  >Mastermind</h1>
+    
   </header>
   <br>
   <div class="wrapper">
@@ -415,9 +415,14 @@
       <button value="18" id="brown_three" class="option brown_three"></button>
       
     </div>
+    
     <button id="delete" class="">&#8672;</button>
+    <br>
+    <button id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;" >Submit</button>
     </div>
   </div>
+
+  
 
   <div id="modalOverlay">
     <div id="modalMessage">
@@ -425,6 +430,9 @@
       <button class="large primary">Restart</button>
     </div>
   </div>
+
+
+
 
   <script src="{% static 'mastermind/js/main.js' %}"></script>
 
