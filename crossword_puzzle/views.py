@@ -30,7 +30,7 @@ def submission(request):
 		# thirdyear.save()
 
 		thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
-		thirdyear.save();
+		thirdyear.save()
 		data = "Save Successfully"
 		return JsonResponse(data, safe=False)
 
