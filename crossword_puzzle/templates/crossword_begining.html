@@ -299,6 +299,7 @@ function lettersumcheckAnswer(){
   if(lettersum_ans==56){
 
     document.querySelector("#lettersum_result").innerHTML = "<h4>Right Answer. You have unlocked 2 encrypted words in paragraph.</h4>";
+     is_lettersum_solved = 1;
      $('#integrates').text(encryptedWords.integrates);      
      $('#interact').text(encryptedWords.interact);      
 
@@ -347,7 +348,23 @@ for(let i=0; i < 15; i++){
      k++;
   }
 }
-  console.log(submittedCrossword);
+  // console.log(submittedCrossword);
+  $.ajax({
+            type: "POST",
+            url: "{%url 'submission' %}",
+            data: {
+              'submittedCrossword': JSON.stringify(submittedCrossword), csrfmiddlewaretoken: '{{ csrf_token }}',
+              'puzzle_score': puzzle_score,
+              'puzzle_click_used': puzzle_click_used,
+              'is_agesum_solved': is_agesum_solved,
+              'is_lettersum_solved': is_lettersum_solved
+
+            },
+            dataType: 'json',
+            success: function (data) {
+              alert("Your response have been subitted");
+            }
+        });
 });
 
 </script>

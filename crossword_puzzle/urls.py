@@ -7,4 +7,5 @@ urlpatterns =[
     path("agesum",views.age_sum,name='age_sum'),
     path("bridgeconnect",views.bridge_connect,name='bridge_connect'),
     path("slitherlink",views.slither_link,name='slither_link'),
+    path("submission", views.submission, name='submission')
 ]
