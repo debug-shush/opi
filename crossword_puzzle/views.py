@@ -24,17 +24,34 @@ def submission(request):
 		agesum_solved = request.POST.get('is_agesum_solved')
 		letter_sum_solved = request.POST.get('is_lettersum_solved')
 		puzzle_score = request.POST.get('puzzle_score')
-		# thirdyear = Thirdyear.objects.filter(user=request.user)
-		# thirdyear.puzzle_score = puzzle_score
-		# thirdyear.age_sum = agesum_solved
-		# thirdyear.save()
+		thirdyear = Thirdyear.objects.filter(user=request.user)
+		if thirdyear != None:
+			thirdyear.puzzle_score = puzzle_score
+			thirdyear.age_sum = agesum_solved
+			thirdyear.save()
 
-		thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
-		thirdyear.save();
+
+		# thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+		# thirdyear.save();
 		data = "Save Successfully"
 		return JsonResponse(data, safe=False)
 
 	return HttpResponse("get method")
 
 def login(request):
-	pass
+	if request.method == 'POST':
+		username = (request.POST['username'])
+		password = (request.POST['password'])
+		user = authenticate(username=username, password=password)
+		if user is not None:
+			print('user logged in')
+			return redirect('/')
+		else:
+			messages.info(request, 'Invalid Credentials')
+			return redirect('login')
+	else:
+		return render(request, 'login.html')
+# def first_year(request):
+
+# def login(request):
+# 	pass
