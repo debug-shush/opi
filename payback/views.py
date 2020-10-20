@@ -38,3 +38,9 @@ def game(request):
 
 def mastermind(request):
     return render(request, 'mastermind.html')
+
+def crossword(request):
+    return render(request, 'crossword_begining.html')
+
+def mysteryroom(request):
+    return render(request, 'mystery_room.html')

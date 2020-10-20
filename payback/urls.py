@@ -15,5 +15,7 @@ urlpatterns =[
     path("graduation/",views.graduation,name='graduation'),
     path("game/",views.game,name='game'),
     path("mastermind/",views.mastermind,name='mastermind'),
+    path("crossword/",views.crossword,name='crossword'),
+    path("mysteryroom/",views.mysteryroom,name='mysteryroom'),
 ]
 
