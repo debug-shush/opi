@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href='{% static "payback/css/firstyear/app.css" %}'>
     <link rel="stylesheet" href='{% static "payback/css/firstyear/shop.css" %}'>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -633,7 +634,8 @@
                 <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg> -->
             </div>
         </div>
-        <div class="optionWrap right-opt" onclick="document.getElementById('p6').scrollIntoView();"> <!--   clickOutcome('right', 1, event, this)   -->
+        <div class="optionWrap right-opt" onclick="document.getElementById('p6').scrollIntoView();">
+            <!--   clickOutcome('right', 1, event, this)   -->
             <div class="opt options" onclick="seniors(1)" data-direction="right" data-outcome="468"
                  data-challenge="98">Be A Lone Wolf!
             </div>
@@ -692,7 +694,8 @@
                 <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg> -->
             </div>
         </div>
-        <div class="optionWrap right-opt" onclick="document.getElementById('p7').scrollIntoView();"> <!--   clickOutcome('right', 1, event, this)   -->
+        <div class="optionWrap right-opt" onclick="document.getElementById('p7').scrollIntoView();">
+            <!--   clickOutcome('right', 1, event, this)   -->
             <div class="opt options" onclick="job(1)" data-direction="right" data-outcome="468"
                  data-challenge="98">Focus on your Studies
             </div>
@@ -751,7 +754,8 @@
                 <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg> -->
             </div>
         </div>
-        <div class="optionWrap right-opt" onclick="document.getElementById('p8').scrollIntoView();"> <!--   clickOutcome('right', 1, event, this)   -->
+        <div class="optionWrap right-opt" onclick="document.getElementById('p8').scrollIntoView();">
+            <!--   clickOutcome('right', 1, event, this)   -->
             <div class="opt options" onclick="bbq(1)" data-direction="right" data-outcome="468"
                  data-challenge="98">Be a Miser!
             </div>
@@ -810,7 +814,8 @@
                 <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg> -->
             </div>
         </div>
-        <div class="optionWrap right-opt" onclick="document.getElementById('p9').scrollIntoView();"> <!--   clickOutcome('right', 1, event, this)   -->
+        <div class="optionWrap right-opt" onclick="document.getElementById('p9').scrollIntoView();">
+            <!--   clickOutcome('right', 1, event, this)   -->
             <div class="opt options" onclick="kriti(1)" data-direction="right" data-outcome="468"
                  data-challenge="98">My knowledge is sufficient
             </div>
@@ -848,7 +853,7 @@
                 <div class="borderTop"></div>
                 <div class="borderLeft"></div>
                 <div class="text label" style="background: none;">
-                    Its  End of your first year . <br>
+                    Its End of your first year . <br>
                     Time for Exams <br>
                     All the Best :)
                 </div>
@@ -861,14 +866,17 @@
             <div class="options-hidden">hidden option</div>
         </div>
         <div class="optionWrap down-opt" onclick="document.getElementById('p9').scrollIntoView();">
-            <div class="opt options" onclick="" data-direction="down" data-outcome="467"
-                 data-challenge="98"> <a href="{%url 'kenken'%}" style="background: none;" onMouseOver="this.style.color='#fff0d2'" onMouseOut="this.style.color='#fff0d2'" >  Start EXAM </a>
+            <div id="firstyearbutton" class="opt options" onclick="" data-direction="down" data-outcome="467"
+                 data-challenge="98"><a href="{% url 'kenken' %}" style="background: none;"
+                                        onMouseOver="this.style.color='#fff0d2'"
+                                        onMouseOut="this.style.color='#fff0d2'"> Start EXAM </a>
             </div>
             <div class="svg-opt-anim svg-anim">
                 <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg> -->
             </div>
         </div>
-        <div class="optionWrap right-opt" onclick="document.getElementById('p9').scrollIntoView();"> <!--   clickOutcome('right', 1, event, this)   -->
+        <div class="optionWrap right-opt" onclick="document.getElementById('p9').scrollIntoView();">
+            <!--   clickOutcome('right', 1, event, this)   -->
             <!-- <div class="opt options" onclick="kriti(1)" data-direction="right" data-outcome="468"
                  data-challenge="98">My knowledge is sufficient
             </div> -->
@@ -907,8 +915,6 @@
 <!-- END OF FIRST YEAR    END ============================== -->
 
 
-
-
 <!-- page 8 end ============================ -->
 
 
@@ -922,21 +928,54 @@
 </script> -->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
 <script>
-//     $('body').bind("mousewheel", function() {
-//     return false;
-// });
+    //     $('body').bind("mousewheel", function() {
+    //     return false;
+    // });
 
-$(window).on('wheel', function() {
-    return false;
-}, );
-// $(window).on('mousewheel DOMMouseScroll', function() {
-//     return false;
-// } , { passive: false });
+    $(window).on('wheel', function () {
+        return false;
+    },);
+    // $(window).on('mousewheel DOMMouseScroll', function() {
+    //     return false;
+    // } , { passive: false });
+
+</script>
+<script src="{% static 'payback/js/firstyear/shop/libraries.js' %}"></script>
+<script src="{% static 'payback/js/firstyear/shop/ap.js' %}"></script>
+<script>
+    $('#firstyearbutton').on('click', () => {
+        {#let total_square = $('#puzzle').find('.square').length;#}
+        {#console.log($('#puzzle').find('.square').eq(1).text());#}
+        {#for (let i = 0; i < 15; i++) {#}
+        {#    submittedCrossword[i] = new Array(15);#}
+        {#var k = 0;#}
+        {#for (let i = 0; i < 15; i++) {#}
+        {#    for (let j = 0; j < 15; j++) {#}
+        {#        submittedCrossword[i][j] = $('#puzzle').find('.square').eq(k).text();#}
+        {#        k++;#}
+        {#    }#}
+        // console.log(submittedCrossword);
+
+        $.ajax({
+            type: "POST",
+            url: "{%url 'firstyear_submission' %}",
+            data: {
+                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
+                'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
+                'connection': document.getElementsByClassName("meter-connection")[0].attributes[1].value,
+                'loan': loan
+
+            },
+            dataType: 'json',
+            success: function (data) {
+                alert("Your response have been subitted");
+            }
+        });
+    });
 
 </script>
 <!-- shop js here -->
-<script src="{% static 'payback/js/firstyear/shop/libraries.js' %}"></script>
-<script src="{% static 'payback/js/firstyear/shop/ap.js' %}"></script>
+
 <!-- shop js here -->
 </body>
 
