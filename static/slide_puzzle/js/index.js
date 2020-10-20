@@ -6,9 +6,9 @@ function getLocalGameData() {
         '3': {
             isAccessible: false,
         },
-        '4': {
-            isAccessible: false,
-        },
+        // '4': {
+        //     isAccessible: false,
+        // },
         // '5': {
         //     isAccessible: false,
         // },
@@ -60,8 +60,8 @@ function renderGameLevels(localGameDataObject, board) {
         levelEl.setAttribute('data-level', key);
         board.append(levelEl);
     }
-    if (board.lastChild.getAttribute('data-level') === '4' &&
-        board.lastChild.textContent !== '4x4') {
+    if (board.lastChild.getAttribute('data-level') === '3' &&
+        board.lastChild.textContent !== '3x3') {
         board.classList.add('game-over');
     }
 

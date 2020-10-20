@@ -157,7 +157,7 @@ body {
     font-size: 0.9em;
   }
 }
-@media screen and (min-width: 740px) {
+/* @media screen and (min-width: 740px) {
   html {
     font-size: 0.95em;
   }
@@ -166,7 +166,7 @@ body {
   html {
     font-size: 1em;
   }
-}
+} */
 * {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -280,4 +280,19 @@ body {
 .main-screen .end-group .start-button {
   height: 20%;
   top: 70%;
+}
+
+
+.main-screen .end-group .start-button_pg {
+  height: 20%;
+  top: 70%;
+}
+.main-screen .mid-wrap .start-button_pg {
+  position: absolute;
+  top: calc(40% + 3em);
+  left: 10%;
+  height: 30%;
+  width: 80%;
+  text-align: center;
+  transition: color,text-shadow, 0.5s;
 }

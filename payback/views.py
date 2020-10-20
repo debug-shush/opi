@@ -35,3 +35,6 @@ def graduation(request):
 
 def game(request):
     return render(request, 'game.html')
+
+def mastermind(request):
+    return render(request, 'mastermind.html')

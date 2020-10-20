@@ -1,16 +1,31 @@
 var $, TweenLite, con = console, z = 50, x, y = z/2;
 con.log(x,y,z)
+
 $ ? con.log('jquery ready') : con.log('jquery failed');
 TweenLite ? con.log('gsap ready') : con.log('gsap failed')
 /////////////////////////////////////////////////////////////
 //--------------------------------------------------
 
+var sh = 0;
+
 $('.start-button').click(function(){
-  var x = $('.main-screen');
-  h = x.height();h2=0-h;
-  TweenLite.to(x,1,{top:h2,ease:Power3.easeInOut,onComplete:theGame})
+  // return scor
+  if (sh === 0){
+    var x = $('.main-screen');
+    h = x.height();h2=0-h;
+    TweenLite.to(x,1,{top:h2,ease:Power3.easeInOut,onComplete:theGame})
+    sh += 1
+  }
+  else if (sh ===1){
+
+    scor = $('.score .current').text();
+    callfunc(scor)
+  }
+  
+
+  
 })
- 
+
 //--------------------------------------------------
 function theGame(){
 
@@ -76,9 +91,9 @@ function theGame(){
       }
       else{
         console.log('missed');
-        scorePopUp(curmp.x,curmp.y,1,'-');
+        scorePopUp(curmp.x,curmp.y,4,'-');
         var x = Number($('.score span.current').text());
-        if(x>0)x--;
+        if(x>4){x-=4;}
         $('.score span .current').text(x);
         logScore(x);
       }
@@ -129,4 +144,8 @@ function endScreen(){
       "This Round's Score: <br />"+$('.score .current').text()+'<br /><br />'
     )
   },1000);
+
+
 }
+
+
