@@ -1,5 +1,4 @@
-var x = "{{ loan }}";
-console.log(x);
+
 (function() {
 'use strict';
 
@@ -6078,7 +6077,13 @@ function myfunc(e,elm){
 	if (elm.parentNode.children[1].classList.contains("disab")){
 		$var = elm.parentNode.children[1].children[1].innerHTML;
 		$var = $var.split("")
-		$var = parseInt($var[1] + $var[2]);
+		if ($var.length === 4){
+			$var = parseInt($var[1] + $var[2] + $var[3]);
+		}
+		else{
+			$var = parseInt($var[1] + $var[2] );
+		}
+		
 		shop_money += $var;
 	}
 	// else{

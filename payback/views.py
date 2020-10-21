@@ -35,6 +35,8 @@ def tangram(request):
 def secondyear(request):
     technoplayer = Technoplayer.objects.filter(user=request.user).first()
     loan = technoplayer.loan
+    print(loan)
+    print(1)
     connection = technoplayer.connection
     happiness= technoplayer.happiness
     focus= technoplayer.focus
@@ -78,11 +80,12 @@ def firstyear_submission(request):
         loan = request.POST.get('loan')
         print(focus)
         if technoplayer is not None:
-            technoplayer.happiness = happiness
-            technoplayer.connection = connection
-            technoplayer.focus = focus
-            technoplayer.loan = loan
-            technoplayer.save()
+            pass
+            # technoplayer.happiness = happiness
+            # technoplayer.connection = connection
+            # technoplayer.focus = focus
+            # technoplayer.loan = loan
+            # technoplayer.save()
         else:
             technoplayer = Technoplayer()
             technoplayer.user = request.user
@@ -142,13 +145,20 @@ def secondyear_submission(request):
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
         technoplayer = Technoplayer.objects.filter(user=request.user)
-        if technoplayer != None:
+        if technoplayer is not None:
             technoplayer.happiness = happiness
             technoplayer.connection = connection
             technoplayer.focus = focus
             technoplayer.loan = loan
             technoplayer.save()
-
+        # else:
+        #     technoplayer = Technoplayer()
+        #     technoplayer.user = request.user
+        #     technoplayer.happiness = happiness
+        #     technoplayer.connection = connection
+        #     technoplayer.focus = focus
+        #     technoplayer.loan = loan
+        #     technoplayer.save()
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();
         data = "Save Successfully"
