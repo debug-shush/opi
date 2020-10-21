@@ -76,6 +76,7 @@ def firstyear_submission(request):
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
+<<<<<<< Updated upstream
         print(focus)
         if technoplayer is not None:
             technoplayer.happiness = happiness
@@ -85,6 +86,10 @@ def firstyear_submission(request):
             technoplayer.save()
         else:
             technoplayer = Technoplayer()
+=======
+        technoplayer = Technoplayer.objects.filter(user=request.user)
+        if technoplayer is None:
+>>>>>>> Stashed changes
             technoplayer.user = request.user
             technoplayer.happiness = happiness
             technoplayer.connection = connection
