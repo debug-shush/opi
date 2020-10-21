@@ -34,29 +34,29 @@ def tangram(request):
 
 def secondyear(request):
     technoplayer1 = Technoplayer1.objects.filter(user=request.user).first()
-    loan1 = technoplayer1.loan
-    connection1 = technoplayer1.connection
-    happiness1 = technoplayer1.happiness
-    focus1 = technoplayer1.focus
-    return render(request, 'secondyear.html', {'loan1': loan1, 'connection1': connection1, 'happiness1': happiness1,'focus1':focus1})
+    loan2 = technoplayer1.loan1
+    connection2 = technoplayer1.connection1
+    happiness2 = technoplayer1.happiness1
+    focus2 = technoplayer1.focus1
+    return render(request, 'secondyear.html', {'loan2': loan2, 'connection2': connection2, 'happiness2': happiness2,'focus2':focus2})
 
 
 def thirdyear(request):
     technoplayer2 = Technoplayer2.objects.filter(user=request.user).first()
-    loan2 = technoplayer2.loan
-    connection2 = technoplayer2.connection
-    happiness2 = technoplayer2.happiness
-    focus2 = technoplayer2.focus
-    return render(request, 'thirdyear.html',{'loan2': loan2, 'connection2': connection2, 'happiness2': happiness2,'focus2':focus2})
+    loan3 = technoplayer2.loan2
+    connection3 = technoplayer2.connection2
+    happiness3 = technoplayer2.happiness2
+    focus3 = technoplayer2.focus2
+    return render(request, 'thirdyear.html',{'loan3': loan3, 'connection3': connection3, 'happiness3': happiness3,'focus3':focus3})
 
 
 def fourthyear(request):
     technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
-    loan3 = technoplayer3.loan
-    connection3 = technoplayer3.connection
-    happiness3 = technoplayer3.happiness
-    focus3 = technoplayer3.focus
-    return render(request, 'fourthyear.html',{'loan3': loan3, 'connection3': connection3, 'happiness3': happiness3,'focus3':focus3})
+    loan4 = technoplayer3.loan3
+    connection4 = technoplayer3.connection3
+    happiness4 = technoplayer3.happiness3
+    focus4 = technoplayer3.focus3
+    return render(request, 'fourthyear.html',{'loan4': loan4, 'connection4': connection4, 'happiness4': happiness4,'focus4':focus4})
 
 
 def graduation(request):
