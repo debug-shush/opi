@@ -14,9 +14,7 @@ class User(AbstractUser):
 
 class Technoplayer(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
-    # rollno = models.CharField(max_length=1, null=True)
-    # password = models.CharField(max_length=5, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     focus = models.IntegerField(blank=True, null=True)
     connection = models.IntegerField(blank=True, null=True)
     happiness = models.IntegerField(blank=True, null=True)

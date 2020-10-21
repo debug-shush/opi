@@ -1,5 +1,5 @@
-
-console.log(x)
+var x = "{{ loan }}";
+console.log(x);
 (function() {
 'use strict';
 
@@ -6028,7 +6028,7 @@ function end_to_start(){
 	else{
 		$('#focid').css({"background" : "#01b6ad" });
 		$v = $("#focid")
-		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		$v[0].parentNode.style.backgroundColor = "#019d95" ;
 	}
 
 
@@ -6044,7 +6044,7 @@ function end_to_start(){
 	else{
 		$('#conid').css({"background" : "#01b6ad" });
 		$v = $("#conid")
-		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		$v[0].parentNode.style.backgroundColor = "#019d95" ;
 	}
 
 
@@ -6061,7 +6061,7 @@ function end_to_start(){
 	else{
 		$('#happid').css({"background" : "#01b6ad" });
 		$v = $("#happid")
-		$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		$v[0].parentNode.style.backgroundColor = "#019d95" ;
 	}
 }
 	
@@ -6178,7 +6178,7 @@ function meals(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95";
 		}
 
 
@@ -6202,36 +6202,36 @@ function meals(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 200
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95";
+		}
 
 		// Money code
-		calculateLoanAndApplyChange(loan + 10000);
-		loan = loan + 10000;
-		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		calculateLoanAndApplyChange(loan + 2000);
+		loan = loan + 2000;
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6278,7 +6278,13 @@ function meals(x){
 
 
 		// Loan =================
-		calculateLoanAndApplyChange(loan);
+		calculateLoanAndApplyChange(loan+5000);
+		loan += 5000
+		$("#loid")[0].children[0].innerHTML = "+" + 5000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 	else if(x ==2){
 		// Focus code =====================
@@ -6300,7 +6306,7 @@ function meals(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95";
 		}
 
 		// Connections code =====================
@@ -6316,31 +6322,31 @@ function meals(x){
 		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data += 150
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += 250
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95";
+		}
 
 		// Loan =======================
-		calculateLoanAndApplyChange(loan - 10000);
-		loan = loan - 10000;
-		$("#loid")[0].children[0].innerHTML = "-" + 10000; 
+		calculateLoanAndApplyChange(loan + 10000);
+		loan = loan + 10000;
+		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6380,7 +6386,7 @@ function books(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -6404,36 +6410,36 @@ function books(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
 		// Activities code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data += (0.1*$va_data)
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += 125
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95";
+		}
 
 		// Money code
-		calculateLoanAndApplyChange(loan + 10000);
-		loan = loan + 10000;
-		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		calculateLoanAndApplyChange(loan + 8000);
+		loan = loan + 8000;
+		$("#loid")[0].children[0].innerHTML = "+" + 8000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6467,22 +6473,22 @@ function books(x){
 		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 125
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
 
 		// Loan =================
-		calculateLoanAndApplyChange(loan+2000);
-		loan = loan+2000
-		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
+		calculateLoanAndApplyChange(loan+ 0);
+		loan = loan+0
+		$("#loid")[0].children[0].innerHTML = "+" + 0; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6490,26 +6496,26 @@ function books(x){
 	}
 	else if(x ==2){
 		// Focus code =====================
-		// var $var = document.getElementsByClassName("meter-focus")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data += 100
-		// $var[0].attributes[1].value = $va_data
-		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		// $("#foid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#foid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#focid').css({"background" : "#9e2145" });
-		// 	$v = $("#focid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-		// }
-		// else{
-		// 	$('#focid').css({"background" : "#01b6ad" });
-		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 175
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 		// Connections code =====================
 		// var $var = document.getElementsByClassName("meter-connections")
@@ -6524,31 +6530,31 @@ function books(x){
 		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data += 150
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d";
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
-		// }
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 125
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 		// Loan =======================
-		calculateLoanAndApplyChange(loan + 2000);
-		loan = loan + 2000;
-		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		calculateLoanAndApplyChange(loan + 1000);
+		loan = loan + 1000;
+		$("#loid")[0].children[0].innerHTML = "+" + 1000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6570,11 +6576,8 @@ function seniors(x){
 		// Focus code =====================
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += (0.3*$va_data)
-		if($va_data>=500)
-		{
-			$va_data=500;
-		}
+		$va_data -= 250
+		
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6590,7 +6593,7 @@ function seniors(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -6600,7 +6603,7 @@ function seniors(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -6614,7 +6617,7 @@ function seniors(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -6622,12 +6625,13 @@ function seniors(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 
-		$va_data += 250
-		if($va_data>=500)
-		{
-			$va_data = 500
-		}		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$va_data += 150
+		// if($va_data>=500)
+		// {
+		// 	$va_data = 500
+		// }		
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -6641,7 +6645,7 @@ function seniors(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -6653,13 +6657,13 @@ function seniors(x){
 		// Focus code =====================
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data -= (0.3*$va_data)
-		if($va_data<0)
-		{
-			$va_data=0
-		}
+		$va_data += 200
+		// if($va_data<0)
+		// {
+		// 	$va_data=0
+		// }
 		$var[0].attributes[1].value = $va_data
-		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#foid").css({"opacity" : "0"});
@@ -6673,33 +6677,53 @@ function seniors(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-connections")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-connections")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 150
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 125
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Loan =================
@@ -6718,11 +6742,11 @@ function job(x){
 		// Focus code =====================
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data -= (0.6*$va_data)
-		if($va_data>=500)
-		{
-			$va_data=500;
-		}
+		$va_data -= 175
+		// if($va_data>=500)
+		// {
+		// 	$va_data=500;
+		// }
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6738,7 +6762,7 @@ function job(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -6746,9 +6770,9 @@ function job(x){
 		// Connections code =====================
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += (0.2*$va_data)
+		$va_data += 150
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -6762,7 +6786,7 @@ function job(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -6789,7 +6813,7 @@ function job(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -6883,7 +6907,7 @@ function bbq(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -6911,7 +6935,7 @@ function bbq(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -6939,7 +6963,7 @@ function bbq(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -6994,7 +7018,7 @@ function bbq(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Happiness code  ======================
@@ -7048,7 +7072,7 @@ function kriti(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7076,7 +7100,7 @@ function kriti(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7104,7 +7128,7 @@ function kriti(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -7137,7 +7161,7 @@ function kriti(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7214,7 +7238,7 @@ function transport(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7238,7 +7262,7 @@ function transport(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7265,7 +7289,7 @@ function transport(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Money code
@@ -7322,7 +7346,7 @@ function transport(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7350,7 +7374,7 @@ function transport(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Connections code =====================
@@ -7384,7 +7408,7 @@ function transport(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Loan =======================
@@ -7423,7 +7447,7 @@ function research(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7447,7 +7471,7 @@ function research(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7474,7 +7498,7 @@ function research(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -7531,7 +7555,7 @@ function research(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7570,7 +7594,7 @@ function laptop(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7598,7 +7622,7 @@ function laptop(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7625,7 +7649,7 @@ function laptop(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -7682,7 +7706,7 @@ function laptop(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7714,7 +7738,7 @@ function laptop(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Connections code =====================
@@ -7748,7 +7772,7 @@ function laptop(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Loan =======================
@@ -7785,7 +7809,7 @@ function interiit(x){
 		else{
 			$('#focid').css({"background" : "#01b6ad" });
 			$v = $("#focid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7813,7 +7837,7 @@ function interiit(x){
 		else{
 			$('#conid').css({"background" : "#01b6ad" });
 			$v = $("#conid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 
@@ -7840,7 +7864,7 @@ function interiit(x){
 		else{
 			$('#happid').css({"background" : "#01b6ad" });
 			$v = $("#happid")
-			$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
 		// Money code
@@ -7897,7 +7921,7 @@ function interiit(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7941,7 +7965,7 @@ function creditcard(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7965,7 +7989,7 @@ function creditcard(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -7988,7 +8012,7 @@ function creditcard(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Money code
@@ -8069,7 +8093,7 @@ function creditcard(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Connections code =====================
@@ -8103,7 +8127,7 @@ function creditcard(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Loan =======================
@@ -8145,7 +8169,7 @@ function techniche(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -8169,7 +8193,7 @@ function techniche(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -8192,7 +8216,7 @@ function techniche(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Money code
@@ -8273,7 +8297,7 @@ function techniche(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Connections code =====================
@@ -8307,7 +8331,7 @@ function techniche(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Loan =======================
@@ -8352,7 +8376,7 @@ function stayinout(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -8376,7 +8400,7 @@ function stayinout(x){
 		// else{
 		// 	$('#conid').css({"background" : "#01b6ad" });
 		// 	$v = $("#conid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 
@@ -8399,7 +8423,7 @@ function stayinout(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Money code
@@ -8480,7 +8504,7 @@ function stayinout(x){
 		// else{
 		// 	$('#focid').css({"background" : "#01b6ad" });
 		// 	$v = $("#focid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Connections code =====================
@@ -8514,7 +8538,7 @@ function stayinout(x){
 		// else{
 		// 	$('#happid').css({"background" : "#01b6ad" });
 		// 	$v = $("#happid")
-		// 	$v[0].nextElementSibling.css({"background-color" : "#019d95" });
+		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		// }
 
 		// Loan =======================
