@@ -32,7 +32,11 @@ def tangram(request):
 
 
 def secondyear(request):
-    return render(request, 'secondyear.html')
+    technoplayer = Technoplayer.objects.filter(user=request.user).first()
+    loan = technoplayer.loan
+    connection = technoplayer.connection
+    happiness= technoplayer.happiness
+    return render(request, 'secondyear.html',{'loan':loan,'connection':connection,'happiness':happiness})
 
 
 def thirdyear(request):

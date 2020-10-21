@@ -1,4 +1,4 @@
-
+var x = "{{loan}}";
 (function() {
 'use strict';
 
