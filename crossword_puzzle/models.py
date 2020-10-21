@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import  User
+from django.contrib.auth.models import User
 
 
 
@@ -8,7 +8,7 @@ from django.contrib.auth.models import  User
 # class User(models.Model):
 # 	first_name = ..
 # 	last_name = ..
-# 	roll_no = 
+# 	roll_no =
 #     passward =
      
 class Thirdyear(models.Model):

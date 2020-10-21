@@ -2,13 +2,13 @@
 <!Doctype html>
   <html>
     <head>
-      <title>KenKen - navya</title>
+      <title>KenKen</title>
       <script src="{% static 'kenken/js/kenkensolution.js'%}"></script>
       <link rel="stylesheet" href="{% static 'kenken/css/cells.css' %}">
       <link rel="stylesheet" href="{% static 'kenken/css/style.css' %}" />
     </head>
     <body >
-        <h1 id='myh1' align="center">KenKen</h1>
+        <h1 id='myh1' align="center"></h1>
         <!-- <label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label> -->
         <!-- <script>
           var hoursLabel = document.getElementById("hours");
@@ -178,21 +178,21 @@
           <p>d) you will get hints for these puzzles inexchange to 25% points of that grid.
           </p>
         </div>
-        <!-- <input id = "task1" type="button" value="task1" onclick="redirect1();"/>
-        <script type="text/javascript">
+        <!-- <input id = "task1" type="button" value="SKIP" onclick="redirect1();"/> -->
+        <!-- <script type="text/javascript">
         function redirect1(){
-          window.location="http://127.0.0.1:8000/kenken/slide_puzzle/";
+          window.location="{% url 'secondyear' %}";
         }
         </script>
-        <input id = "task2" type="button" value="task2" onClick="redirect2();"/>
+        <input id = "task2" type="button" value="SUBMIT" onClick="redirect2();"/>
         <script type="text/javascript">
         function redirect2(){
-          window.location="http://127.0.0.1:8000/kenken/slider/";
+          window.location="{% url 'secondyear' %}";
         }
       </script>
         <input id = "task3" type="button" value="task3" onClick="redirect3();"/>
         <script type="text/javascript">
-        function redirect3(){
+        function redirect3()}
           window.location="http://127.0.0.1:8000/kenken/tiles/";
         }
         </script> -->

@@ -1,4 +1,5 @@
 
+console.log(x)
 (function() {
 'use strict';
 
