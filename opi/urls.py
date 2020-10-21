@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('kenken/',include('kenken.urls')),
     path('kenken/slide_puzzle/',include('slide_puzzle.urls')),
-    path('payback/',include('payback.urls')),
+    path('',include('payback.urls')),
     path('mystery_rooms/',include('mystery_rooms.urls')),
     path('crossword_puzzle/',include('crossword_puzzle.urls')),
 ]

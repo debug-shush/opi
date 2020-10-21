@@ -198,7 +198,13 @@
             <div class="skw-page__skewed">
                 <div class="skw-page__content">
                     <p class="skw-page__description">
-                        <a href="{% url 'login'%}">Login</a>
+                        {%if request.user.is_authenticated %}
+                        <p>Hello {{request.user.first_name}}</p>
+                        <a href="{% url 'firstyear' %}">Start Your Journey</a>
+                        {%else%}
+                        <p>To Start your Journey</p>
+                        <a href="{% url 'login'%}">Login Here</a>
+                        {%endif%}
                         <!-- <div class="login-page">
                             <div class="form">
                                 <form class="login-form">
