@@ -90,22 +90,15 @@ def firstyear_submission(request):
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
         print(focus)
-        if technoplayer1 is not None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
-            technoplayer1 = Technoplayer1()
+        print(loan)
+        if technoplayer1 is None:
+            print(1)
             technoplayer1.user = request.user
-            technoplayer1.happiness = happiness
-            technoplayer1.connection = connection
-            technoplayer1.focus = focus
-            technoplayer1.loan = loan
+            technoplayer1.happiness1 = happiness
+            technoplayer1.connection1 = connection
+            technoplayer1.focus1 = focus
+            technoplayer1.loan1 = loan
             technoplayer1.save()
-
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();
         data = "Save Successfully"
@@ -132,7 +125,7 @@ def techo_login(request):
         technouser = User.objects.filter(roll_no=request.POST['roll_no']).first()
         if technouser is None:
             return render(request, 'login.html', {"messages": [["text-danger", "Roll Number Not Found."]]})
-        username = technouser.username;
+        username = technouser.username
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
@@ -165,12 +158,11 @@ def secondyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
-            technoplayer2 = Technoplayer1()
             technoplayer2.user = request.user
-            technoplayer2.happiness = happiness
-            technoplayer2.connection = connection
-            technoplayer2.focus = focus
-            technoplayer2.loan = loan
+            technoplayer2.happiness2 = happiness
+            technoplayer2.connection2 = connection
+            technoplayer2.focus2 = focus
+            technoplayer2.loan2 = loan
             technoplayer2.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
@@ -197,12 +189,11 @@ def thirdyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
-            technoplayer3 = Technoplayer1()
             technoplayer3.user = request.user
-            technoplayer3.happiness = happiness
-            technoplayer3.connection = connection
-            technoplayer3.focus = focus
-            technoplayer3.loan = loan
+            technoplayer3.happiness3 = happiness
+            technoplayer3.connection3 = connection
+            technoplayer3.focus3 = focus
+            technoplayer3.loan3 = loan
             technoplayer3.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
@@ -229,12 +220,11 @@ def fourthyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
-            technoplayer4 = Technoplayer1()
             technoplayer4.user = request.user
-            technoplayer4.happiness = happiness
-            technoplayer4.connection = connection
-            technoplayer4.focus = focus
-            technoplayer4.loan = loan
+            technoplayer4.happiness4 = happiness
+            technoplayer4.connection4 = connection
+            technoplayer4.focus4 = focus
+            technoplayer4.loan4 = loan
             technoplayer4.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)

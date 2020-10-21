@@ -141,10 +141,10 @@
                     </svg>
                     <div class="icon-label value-text mobile-only">HAPPINESS</div>
                 </div>
-                <div id="happid" class="value" style="background: rgb(1, 182, 173); width: 50%;"></div>
+                <div id="happid" class="value" style="background: rgb(1, 182, 173); width: '{{happiness1}}%';"></div>
             </div>
         </div>
-        <div class="barWrapper meter-loans" data-value="50000">
+        <div class="barWrapper meter-loans" data-value="{{loan1}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Debt:</div>
@@ -175,7 +175,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div style="background:#313d4c" id="meter-loan-value" class="value">50,000</div>
+                    <div style="background:#313d4c" id="meter-loan-value" class="value">{{loan2}}</div>
                 </div>
                 <div style="background:#313d4c" class="value-text desktop-only">IN<br>DEBT</div>
                 <div class="value-text mobile-only">IN DEBT</div>
