@@ -226,7 +226,7 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt" >
-                <div  class="opt options" onclick="clickOutcome('left', 0, event, this); document.getElementById('p3').scrollIntoView();" data-direction="left" data-outcome="222" data-challenge="28">Take Out More Loans</div>
+                <div  class="opt options" onclick="jobloss(0); document.getElementById('p3').scrollIntoView();" data-direction="left" data-outcome="222" data-challenge="28">Take Out More Loans</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
@@ -234,7 +234,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="clickOutcome('down', 1, event, this);document.getElementById('p3').scrollIntoView();" data-direction="down" data-outcome="223" data-challenge="28">Talk to the Aid Office</div>
+                <div class="opt options" onclick="jobloss(1);document.getElementById('p3').scrollIntoView();" data-direction="down" data-outcome="223" data-challenge="28">Talk to the Aid Office</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
@@ -242,7 +242,7 @@
                 </div>
             </div>
             <div class="optionWrap right-opt" >
-                <div class="opt options" onclick="clickOutcome('right', 2, event, this);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Earn More Money</div>
+                <div class="opt options" onclick="jobloss(2);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Earn More Money</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
@@ -286,7 +286,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Yayy , Im Lucky !!</div>
+                <div class="opt options" onclick="document.getElementById('p4').scrollIntoView();luck(0)" data-direction="down" data-outcome="223" data-challenge="28">Yayy , Im Lucky !!</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
@@ -337,7 +337,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Make a LinkedIn Profile</div>
+                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();res_li(0)" data-direction="down" data-outcome="223" data-challenge="28">Make a LinkedIn Profile</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
@@ -345,8 +345,8 @@
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Fancy And Printed</div>
-                <div class="optDebt">$585</div>
+                <div class="opt options" onclick="document.getElementById('p5').scrollIntoView();res_li(1)" data-direction="right" data-outcome="221" data-challenge="28">Fancy And Printed</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -380,7 +380,7 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Road Trip Any one!</div>
+                <div  class="opt options" onclick="document.getElementById('p6').scrollIntoView();celeb(0)" data-direction="left" data-outcome="222" data-challenge="28">Road Trip Any one!</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
@@ -388,7 +388,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Find Me in Library</div>
+                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();celeb(1)" data-direction="down" data-outcome="223" data-challenge="28">Find Me in Library</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
@@ -396,7 +396,7 @@
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Cacun, Here I come</div>
+                <div class="opt options" onclick="document.getElementById('p6').scrollIntoView();celeb(2)" data-direction="right" data-outcome="221" data-challenge="28">Cacun, Here I come</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
@@ -431,24 +431,24 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt"  >
-                <div  class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Do It On Cheap</div>
-                <div class="optDebt">$500</div>
+                <div  class="opt options" onclick="document.getElementById('p9').scrollIntoView();dress(0)" data-direction="left" data-outcome="222" data-challenge="28">Do It On Cheap</div>
+                <div class="optDebt">₹1000</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Whats Wrong On Jeans</div>
-                <div class="optDebt">$0</div>
+                <div class="opt options" onclick="document.getElementById('p9').scrollIntoView();dress(1)" data-direction="down" data-outcome="223" data-challenge="28">Whats Wrong On Jeans</div>
+                <div class="optDebt">₹0</div>
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options" onclick="document.getElementById('p7').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Great suit</div>
-                <div class="optDebt">$10000</div>
+                <div class="opt options" onclick="document.getElementById('p9').scrollIntoView();dress(2)" data-direction="right" data-outcome="221" data-challenge="28">Great suit</div>
+                <div class="optDebt">₹8500</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
@@ -467,7 +467,7 @@
 <!-- Page 6 end ================================ -->
 
 <!-- Page 7 ===================================== -->
-<section class="bck-4" id="p7">
+<!-- <section class="bck-4" id="p7">
     <div id="optthree" class="optHolder" data-template="challenge" style="position:unset">
         <div class="contentWrap" >
             <div class="questionWrapper" >
@@ -483,7 +483,7 @@
             </div>
             <div class="optionWrap left-opt"  >
                 <div  class="opt options" onclick="document.getElementById('p8').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
@@ -491,36 +491,36 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options" onclick="document.getElementById('p8').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim svg-anim">
-                    <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
-                -->
+                    <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
+               
                 </div>
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options" onclick="document.getElementById('p8').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
                 </div>
             </div>
         </div>
-        <!-- <div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 216px; margin-left: -2px;">
+        <div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 216px; margin-left: -2px;">
             <div class="svg-down-anim">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 216" preserveAspectRatio="xMidYMin slice"><line class="path" x1="1.5" y1="0" x2="1.5" y2="216" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="1.5" y1="0" x2="1.5" y2="216"></line></svg>
             
             </div>
-        </div> -->
+        </div>
     </div>
-</section>
+</section> -->
 
 <!-- Page 7 end ================================ -->
 
 
 
 <!-- Page 8 ===================================== -->
-<section class="bck-4" id="p8">
+<!-- <section class="bck-4" id="p8">
     <div id="optthree" class="optHolder" data-template="challenge" style="position:unset">
         <div class="contentWrap" >
             <div class="questionWrapper" >
@@ -536,7 +536,7 @@
             </div>
             <div class="optionWrap left-opt"  >
                 <div  class="opt options" onclick="document.getElementById('p9').scrollIntoView();clickOutcome('left', 0, event, this)" data-direction="left" data-outcome="222" data-challenge="28">Take the Bus</div>
-                <div class="optDebt">$585</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="100" y1="1.5" x2="0" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="100" y1="1.5" x2="0" y2="1.5"></line></svg>
                 
@@ -544,29 +544,29 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options" onclick="document.getElementById('p9').scrollIntoView();clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28">Bike It</div>
-                <div class="optDebt">$585</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim svg-anim">
-                    <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
-                -->
+                    <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
+               
                 </div>
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options" onclick="document.getElementById('p9').scrollIntoView();clickOutcome('right', 2, event, this)" data-direction="right" data-outcome="221" data-challenge="28">Bring a Car</div>
-                <div class="optDebt">$585</div>
+                <div class="optDebt">₹585</div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
                 
                 </div>
             </div>
         </div>
-        <!-- <div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 216px; margin-left: -2px;">
+        <div class="svg-options-anim-1" style="top: 0px; left: 50%; width: 3px; height: 216px; margin-left: -2px;">
             <div class="svg-down-anim">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 216" preserveAspectRatio="xMidYMin slice"><line class="path" x1="1.5" y1="0" x2="1.5" y2="216" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="1.5" y1="0" x2="1.5" y2="216"></line></svg>
             
             </div>
-        </div> -->
+        </div>
     </div>
-</section>
+</section> -->
 
 <!-- Page 8 end ================================ -->
 
