@@ -21,6 +21,7 @@ class Technoplayer1(models.Model):
     loan1 = models.IntegerField(blank=True, null=True)
     # crossword = jsonfield.JSONField()
 
+
 class Technoplayer2(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
@@ -30,6 +31,7 @@ class Technoplayer2(models.Model):
     loan2 = models.IntegerField(blank=True, null=True)
     # crossword = jsonfield.JSONField()
 
+
 class Technoplayer3(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
@@ -38,6 +40,7 @@ class Technoplayer3(models.Model):
     happiness3 = models.IntegerField(blank=True, null=True)
     loan3 = models.IntegerField(blank=True, null=True)
     # crossword = jsonfield.JSONField()
+
 
 class Technoplayer4(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
@@ -49,7 +52,23 @@ class Technoplayer4(models.Model):
     # crossword = jsonfield.JSONField()
 
 
+class Kenkenplayer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    kenken_solver = models.JSONField(blank=True, null=True)
 
 
+class Mastermindplayer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    mastermind_solver = models.IntegerField(blank=True, null=True)
 
+
+class Crosswordplayer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    puzzle_score = models.CharField(max_length=10, blank=True, null=True)
+    age_sum = models.BooleanField(max_length=10, blank=True)
+    letter_sum = models.BooleanField(max_length=10, blank=True)
+
+class Mysteryplayer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    answers = models.JSONField(max_length=10, blank=True, null=True)
 

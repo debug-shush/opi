@@ -153,9 +153,9 @@
             </div>
             <div class="bar bar-4">
                 <div style="background:#313d4c" class="loan-value-wrapper">
-                    <div class="icon" >
-                        <span  style="font-size: xx-large;background: none;">₹</span>
-                        
+                    <div class="icon">
+                        <span style="font-size: xx-large;background: none;">₹</span>
+
                         <!-- <svg id="icon-debt" style="background: none;" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                              width="100%" height="100%" viewBox="0 0 250 490.7">
                             <g>
@@ -351,7 +351,7 @@
                 <div class="opt options" onclick="books(1)" data-direction="down" data-outcome="366"
                      data-challenge="24">Old Books
                 </div>
-                <div class="optDebt" style="color: black;">₹ 0 </div>
+                <div class="optDebt" style="color: black;">₹ 0</div>
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
@@ -874,7 +874,7 @@
                  data-challenge="98"><!-- <a href="{% url 'kenken' %}" style="background: none;"
                                         onMouseOver="this.style.color='#fff0d2'"
                                         onMouseOut="this.style.color='#fff0d2'"> --> Start EXAM </a>
-                 <!-- data-challenge="98"> Start The Exam  -->
+                <!-- data-challenge="98"> Start The Exam  -->
             </div>
             <div class="svg-opt-anim svg-anim">
                 <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg> -->
@@ -965,7 +965,8 @@
             type: "POST",
             url: "{%url 'firstyear_submission' %}",
             data: {
-                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
+                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value,
+                csrfmiddlewaretoken: '{{ csrf_token }}',
                 'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
                 'connection': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
                 'loan': loan

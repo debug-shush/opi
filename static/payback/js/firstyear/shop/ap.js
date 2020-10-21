@@ -1,4 +1,4 @@
-var x = "{{ loan }}";
+var x = "{{ loan1 }}";
 console.log(x);
 (function() {
 'use strict';
