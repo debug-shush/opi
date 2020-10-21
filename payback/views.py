@@ -90,12 +90,8 @@ def login(request):
     if request.method == 'POST':
         rollno = (request.POST['rollno'])
         password = (request.POST['password'])
-        user = authenticate(rollno = rollno, password=password)
-        if user is not None:
+        technoplayer = Technoplayer.objects.get(rollno=rollno)
+        # user = authenticate(rollno = rollno, password=password)
+        if technoplayer is not None:
             print('user logged in')
-            return redirect('firstyear.html')
-        else:
-            messages.info(request, 'Invalid Credentials')
-            return redirect('/')
-    else:
-        return render(request, 'opening.html')
+            return JsonResponse("Login Successful",safe=False)

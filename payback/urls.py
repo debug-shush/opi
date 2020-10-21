@@ -18,7 +18,6 @@ urlpatterns =[
     path("crossword/",views.crossword,name='crossword'),
     path("mysteryroom/",views.mysteryroom,name='mysteryroom'),
     path("login/", views.login, name='login'),
-    path("firstyearsubmission/", views.firstyear_submission, name='firstyearsubmission'),
-
+    path("firstyear_submission/", views.firstyear_submission, name='firstyear_submission'),
 ]
 
