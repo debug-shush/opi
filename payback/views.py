@@ -38,7 +38,7 @@ def secondyear(request):
     connection1 = technoplayer1.connection
     happiness1 = technoplayer1.happiness
     focus1 = technoplayer1.focus
-    return render(request, 'secondyear.html', {'loan': loan1, 'connection': connection1, 'happiness': happiness1,'focus1':focus1})
+    return render(request, 'secondyear.html', {'loan1': loan1, 'connection1': connection1, 'happiness1': happiness1,'focus1':focus1})
 
 
 def thirdyear(request):
@@ -47,7 +47,7 @@ def thirdyear(request):
     connection2 = technoplayer2.connection
     happiness2 = technoplayer2.happiness
     focus2 = technoplayer2.focus
-    return render(request, 'thirdyear.html',{'loan': loan2, 'connection': connection2, 'happiness': happiness2,'focus1':focus2})
+    return render(request, 'thirdyear.html',{'loan2': loan2, 'connection2': connection2, 'happiness2': happiness2,'focus2':focus2})
 
 
 def fourthyear(request):
@@ -56,7 +56,7 @@ def fourthyear(request):
     connection3 = technoplayer3.connection
     happiness3 = technoplayer3.happiness
     focus3 = technoplayer3.focus
-    return render(request, 'fourthyear.html',{'loan': loan3, 'connection': connection3, 'happiness': happiness3,'focus1':focus3})
+    return render(request, 'fourthyear.html',{'loan3': loan3, 'connection3': connection3, 'happiness3': happiness3,'focus3':focus3})
 
 
 def graduation(request):
@@ -87,14 +87,7 @@ def firstyear_submission(request):
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
         print(focus)
-        if technoplayer1 is not None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
+        if technoplayer1 is  None:
             technoplayer1 = Technoplayer1()
             technoplayer1.user = request.user
             technoplayer1.happiness = happiness
@@ -102,6 +95,8 @@ def firstyear_submission(request):
             technoplayer1.focus = focus
             technoplayer1.loan = loan
             technoplayer1.save()
+
+            
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();

@@ -6799,12 +6799,13 @@ function job(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 
-		$va_data -= (0.5*$va_data)
-		if($va_data>=500)
-		{
-			$va_data = 500
-		}		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$va_data += 150
+		// if($va_data>=500)
+		// {
+		// 	$va_data = 500
+		// }		
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -6824,7 +6825,7 @@ function job(x){
 		// Money code
 		calculateLoanAndApplyChange(loan + 5000);
 		loan = loan + 5000;
-		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid")[0].children[0].innerHTML = "+" + 5000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6834,45 +6835,75 @@ function job(x){
 	//No
 	else if(x ==1){
 		// Focus code =====================
-		// var $var = document.getElementsByClassName("meter-focus")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= (0.3*$va_data)
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += 200 
 		// if($va_data<0)
 		// {
 		// 	$va_data=0
 		// }
-		// $var[0].attributes[1].value = $va_data
-		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#foid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#foid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Connections code =====================
-		// var $var = document.getElementsByClassName("meter-connections")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-connections")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 125
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 125
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Loan =================
@@ -6892,10 +6923,14 @@ function bbq(x){
 		// Focus code =====================
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += (0.2*$va_data)
-		if($va_data>=500)
+		$va_data -= 125
+		if($va_data>=1000)
 		{
-			$va_data=500;
+			$va_data=1000;
+		}
+		if($va_data < 0)
+		{
+			$va_data= 0;
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
@@ -6920,13 +6955,13 @@ function bbq(x){
 		// Connections code =====================
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += (0.3*$va_data)
+		$va_data += 150
 		if($va_data>=500)
 		{
 			$va_data=500
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -6948,7 +6983,7 @@ function bbq(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 
-		$va_data += (0.3*$va_data)
+		$va_data += 100
 		if($va_data>=500)
 		{
 			$va_data = 500
@@ -6974,7 +7009,7 @@ function bbq(x){
 		// Money code
 		calculateLoanAndApplyChange(loan + 2000);
 		loan = loan + 2000;
-		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
+		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -6984,26 +7019,36 @@ function bbq(x){
 	//No
 	else if(x ==1){
 		// Focus code =====================
-		// var $var = document.getElementsByClassName("meter-focus")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= (0.3*$va_data)
-		// if($va_data<0)
-		// {
-		// 	$va_data=0
-		// }
-		// $var[0].attributes[1].value = $va_data
-		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#foid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#foid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += 175
+		if($va_data<0)
+		{
+			$va_data=0
+		}
+		$var[0].attributes[1].value = $va_data
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Connections code =====================
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data -= (0.3*$va_data)
+		$va_data -= 100
 		if($va_data<=0)
 		{
 			$va_data=0
@@ -7027,16 +7072,26 @@ function bbq(x){
 		}
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 125
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 175
+		$var[0].attributes[1].value = $va_data
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
+		}
+		else{
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Loan =================
