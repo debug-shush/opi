@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
-from payback.models import Technoplayer
+from payback.models import *
 from .models import *
 
 
@@ -33,22 +33,30 @@ def tangram(request):
 
 
 def secondyear(request):
-    technoplayer = Technoplayer.objects.filter(user=request.user).first()
-    loan = technoplayer.loan
-    print(loan)
-    print(1)
-    connection = technoplayer.connection
-    happiness= technoplayer.happiness
-    focus= technoplayer.focus
-    return render(request, 'secondyear.html',{'loan':loan,'connection':connection,'happiness':happiness})
+    technoplayer1 = Technoplayer1.objects.filter(user=request.user).first()
+    loan1 = technoplayer1.loan
+    connection1 = technoplayer1.connection
+    happiness1 = technoplayer1.happiness
+    focus1 = technoplayer1.focus
+    return render(request, 'secondyear.html', {'loan': loan1, 'connection': connection1, 'happiness': happiness1,'focus1':focus1})
 
 
 def thirdyear(request):
-    return render(request, 'thirdyear.html')
+    technoplayer2 = Technoplayer2.objects.filter(user=request.user).first()
+    loan2 = technoplayer2.loan
+    connection2 = technoplayer2.connection
+    happiness2 = technoplayer2.happiness
+    focus2 = technoplayer2.focus
+    return render(request, 'thirdyear.html',{'loan': loan2, 'connection': connection2, 'happiness': happiness2,'focus1':focus2})
 
 
 def fourthyear(request):
-    return render(request, 'fourthyear.html')
+    technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
+    loan3 = technoplayer3.loan
+    connection3 = technoplayer3.connection
+    happiness3 = technoplayer3.happiness
+    focus3 = technoplayer3.focus
+    return render(request, 'fourthyear.html',{'loan': loan3, 'connection': connection3, 'happiness': happiness3,'focus1':focus3})
 
 
 def graduation(request):
@@ -72,28 +80,28 @@ def mysteryroom(request):
 
 
 def firstyear_submission(request):
-    technoplayer = Technoplayer.objects.filter(user=request.user).first()
+    technoplayer1 = Technoplayer1.objects.filter(user=request.user).first()
     if request.method == "POST":
         focus = request.POST.get('focus')
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
         print(focus)
-        if technoplayer is not None:
+        if technoplayer1 is not None:
             pass
-            # technoplayer.happiness = happiness
-            # technoplayer.connection = connection
-            # technoplayer.focus = focus
-            # technoplayer.loan = loan
-            # technoplayer.save()
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
         else:
-            technoplayer = Technoplayer()
-            technoplayer.user = request.user
-            technoplayer.happiness = happiness
-            technoplayer.connection = connection
-            technoplayer.focus = focus
-            technoplayer.loan = loan
-            technoplayer.save()
+            technoplayer1 = Technoplayer1()
+            technoplayer1.user = request.user
+            technoplayer1.happiness = happiness
+            technoplayer1.connection = connection
+            technoplayer1.focus = focus
+            technoplayer1.loan = loan
+            technoplayer1.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();
@@ -101,6 +109,7 @@ def firstyear_submission(request):
         return JsonResponse(data, safe=False)
 
     return HttpResponse("get method")
+
 
 # def login(request):
 #     if request.method == 'POST':
@@ -114,28 +123,28 @@ def firstyear_submission(request):
 
 def techo_login(request):
     if request.user.is_authenticated:
-        return redirect(request.GET.get('next','/firstyear'))
+        return redirect(request.GET.get('next', '/firstyear'))
 
-    if request.method=="POST":
+    if request.method == "POST":
         technouser = User.objects.filter(roll_no=request.POST['roll_no']).first()
         if technouser is None:
-            return render(request, 'login.html', {"messages":[["text-danger","Roll Number Not Found."]]})
-        username = technouser.username;
+            return render(request, 'login.html', {"messages": [["text-danger", "Roll Number Not Found."]]})
+        username = technouser.username
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             print("Used logged in!")
-            return redirect(request.GET.get('next','/firstyear'))
+            return redirect(request.GET.get('next', '/firstyear'))
         else:
-            return render(request, 'login.html',{"messages":[["text-danger","Invalid Credentials."]]})
-    return render(request, 'login.html',)
-
+            return render(request, 'login.html', {"messages": [["text-danger", "Invalid Credentials."]]})
+    return render(request, 'login.html', )
 
 
 def logout_view(request):
     logout(request)
     return redirect('/')
+
 
 def secondyear_submission(request):
     if request.method == "POST":
@@ -144,21 +153,23 @@ def secondyear_submission(request):
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer = Technoplayer.objects.filter(user=request.user)
-        if technoplayer is not None:
-            technoplayer.happiness = happiness
-            technoplayer.connection = connection
-            technoplayer.focus = focus
-            technoplayer.loan = loan
-            technoplayer.save()
-        # else:
-        #     technoplayer = Technoplayer()
-        #     technoplayer.user = request.user
-        #     technoplayer.happiness = happiness
-        #     technoplayer.connection = connection
-        #     technoplayer.focus = focus
-        #     technoplayer.loan = loan
-        #     technoplayer.save()
+        technoplayer2 = Technoplayer2.objects.filter(user=request.user)
+        if technoplayer2 is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            technoplayer2 = Technoplayer1()
+            technoplayer2.user = request.user
+            technoplayer2.happiness = happiness
+            technoplayer2.connection = connection
+            technoplayer2.focus = focus
+            technoplayer2.loan = loan
+            technoplayer2.save()
+
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();
         data = "Save Successfully"
@@ -174,13 +185,22 @@ def thirdyear_submission(request):
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer = Technoplayer.objects.filter(user=request.user)
-        if technoplayer != None:
-            technoplayer.happiness = happiness
-            technoplayer.connection = connection
-            technoplayer.focus = focus
-            technoplayer.loan = loan
-            technoplayer.save()
+        technoplayer3 = Technoplayer3.objects.filter(user=request.user)
+        if technoplayer3 is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            technoplayer3 = Technoplayer1()
+            technoplayer3.user = request.user
+            technoplayer3.happiness = happiness
+            technoplayer3.connection = connection
+            technoplayer3.focus = focus
+            technoplayer3.loan = loan
+            technoplayer3.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();
@@ -197,13 +217,22 @@ def fourthyear_submission(request):
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer = Technoplayer.objects.filter(user=request.user)
-        if technoplayer != None:
-            technoplayer.happiness = happiness
-            technoplayer.connection = connection
-            technoplayer.focus = focus
-            technoplayer.loan = loan
-            technoplayer.save()
+        technoplayer4 = Technoplayer4.objects.filter(user=request.user)
+        if technoplayer4 is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            technoplayer4 = Technoplayer1()
+            technoplayer4.user = request.user
+            technoplayer4.happiness = happiness
+            technoplayer4.connection = connection
+            technoplayer4.focus = focus
+            technoplayer4.loan = loan
+            technoplayer4.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
         # thirdyear.save();
@@ -211,4 +240,3 @@ def fourthyear_submission(request):
         return JsonResponse(data, safe=False)
 
     return HttpResponse("get method")
-

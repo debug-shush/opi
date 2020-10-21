@@ -747,7 +747,7 @@ $( window ).on( "load", nextfunc(x));
     $('#secondyearbutton').on('click', () => {
         $.ajax({
             type: "POST",
-            url: "{%url 'firstyear_submission' %}",
+            url: "{%url 'secondyear_submission' %}",
             data: {
                 'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
                 'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
