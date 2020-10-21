@@ -96,7 +96,7 @@ def firstyear_submission(request):
 #             print('user logged in')
 #             return JsonResponse("Login Successful",safe=False)
 
-def login(request):
+def techo_login(request):
     if request.user.is_authenticated:
         return redirect(request.GET.get('next','/firstyear'))
 
@@ -108,7 +108,8 @@ def login(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request,user, backend='django.contrib.auth.backends.AllowAllUsersModelBackend')
+            login(request, user)
+            print("Used logged in!")
             return redirect(request.GET.get('next','/firstyear'))
         else:
             return render(request, 'login.html',{"messages":[["text-danger","Invalid Credentials."]]})
