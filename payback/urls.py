@@ -18,6 +18,7 @@ urlpatterns =[
     path("crossword/",views.crossword,name='crossword'),
     path("mysteryroom/",views.mysteryroom,name='mysteryroom'),
     path("login/", views.techo_login, name='login'),
+    path('logout/', views.logout_view, name='logout'),
     path("firstyear_submission/", views.firstyear_submission, name='firstyear_submission'),
 ]
 

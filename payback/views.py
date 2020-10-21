@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth import logout
 from payback.models import Technoplayer
 from .models import *
 
@@ -68,14 +69,22 @@ def mysteryroom(request):
 
 
 def firstyear_submission(request):
+    technoplayer = Technoplayer.objects.filter(user=request.user).first()
     if request.method == "POST":
         focus = request.POST.get('focus')
-        print(focus)
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer = Technoplayer.objects.filter(user=request.user)
-        if technoplayer != None:
+        print(focus)
+        if technoplayer is not None:
+            technoplayer.happiness = happiness
+            technoplayer.connection = connection
+            technoplayer.focus = focus
+            technoplayer.loan = loan
+            technoplayer.save()
+        else:
+            technoplayer = Technoplayer()
+            technoplayer.user = request.user
             technoplayer.happiness = happiness
             technoplayer.connection = connection
             technoplayer.focus = focus
@@ -120,4 +129,6 @@ def techo_login(request):
     return render(request, 'login.html',)
 
 
-
+def logout_view(request):
+    logout(request)
+    return redirect('/')
