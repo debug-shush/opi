@@ -36,7 +36,7 @@
               <option>
                 Master
               </option>
-            </select> 
+            </select>
             <!-- <input type="button" value="New" onclick="buttonNew()" title="Start a new game"> -  -->
             <button onclick="buttonNew(); puzzleStart();" value="New" id="puzzle_start">START</button>
             <!-- <button onclick="buttonUndo(1);" value="Restart" id="puzzle_restart">Restart</button> -->
@@ -205,13 +205,13 @@ since last reload
 
       IIT Guwahati is a prestigious institute of higher learning producing meritorious students with excellent career growth and universal recognition. The students go to get the best of opportunities in the form of highly advanced courses, eminent faculty members, well-equipped laboratories, library, hostels and immense facilities to excel in research and development. The faculty and students are thriving every year to add to the list of bejeweled achievements of the institute in the form of research publications, projects, fellowships and industrial exposure.<br>
 
- 
+
       IIT Guwahati is a fully residential campus. All the students live in hostels on the campus. The hostels are named after rivers and tributaries of North-East India: Manas, Dihing, Kapili, Siang, Kameng, Barak, Subansiri, Umiam, Dibang, Brahmaputra, Dhansiri, Lohit and Disang. Apart from these, there is a married scholars' hostel for married postgraduates. Every student at IIT Guwahati is given a separate room. Each room comes equipped with requisite basic <span style="font-weight: bold" id="amenities">*****</span>. The toilets and bathrooms are shared. Every hostel has a mess, a canteen, a juice center, a stationary shop, a library, a TV room, an indoor sports room, and laundry facilities. The hostels are provided with nonstop Internet facility. The boy's hostels are single seated.<br>
 
- 
+
       Every year the students and administration of IIT Guwahati come together to organize a number of festivals and competitions. The major festivals include Alcheringa, the annual cultural festival, Techniche, the annual techno-management festival, Udgam, the annual entrepreneurship summit and Research <span style="font-weight: bold" id="Conclave">*****</span>. Apart from these the Students of IIT Guwahati participate in the annual Inter IIT Sports Meet. Apart from these the General Championship is widely celebrated across the hostel communities in the institute, the combined score in the inter hostel meets Kriti - Technical, Manthan - Cultural and Spardha - Sports, is used to decide the winning hostel.<br>
 
- 
+
       Alcheringa, popularly known as "Alcher", is the annual cultural extravaganza of the IIT Guwahati. It started in 1996 as a student-run nonprofit organization catering primarily to the youth of the nation. Held for three days and four nights, Alcheringa's 2018 edition witnessed an estimated footfall of one lakh people. <span style="font-weight: bold" id="Alcheringa">*****</span> has hosted famous Indian and international artists.<br>
 
       Alcheringa 2018, titled "Echoes of Innocence", the twenty-second edition of the festival starred Bollywood dynamic duo, Vishal-Shekhar, Portuguese House producer, Diego Miranda and Australian House producers, Mashd N Kutcher, alternative rock band from Chennai, The F16's and classical music maestros and brothers, Ganesh and Kumaresh and legendary Padma Shri Awardee Shahid Parvez. Alcheringa 2020 starred Bollywood Singer Jubin Nautiyal and was sponsored by The Red Chief.<br>
@@ -226,7 +226,7 @@ since last reload
 
       Technothlon, more than just an exam, is a family that binds school students and IIT Guwahati. A family that grows every year multifold. We are overwhelmed to have you aboard.  </p>
     </div>
-    
+
     <div id="puzzle_container">
         <table id="puzzle">
         </table>
@@ -245,7 +245,7 @@ since last reload
     </div>
   </div>
   <div style="position: relative; left: 50%;">
-      <button id="final_submit"><a href="{% url 'fourthyear' %}">FINAL SUBMIT</a></button>
+      <button id="final_submit">Final Submit</button>
   </div>
 </p>
 <script src='{% static "crossword_puzzle/Crossword/crossword.js" %}'></script>
@@ -299,8 +299,9 @@ function lettersumcheckAnswer(){
   if(lettersum_ans==56){
 
     document.querySelector("#lettersum_result").innerHTML = "<h4>Right Answer. You have unlocked 2 encrypted words in paragraph.</h4>";
-     $('#integrates').text(encryptedWords.integrates);      
-     $('#interact').text(encryptedWords.interact);      
+     is_lettersum_solved = 1;
+     $('#integrates').text(encryptedWords.integrates);
+     $('#interact').text(encryptedWords.interact);
 
   }else{
     document.querySelector("#lettersum_result").innerHTML = "<h4> Try Again </h4>"
@@ -337,9 +338,9 @@ $('#puzzle_check').on('click', () => {
 $('#final_submit').on('click', ()=> {
   let total_square = $('#puzzle').find('.square').length;
   console.log($('#puzzle').find('.square').eq(1).text());
-  for (let i = 0; i < 15; i++) { 
+  for (let i = 0; i < 15; i++) {
     submittedCrossword[i] = new Array(15);
-} 
+}
 var k =0;
 for(let i=0; i < 15; i++){
   for(let j=0; j < 15; j++){
@@ -347,7 +348,23 @@ for(let i=0; i < 15; i++){
      k++;
   }
 }
-  console.log(submittedCrossword);
+  // console.log(submittedCrossword);
+  $.ajax({
+            type: "POST",
+            url: "{%url 'crossword_submission' %}",
+            data: {
+              'submittedCrossword': JSON.stringify(submittedCrossword), csrfmiddlewaretoken: '{{ csrf_token }}',
+              'puzzle_score': puzzle_score,
+              'puzzle_click_used': puzzle_click_used,
+              'is_agesum_solved': is_agesum_solved,
+              'is_lettersum_solved': is_lettersum_solved
+
+            },
+            dataType: 'json',
+            success: function (data) {
+              alert("Your response have been subitted");
+            }
+        });
 });
 
 </script>

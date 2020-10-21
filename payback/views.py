@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from payback.models import *
-from .models import *
+
 
 
 # Create your views here.
@@ -34,29 +34,32 @@ def tangram(request):
 
 def secondyear(request):
     technoplayer1 = Technoplayer1.objects.filter(user=request.user).first()
-    loan2 = technoplayer1.loan1
-    connection2 = technoplayer1.connection1
-    happiness2 = technoplayer1.happiness1
-    focus2 = technoplayer1.focus1
-    return render(request, 'secondyear.html', {'loan2': loan2, 'connection2': connection2, 'happiness2': happiness2,'focus2':focus2})
+    loan1 = technoplayer1.loan
+    connection1 = technoplayer1.connection
+    happiness1 = technoplayer1.happiness
+    focus1 = technoplayer1.focus
+    return render(request, 'secondyear.html',
+                  {'loan1': loan1, 'connection1': connection1, 'happiness1': happiness1, 'focus1': focus1})
 
 
 def thirdyear(request):
     technoplayer2 = Technoplayer2.objects.filter(user=request.user).first()
-    loan3 = technoplayer2.loan2
-    connection3 = technoplayer2.connection2
-    happiness3 = technoplayer2.happiness2
-    focus3 = technoplayer2.focus2
-    return render(request, 'thirdyear.html',{'loan3': loan3, 'connection3': connection3, 'happiness3': happiness3,'focus3':focus3})
+    loan2 = technoplayer2.loan
+    connection2 = technoplayer2.connection
+    happiness2 = technoplayer2.happiness
+    focus2 = technoplayer2.focus
+    return render(request, 'thirdyear.html',
+                  {'loan2': loan2, 'connection2': connection2, 'happiness2': happiness2, 'focus2': focus2})
 
 
 def fourthyear(request):
     technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
-    loan4 = technoplayer3.loan3
-    connection4 = technoplayer3.connection3
-    happiness4 = technoplayer3.happiness3
-    focus4 = technoplayer3.focus3
-    return render(request, 'fourthyear.html',{'loan4': loan4, 'connection4': connection4, 'happiness4': happiness4,'focus4':focus4})
+    loan3 = technoplayer3.loan
+    connection3 = technoplayer3.connection
+    happiness3 = technoplayer3.happiness
+    focus3 = technoplayer3.focus
+    return render(request, 'fourthyear.html',
+                  {'loan3': loan3, 'connection3': connection3, 'happiness3': happiness3, 'focus3': focus3})
 
 
 def graduation(request):
@@ -140,13 +143,13 @@ def logout_view(request):
 
 
 def secondyear_submission(request):
+    technoplayer2 = Technoplayer2.objects.filter(user=request.user).first()
     if request.method == "POST":
         focus = request.POST.get('focus')
         print(focus)
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer2 = Technoplayer2.objects.filter(user=request.user)
         if technoplayer2 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -171,13 +174,13 @@ def secondyear_submission(request):
 
 
 def thirdyear_submission(request):
+    technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
     if request.method == "POST":
         focus = request.POST.get('focus')
         print(focus)
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer3 = Technoplayer3.objects.filter(user=request.user)
         if technoplayer3 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -202,13 +205,13 @@ def thirdyear_submission(request):
 
 
 def fourthyear_submission(request):
+    technoplayer4 = Technoplayer4.objects.filter(user=request.user).first()
     if request.method == "POST":
         focus = request.POST.get('focus')
         print(focus)
         happiness = request.POST.get('happiness')
         connection = request.POST.get('connection')
         loan = request.POST.get('loan')
-        technoplayer4 = Technoplayer4.objects.filter(user=request.user)
         if technoplayer4 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -230,3 +233,112 @@ def fourthyear_submission(request):
         return JsonResponse(data, safe=False)
 
     return HttpResponse("get method")
+
+
+def kenken_submission(request):
+    kenken_player = Technoplayer4.objects.filter(user=request.user).first()
+    if request.method == "POST":
+        kenken_solver = request.POST.get('kenken_solver')
+        print(kenken_solver)
+        if kenken_player is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            kenken_player = Kenkenplayer()
+            kenken_player.user = request.user
+            kenken_player.kenken_solver = kenken_solver
+            kenken_player.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
+
+
+def mastermind_submission(request):
+    mastermind_player = Mastermindplayer.objects.filter(user=request.user).first()
+    if request.method == "POST":
+        mastermind_solver = request.POST.get('mastermind_solver')
+        print(mastermind_solver)
+        if mastermind_player is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            mastermind_player = Mastermindplayer()
+            mastermind_player.user = request.user
+            mastermind_player.kenken_solver = mastermind_solver
+            mastermind_player.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
+
+
+def crossword_submission(request):
+    crossword_player = Crosswordplayer.objects.filter(user=request.user).first()
+    if request.method == "POST":
+        crossword = request.POST.get('submittedCrossword')
+        print(crossword)
+        agesum = request.POST.get('is_agesum_solved')
+        letter_sum = request.POST.get('is_lettersum_solved')
+        puzzle_score = request.POST.get('puzzle_score')
+        if crossword_player is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            crossword_player = Crosswordplayer()
+            crossword_player.user = request.user
+            crossword_player.agesum = agesum
+            crossword_player.letter_sum = letter_sum
+            crossword_player.puzzle_score = puzzle_score
+            crossword_player.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
+
+def mysteryroom_submission(request):
+    mysteryroom_player = Mysteryplayer.objects.filter(user=request.user).first()
+    if request.method == "POST":
+        jsonanswer = request.POST.get('JSONanswer')
+        print(jsonanswer)
+        if mysteryroom_player is not None:
+            pass
+            # technoplayer1.happiness = happiness
+            # technoplayer1.connection = connection
+            # technoplayer1.focus = focus
+            # technoplayer1.loan = loan
+            # technoplayer1.save()
+        else:
+            mysteryroom_player = Crosswordplayer()
+            mysteryroom_player.user = request.user
+            mysteryroom_player.answers = jsonanswer
+            mysteryroom_player.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
+
