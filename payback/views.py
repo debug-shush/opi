@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
-from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from payback.models import Technoplayer
+from .models import *
 
 
 # Create your views here.
@@ -86,12 +86,33 @@ def firstyear_submission(request):
     return HttpResponse("get method")
 
 
+# def login(request):
+#     if request.method == 'POST':
+#         rollno = (request.POST['rollno'])
+#         password = (request.POST['password'])
+#         technoplayer = Technoplayer.objects.get(rollno=rollno)
+#         # user = authenticate(rollno = rollno, password=password)
+#         if technoplayer is not None:
+#             print('user logged in')
+#             return JsonResponse("Login Successful",safe=False)
+
 def login(request):
-    if request.method == 'POST':
-        rollno = (request.POST['rollno'])
-        password = (request.POST['password'])
-        technoplayer = Technoplayer.objects.get(rollno=rollno)
-        # user = authenticate(rollno = rollno, password=password)
-        if technoplayer is not None:
-            print('user logged in')
-            return JsonResponse("Login Successful",safe=False)
+    if request.user.is_authenticated:
+        return redirect(request.GET.get('next','/firstyear'))
+
+    if request.method=="POST":
+        technouser = User.objects.filter(roll_no=request.POST['roll_no']).first()
+        if technouser is None:
+            return render(request, 'login.html', {"messages":[["text-danger","Roll Number Not Found."]]})
+        username = technouser.username;
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request,user, backend='django.contrib.auth.backends.AllowAllUsersModelBackend')
+            return redirect(request.GET.get('next','/firstyear'))
+        else:
+            return render(request, 'login.html',{"messages":[["text-danger","Invalid Credentials."]]})
+    return render(request, 'login.html',)
+
+
+
