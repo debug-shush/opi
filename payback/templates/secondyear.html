@@ -681,8 +681,8 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down"
-                     data-outcome="223" data-challenge="28">  <a href="../mastermind" style="background: none;" onMouseOver="this.style.color='#fff0d2'" onMouseOut="this.style.color='#000'"> Start The Exam </a>
+                <div id="secondyearbutton" class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down"
+                     data-outcome="223" data-challenge="28">  <a href="../mastermind" style="background: none;" onMouseOver="this.style.color='#fff0d2'" onMouseOut="this.style.color='#000'"> Start The Exam   {{loan}} </a>
                 </div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
@@ -730,7 +730,7 @@
 
 
 
-
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
 <!-- shop js here -->
 <script src="{% static 'payback/js/firstyear/shop/libraries.js' %}"></script>
 <script src="{% static 'payback/js/firstyear/shop/ap.js' %}"></script>
@@ -739,13 +739,29 @@
 
 
 <!-- Script of scores taking from First year  =============================== -->
-
 <script>
-
 $( window ).on( "load", end_to_start());
 $( window ).on( "load", nextfunc(x));
 </script>
+<script>
+    $('#secondyearbutton').on('click', () => {
+        $.ajax({
+            type: "POST",
+            url: "{%url 'firstyear_submission' %}",
+            data: {
+                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
+                'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
+                'connection': document.getElementsByClassName("meter-connection")[0].attributes[1].value,
+                'loan': loan
 
+            },
+            dataType: 'json',
+            success: function (data) {
+                alert("Your response have been subitted");
+            }
+        });
+    });
+</script>
 <!-- Script of scores taking from First year  END ==============================  -->
 
 

@@ -36,6 +36,7 @@ def secondyear(request):
     loan = technoplayer.loan
     connection = technoplayer.connection
     happiness= technoplayer.happiness
+    focus= technoplayer.focus
     return render(request, 'secondyear.html',{'loan':loan,'connection':connection,'happiness':happiness})
 
 
@@ -119,4 +120,71 @@ def login(request):
     return render(request, 'login.html',)
 
 
+def secondyear_submission(request):
+    if request.method == "POST":
+        focus = request.POST.get('focus')
+        print(focus)
+        happiness = request.POST.get('happiness')
+        connection = request.POST.get('connection')
+        loan = request.POST.get('loan')
+        technoplayer = Technoplayer.objects.filter(user=request.user)
+        if technoplayer != None:
+            technoplayer.happiness = happiness
+            technoplayer.connection = connection
+            technoplayer.focus = focus
+            technoplayer.loan = loan
+            technoplayer.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
+
+
+def thirdyear_submission(request):
+    if request.method == "POST":
+        focus = request.POST.get('focus')
+        print(focus)
+        happiness = request.POST.get('happiness')
+        connection = request.POST.get('connection')
+        loan = request.POST.get('loan')
+        technoplayer = Technoplayer.objects.filter(user=request.user)
+        if technoplayer != None:
+            technoplayer.happiness = happiness
+            technoplayer.connection = connection
+            technoplayer.focus = focus
+            technoplayer.loan = loan
+            technoplayer.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
+
+
+def fourthyear_submission(request):
+    if request.method == "POST":
+        focus = request.POST.get('focus')
+        print(focus)
+        happiness = request.POST.get('happiness')
+        connection = request.POST.get('connection')
+        loan = request.POST.get('loan')
+        technoplayer = Technoplayer.objects.filter(user=request.user)
+        if technoplayer != None:
+            technoplayer.happiness = happiness
+            technoplayer.connection = connection
+            technoplayer.focus = focus
+            technoplayer.loan = loan
+            technoplayer.save()
+
+        # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
+        # thirdyear.save();
+        data = "Save Successfully"
+        return JsonResponse(data, safe=False)
+
+    return HttpResponse("get method")
 

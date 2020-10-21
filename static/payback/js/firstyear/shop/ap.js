@@ -1,4 +1,5 @@
-var x = "{{loan}}";
+
+console.log(x)
 (function() {
 'use strict';
 

@@ -19,5 +19,8 @@ urlpatterns =[
     path("mysteryroom/",views.mysteryroom,name='mysteryroom'),
     path("login/", views.login, name='login'),
     path("firstyear_submission/", views.firstyear_submission, name='firstyear_submission'),
+    path("secondyear_submission/", views.secondyear_submission, name='secondyear_submission'),
+    path("thirdyear_submission/", views.thirdyear_submission, name='thirdyear_submission'),
+    path("fourthyear_submission/", views.fourthyear_submission, name='fourthyear_submission'),
 ]
 
