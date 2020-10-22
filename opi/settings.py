@@ -135,3 +135,5 @@ MEDIA_URL='/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
 
 AUTH_USER_MODEL = "payback.User"
+
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
