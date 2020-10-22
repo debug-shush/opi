@@ -45,7 +45,7 @@
     <table id='kenken' border=5 cellpadding=5>
     <tbody>
     <tr>
-    <td id='td11'><label>2/</label>&nbsp;<input id="11" type="text" size="1">&nbsp;&nbsp;</td>
+    <td id='td11'><div style="position: absolute; z-index: 10px;">2/</div> ;&nbsp;<input id="11" type="text" size="1">&nbsp;&nbsp;</td>
     <td id='td12'><label>45*</label>&nbsp;&nbsp;<input id="12" type="text" size="1">&nbsp;&nbsp;</td>
     <td id='td13'>&nbsp;&nbsp;<input id="13" type="text" size="1">&nbsp;&nbsp;</td>
     <td id='td14'><label>3-</label>&nbsp;&nbsp;<input id="14" type="text" size="1">&nbsp;&nbsp;</td>
@@ -162,7 +162,7 @@
     </div>
     </body>
     <p id="demo" align='center'></p>
-    <button align='center'onclick="checker()">solution</button>
+    <button id ="solution" style="display:none;" align='center'onclick="checker()">solution</button>
     <div id ="instructions">
 			<p id="title">HOW TO PLAY</p>
 			<p>
