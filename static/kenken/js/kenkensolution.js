@@ -1,4 +1,4 @@
-window.onload = disabel();
+// window.onload = disabel();
 function disable(){
     document.getElementById("23").disabled = true;
     document.getElementById("45").disabled = true;

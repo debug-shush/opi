@@ -1,5 +1,8 @@
 from django.db import models
+# from django.forms import util
 import jsonfield
+# from django_mysql.models import JSONField
+# from json_field import JSONField
 from django.contrib.auth.models import AbstractUser
 
 
@@ -68,6 +71,7 @@ class Crosswordplayer(models.Model):
     puzzle_score = models.CharField(max_length=10, blank=True, null=True)
     age_sum = models.BooleanField(max_length=10, blank=True)
     letter_sum = models.BooleanField(max_length=10, blank=True)
+    submittedCrossword = jsonfield.JSONField()
 
 class Mysteryplayer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)

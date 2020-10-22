@@ -12,6 +12,7 @@ from io import BytesIO
 from payback.forms import *
 # from django.conf.settings import PROJECT_ROOT
 from payback.models import *
+from . import imp
 
 # Create your views here.
 def opening(request):
@@ -246,7 +247,7 @@ def fourthyear_submission(request):
 
 
 def kenken_submission(request):
-    kenken_player = Kenkenplayer().objects.filter(user=request.user).first()
+    kenken_player = Kenkenplayer.objects.filter(user=request.user).first()
     if request.method == "POST":
         kenken_solver = request.POST.get('kenken_solver')
         print(kenken_solver)
