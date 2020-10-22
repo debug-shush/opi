@@ -5,7 +5,13 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from payback.models import Technoplayer
 from .models import *
-
+import xlrd
+import os
+from django.conf import settings
+from openpyxl import load_workbook
+from io import BytesIO
+from payback.forms import *
+# from django.conf.settings import PROJECT_ROOT
 
 # Create your views here.
 def opening(request):
@@ -202,3 +208,45 @@ def fourthyear_submission(request):
 
     return HttpResponse("get method")
 
+def append_user(excel_data):
+
+    wb = load_workbook(filename=BytesIO(excel_data))
+    sheet = wb.active
+    # a1 = sheet['A1']
+    r = 10
+    col = 5
+    for i in  range(r):
+        name_val = sheet.cell(row=i+2, column=1).value
+        print(name_val)
+        name = name_val.split()
+        first_name = name[0]
+        last_name = name[1]
+        username = str(first_name.lower()+last_name.lower())
+        contact = sheet.cell(row=i+2, column=2).value
+        email = sheet.cell(row=i+2, column=3).value
+        roll = str(sheet.cell(row=i+2, column=4).value)
+        password = str(sheet.cell(row=i+2, column=5).value)
+        user = User.objects.create_user(username=username, email=email, password=password)
+        user.first_name = first_name
+        user.last_name = last_name
+        user.roll_no = roll
+        user.contact = contact
+        user.save()
+
+    # for i in range(sheet.nrows):
+    #     print(sheet.cell_value(i,0))
+
+def get_sheet(request):
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            file_in_memory = request.FILES['file'].read()
+            # wb = load_workbook(filename=BytesIO(file_in_memory))
+            append_user(file_in_memory)
+
+            return HttpResponse("Read Successfully")
+
+
+    else:
+        form = UploadFileForm()
+        return render(request, 'upload.html', {'form': form})
