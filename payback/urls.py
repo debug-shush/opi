@@ -28,6 +28,5 @@ urlpatterns =[
     path("mastermind_submission/", views.mastermind_submission, name='mastermind_submission'),
     path("crossword_submission/", views.crossword_submission, name='crossword_submission'),
     path("mysteryroom_submission/", views.mysteryroom_submission, name='mysteryroom_submission'),
-
 ]
 

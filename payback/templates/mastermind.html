@@ -16,6 +16,8 @@
     <title>Mastermind</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,800italic' rel='stylesheet'
           type='text/css'>
@@ -425,8 +427,16 @@
         <button id="delete" class="">&#8672;</button>
         <br>
         <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
-                href="{% url 'thirdyear' %}">SUBMIT</a></button>
-        <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="{% url 'thirdyear' %}">SKIP</a>
+                href=""></a></button>
+        {#        <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="{% url 'thirdyear' %}">SKIP</a>#}
+        {#        <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a#}
+        {#                href="#">SUBMIT</a></button>#}
+        {#        <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a>#}
+        <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a>
+        </button>
+        <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SKIP</a></button>
+
+
         </button>
     </div>
 </div>
@@ -442,7 +452,7 @@
 
 <script src="{% static 'mastermind/js/main.js' %}"></script>
 <script>
-    $('#newGame').on('click', () => {
+    $('#submit').on('click', () => {
         // {#let total_square = $('#puzzle').find('.square').length;#}
         // {#console.log($('#puzzle').find('.square').eq(1).text());#}
         // {#for (let i = 0; i < 15; i++) {#}

@@ -154,9 +154,9 @@ def secondyear_submission(request):
     if request.method == "POST":
         focus = request.POST.get('focus')
         print(focus)
-        happiness = request.POST.get('happiness')
-        connection = request.POST.get('connection')
-        loan = request.POST.get('loan')
+        happiness = request.POST.get('happiness2')
+        connection = request.POST.get('connection2')
+        loan = request.POST.get('loan2')
         if technoplayer2 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -184,11 +184,11 @@ def secondyear_submission(request):
 def thirdyear_submission(request):
     technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
     if request.method == "POST":
-        focus = request.POST.get('focus')
+        focus = request.POST.get('focus3')
         print(focus)
-        happiness = request.POST.get('happiness')
-        connection = request.POST.get('connection')
-        loan = request.POST.get('loan')
+        happiness = request.POST.get('happiness3')
+        connection = request.POST.get('connection3')
+        loan = request.POST.get('loan3')
         if technoplayer3 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -250,14 +250,9 @@ def kenken_submission(request):
     if request.method == "POST":
         kenken_solver = request.POST.get('kenken_solver')
         print(kenken_solver)
-        if kenken_player is not None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
+        print(1)
+        if kenken_player is None:
+            print(2)
             kenken_player = Kenkenplayer()
             kenken_player.user = request.user
             kenken_player.kenken_solver = kenken_solver
@@ -276,17 +271,12 @@ def mastermind_submission(request):
     if request.method == "POST":
         mastermind_solver = request.POST.get('mastermind_solver')
         print(mastermind_solver)
-        if mastermind_player is not None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
+        print(1)
+        if mastermind_player is None:
+            print(2)
             mastermind_player = Mastermindplayer()
             mastermind_player.user = request.user
-            mastermind_player.kenken_solver = mastermind_solver
+            mastermind_player.mastermind_solver = mastermind_solver
             mastermind_player.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
@@ -305,7 +295,7 @@ def crossword_submission(request):
         agesum = request.POST.get('is_agesum_solved')
         letter_sum = request.POST.get('is_lettersum_solved')
         puzzle_score = request.POST.get('puzzle_score')
-        if crossword_player is not None:
+        if crossword_player is None:
             pass
             # technoplayer1.happiness = happiness
             # technoplayer1.connection = connection
@@ -332,7 +322,7 @@ def mysteryroom_submission(request):
     if request.method == "POST":
         jsonanswer = request.POST.get('JSONanswer')
         print(jsonanswer)
-        if mysteryroom_player is not None:
+        if mysteryroom_player is None:
             pass
             # technoplayer1.happiness = happiness
             # technoplayer1.connection = connection
@@ -340,7 +330,7 @@ def mysteryroom_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
-            mysteryroom_player = Crosswordplayer()
+            mysteryroom_player = Mysteryplayer()
             mysteryroom_player.user = request.user
             mysteryroom_player.answers = jsonanswer
             mysteryroom_player.save()
