@@ -1,4 +1,5 @@
 from django.db import models
+import jsonfield
 from django.contrib.auth.models import AbstractUser
 
 
@@ -54,7 +55,7 @@ class Technoplayer4(models.Model):
 
 class Kenkenplayer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    kenken_solver = models.JSONField(blank=True, null=True)
+    kenken_solver = jsonfield.JSONField()
 
 
 class Mastermindplayer(models.Model):
@@ -70,5 +71,5 @@ class Crosswordplayer(models.Model):
 
 class Mysteryplayer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    answers = models.JSONField(max_length=10, blank=True, null=True)
+    answers = jsonfield.JSONField()
 

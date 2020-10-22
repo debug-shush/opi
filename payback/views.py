@@ -99,6 +99,7 @@ def firstyear_submission(request):
         print(loan)
         if technoplayer1 is None:
             print(1)
+            technoplayer1 = Technoplayer1()
             technoplayer1.user = request.user
             technoplayer1.happiness1 = happiness
             technoplayer1.connection1 = connection
@@ -153,9 +154,9 @@ def secondyear_submission(request):
     if request.method == "POST":
         focus = request.POST.get('focus')
         print(focus)
-        happiness = request.POST.get('happiness')
-        connection = request.POST.get('connection')
-        loan = request.POST.get('loan')
+        happiness = request.POST.get('happiness2')
+        connection = request.POST.get('connection2')
+        loan = request.POST.get('loan2')
         if technoplayer2 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -164,6 +165,7 @@ def secondyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
+            technoplayer2 = Technoplayer2()
             technoplayer2.user = request.user
             technoplayer2.happiness2 = happiness
             technoplayer2.connection2 = connection
@@ -182,11 +184,11 @@ def secondyear_submission(request):
 def thirdyear_submission(request):
     technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
     if request.method == "POST":
-        focus = request.POST.get('focus')
+        focus = request.POST.get('focus3')
         print(focus)
-        happiness = request.POST.get('happiness')
-        connection = request.POST.get('connection')
-        loan = request.POST.get('loan')
+        happiness = request.POST.get('happiness3')
+        connection = request.POST.get('connection3')
+        loan = request.POST.get('loan3')
         if technoplayer3 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -195,6 +197,7 @@ def thirdyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
+            technoplayer3 = Technoplayer3()
             technoplayer3.user = request.user
             technoplayer3.happiness3 = happiness
             technoplayer3.connection3 = connection
@@ -226,6 +229,7 @@ def fourthyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
+            technoplayer1 = Technoplayer4()
             technoplayer4.user = request.user
             technoplayer4.happiness4 = happiness
             technoplayer4.connection4 = connection
@@ -242,7 +246,7 @@ def fourthyear_submission(request):
 
 
 def kenken_submission(request):
-    kenken_player = Technoplayer4.objects.filter(user=request.user).first()
+    kenken_player = Kenkenplayer.objects.filter(user=request.user).first()
     if request.method == "POST":
         kenken_solver = request.POST.get('kenken_solver')
         print(kenken_solver)
@@ -282,7 +286,7 @@ def mastermind_submission(request):
         else:
             mastermind_player = Mastermindplayer()
             mastermind_player.user = request.user
-            mastermind_player.kenken_solver = mastermind_solver
+            mastermind_player.mastermind_solver = mastermind_solver
             mastermind_player.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
@@ -336,7 +340,7 @@ def mysteryroom_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
-            mysteryroom_player = Crosswordplayer()
+            mysteryroom_player = Mysteryplayer()
             mysteryroom_player.user = request.user
             mysteryroom_player.answers = jsonanswer
             mysteryroom_player.save()

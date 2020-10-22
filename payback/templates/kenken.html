@@ -9,6 +9,18 @@
     <script src="{% static 'kenken/js/kenkensolution.js' %}"></script>
     <link rel="stylesheet" href="{% static 'kenken/css/cells.css' %}">
     <link rel="stylesheet" href="{% static 'kenken/css/style.css' %}"/>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 <h1 id='myh1' align="center"></h1>
@@ -182,18 +194,22 @@
     <p>d) you will get hints for these puzzles inexchange to 25% points of that grid.
     </p>
 </div>
-<input id="skip" type="button" value="SKIP" onclick="redirect1();"/>
-<script type="text/javascript">
-    function redirect1() {
-        window.location = "{% url 'secondyear' %}";
-    }
-</script>
-<input id="submit" type="button" value="SUBMIT" onClick="redirect2();"/>
-<script type="text/javascript">
-    function redirect2() {
-        window.location = "{% url 'secondyear' %}";
-    }
-</script>
+{#<input id="skip" type="button" value="SKIP" onclick="redirect1();"/>#}
+{#<script type="text/javascript">#}
+    {#function redirect1() {#}
+    {#    window.location = "{% url 'secondyear' %}";#}
+{#    {#}
+{#    #}
+{#</script>#}
+{#<input id="submit" type="button" value="SUBMIT" onClick="redirect2();"/>#}
+{#<script type="text/javascript">#}
+    {#function redirect2() {#}
+    {#    window.location = "{% url 'secondyear' %}";#}
+{#    {#}
+{#    #}
+{#</script>#}
+<button class="button skip">SKIP</button>
+<button class="button submit">SUBMIT</button>
 {#        <input id = "task3" type="button" value="task3" onClick="redirect3();"/>#}
 {#        <script type="text/javascript">#}
 {#        function redirect3()}#}
@@ -207,7 +223,7 @@
     function kenken_data() {
 
         for (var i = 0; i < 81; i++) {
-            kenken_array[i] = -1;
+            kenken_array[i] = -100;
         }
 
         for (var i = 0; i < 81; i++) {
@@ -239,7 +255,7 @@
             },
             dataType: 'json',
             success: function (data) {
-                alert("Your response have been subitted");
+                alert("Your response have been submitted");
             }
         });
     });
