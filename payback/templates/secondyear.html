@@ -38,7 +38,7 @@
         <div class="mobile-display-btn mobile-only" onclick="toggleFooter(event, this)">
             <div class="fancy-arrow"></div>
         </div>
-        <div class="barWrapper meter-focus" data-value="500">
+        <div class="barWrapper meter-focus" data-value="{{focus1}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Focus:</div>
@@ -69,7 +69,7 @@
                 <div class="value" id="focid" style="background: rgb(1, 182, 173); width: 50%;"></div>
             </div>
         </div>
-        <div class="barWrapper meter-connections" data-value="500">
+        <div class="barWrapper meter-connections" data-value="{{connection1}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Connections:</div>
@@ -102,7 +102,7 @@
                 <div class="value" id="conid" style="width: 50%; background: rgb(1, 182, 173);"></div>
             </div>
         </div>
-        <div class="barWrapper meter-happiness" data-value="500">
+        <div class="barWrapper meter-happiness" data-value="{{happiness1}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Happiness:</div>
@@ -141,7 +141,7 @@
                     </svg>
                     <div class="icon-label value-text mobile-only">HAPPINESS</div>
                 </div>
-                <div id="happid" class="value" style="background: rgb(1, 182, 173); width: '{{happiness1}}%';"></div>
+                <div id="happid" class="value" style="background: rgb(1, 182, 173); width: 50%;"></div>
             </div>
         </div>
         <div class="barWrapper meter-loans" data-value="{{loan1}}">
@@ -175,7 +175,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div style="background:#313d4c" id="meter-loan-value" class="value">{{loan2}}</div>
+                    <div style="background:#313d4c" id="meter-loan-value" class="value">{{loan1}}</div>
                 </div>
                 <div style="background:#313d4c" class="value-text desktop-only">IN<br>DEBT</div>
                 <div class="value-text mobile-only">IN DEBT</div>
@@ -682,7 +682,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div id="secondyearbutton" class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down"
-                     data-outcome="223" data-challenge="28">  <a href="../mastermind" style="background: none;" onMouseOver="this.style.color='#fff0d2'" onMouseOut="this.style.color='#000'"> Start The Exam   {{loan}} </a>
+                     data-outcome="223" data-challenge="28">   Start The Exam  
                 </div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
@@ -718,8 +718,9 @@
 <!-- Page 9 end ================================ -->
 
 
-
-
+<div id="f" data-value="{{focus1}}"></div>
+<div id="c" data-value="{{connection1}}"></div>
+<div id="h" data-value="{{happiness1}}"></div>
 
 <!-- END OF Second YEAR ============================== -->
 
@@ -740,8 +741,15 @@
 
 <!-- Script of scores taking from First year  =============================== -->
 <script>
-$( window ).on( "load", end_to_start());
-$( window ).on( "load", nextfunc(x));
+// $( window ).on( "load", end_to_start());
+// $( window ).on( "load", nextfunc(x));
+$( window ).on( "load", 
+console.log(1),
+$('#focid').css({"transition" : "width 2s" , "width" : parseInt($("#f")[0].dataset.value)/10+ "%"}),
+$('#conid').css({"transition" : "width 2s" , "width" : parseInt($("#c")[0].dataset.value)/10+ "%"}),
+$('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].dataset.value)/10+ "%"}),
+
+);
 </script>
 <script>
     $('#secondyearbutton').on('click', () => {
@@ -751,7 +759,7 @@ $( window ).on( "load", nextfunc(x));
             data: {
                 'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
                 'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
-                'connection': document.getElementsByClassName("meter-connection")[0].attributes[1].value,
+                'connection': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
                 'loan': loan
 
             },
@@ -760,6 +768,7 @@ $( window ).on( "load", nextfunc(x));
                 alert("Your response have been subitted");
             }
         });
+        window.location = "../mastermind";
     });
 </script>
 <!-- Script of scores taking from First year  END ==============================  -->

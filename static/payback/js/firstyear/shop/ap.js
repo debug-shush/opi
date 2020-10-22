@@ -3028,43 +3028,43 @@ function clickLanguage(e, language) {
 	}
 }
 
-function clickOutcome(direction, index, e, elm) {
-	e.stopPropagation();
-	if (elm.classList.contains('disabled')) {
-		return;
-	}
-	//add class disabled so we don't let them keep clicking
-	turnBtnOff();
+// function clickOutcome(direction, index, e, elm) {
+// 	e.stopPropagation();
+// 	if (elm.classList.contains('disabled')) {
+// 		return;
+// 	}
+// 	//add class disabled so we don't let them keep clicking
+// 	turnBtnOff();
 
-	try {
-		selectedOutcome = { Outcome: new Object(challengeData[currentChallengesIndex].Challenge.ChallengeOutcomes[index].Outcome) };
-		checkForSelectedOutcomeRecurring();
-	} catch (e) {
-		// console.log(e);
-		unableToGetOutcome = true;
-	}
+// 	try {
+// 		selectedOutcome = { Outcome: new Object(challengeData[currentChallengesIndex].Challenge.ChallengeOutcomes[index].Outcome) };
+// 		checkForSelectedOutcomeRecurring();
+// 	} catch (e) {
+// 		// console.log(e);
+// 		unableToGetOutcome = true;
+// 	}
 
-	var selectedValue = challengeData[currentChallengesIndex].Challenge.ChallengeOutcomes[index];
+// 	// var selectedValue = challengeData[currentChallengesIndex].Challenge.ChallengeOutcomes[index];
 
 
-	//we push onto the index of challenges
-	if (!selectedPathData._usedChallenges) {
-		selectedPathData._usedChallenges = [];
-	}
-	selectedPathData._usedChallenges.push(challengeData[currentChallengesIndex].Challenge.id);
+// 	//we push onto the index of challenges
+// 	if (!selectedPathData._usedChallenges) {
+// 		selectedPathData._usedChallenges = [];
+// 	}
+// 	selectedPathData._usedChallenges.push(challengeData[currentChallengesIndex].Challenge.id);
 
-	if (selectedOutcome.Outcome.OutcomeChallenges.length > 0) {
-		handleArrayOfOutcomeChallenges(selectedOutcome.Outcome.OutcomeChallenges)
-			.then(function () {
-				loadNextChallenge(challengeData[currentChallengesIndex].Challenge, selectedOutcome, direction, elm);
-			})
-			.catch(function () {
-				loadNextChallenge(challengeData[currentChallengesIndex].Challenge, selectedOutcome, direction, elm);
-			})
-	} else {
-		loadNextChallenge(challengeData[currentChallengesIndex].Challenge, selectedOutcome, direction, elm);
-	}
-}
+// 	if (selectedOutcome.Outcome.OutcomeChallenges.length > 0) {
+// 		handleArrayOfOutcomeChallenges(selectedOutcome.Outcome.OutcomeChallenges)
+// 			.then(function () {
+// 				loadNextChallenge(challengeData[currentChallengesIndex].Challenge, selectedOutcome, direction, elm);
+// 			})
+// 			.catch(function () {
+// 				loadNextChallenge(challengeData[currentChallengesIndex].Challenge, selectedOutcome, direction, elm);
+// 			})
+// 	} else {
+// 		loadNextChallenge(challengeData[currentChallengesIndex].Challenge, selectedOutcome, direction, elm);
+// 	}
+// }
 
 
 function loadNextChallenge(challenge, outcomeSelected, direction, elm) {
@@ -6013,9 +6013,9 @@ function end_to_start_ret(){
 	//  End func of First year    
 	
 function end_to_start(){
-	// console.log(1);
+	console.log(3);
 	var $var = document.getElementsByClassName("meter-focus")
-	var $va_data =  first_year_score_storing_array[0];
+	var $va_data =  parseInt($var[0].attributes[1].value);
 	$var[0].attributes[1].value = $va_data
 	$('#focid').css({ "width" : $va_data/10+ "%"});
 	if ($va_data < 200){
@@ -6031,7 +6031,7 @@ function end_to_start(){
 
 
 	var $var = document.getElementsByClassName("meter-connections")
-	var $va_data =  first_year_score_storing_array[1]
+	var $va_data =  parseInt($var[0].attributes[1].value);
 	$var[0].attributes[1].value = $va_data
 	$('#conid').css({"width" : $va_data/10+ "%"});
 	if ($va_data < 200){
@@ -6048,7 +6048,7 @@ function end_to_start(){
 
 
 	var $var = document.getElementsByClassName("meter-happiness")
-	var $va_data =  first_year_score_storing_array[2]
+	var $va_data =  parseInt($var[0].attributes[1].value);
 	$var[0].attributes[1].value = $va_data
 	$('#happid').css({"width" : $va_data/10+ "%"});
 	if ($va_data < 200){
@@ -6423,7 +6423,7 @@ function books(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -6607,10 +6607,10 @@ function seniors(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -6690,10 +6690,10 @@ function seniors(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 150
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -6776,10 +6776,10 @@ function job(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -6865,10 +6865,10 @@ function job(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -6960,10 +6960,10 @@ function bbq(x){
 			$va_data=500
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -7053,10 +7053,10 @@ function bbq(x){
 			$va_data=0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -7145,10 +7145,10 @@ function kriti(x){
 			$va_data=500
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -7233,10 +7233,10 @@ function kriti(x){
 			$va_data=0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){

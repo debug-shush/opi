@@ -37,7 +37,7 @@
         <div class="mobile-display-btn mobile-only" onclick="toggleFooter(event, this)">
             <div class="fancy-arrow"></div>
         </div>
-        <div class="barWrapper meter-focus" data-value="500">
+        <div class="barWrapper meter-focus" data-value="{{focus2}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Focus:</div>
@@ -68,7 +68,7 @@
                 <div class="value" id="focid" style="background: rgb(1, 182, 173); width: 50%;"></div>
             </div>
         </div>
-        <div class="barWrapper meter-connections" data-value="500">
+        <div class="barWrapper meter-connections" data-value="{{connection2}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Connections:</div>
@@ -101,7 +101,7 @@
                 <div class="value" id="conid" style="width: 50%; background: rgb(1, 182, 173);"></div>
             </div>
         </div>
-        <div class="barWrapper meter-happiness" data-value="500">
+        <div class="barWrapper meter-happiness" data-value="{{happiness2}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Happiness:</div>
@@ -591,7 +591,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div class="opt options" id="thirdyearbutton" onclick="clickOutcome('down', 1, event, this)" data-direction="down" data-outcome="223" data-challenge="28"> <a href="{% url 'crossword' %}" style="background: none;">   Start The Exam  </a></div>
+                <div class="opt options" id="thirdyearbutton" onclick="" data-direction="down" data-outcome="223" data-challenge="28">    Start The Exam  </div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
@@ -669,6 +669,10 @@
 <!-- END OF Third YEAR    END ============================== -->
 
 
+<div id="f" data-value="{{focus2}}"></div>
+<div id="c" data-value="{{connection2}}"></div>
+<div id="h" data-value="{{happiness2}}"></div>
+
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
 <!-- shop js here -->
@@ -683,19 +687,28 @@
 <!-- Script of scores taking from Second year  =============================== -->
 
 <script>
-    $( window ).on( "load", end_to_start());
-    // $( window ).on( "load", loadRegisterTemplate());  
+
+// $( window ).on( "load", end_to_start());
+// $( window ).on( "load", nextfunc(x));
+$( window ).on( "load", 
+console.log(1),
+$('#focid').css({"transition" : "width 2s" , "width" : parseInt($("#f")[0].dataset.value)/10+ "%"}),
+$('#conid').css({"transition" : "width 2s" , "width" : parseInt($("#c")[0].dataset.value)/10+ "%"}),
+$('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].dataset.value)/10+ "%"}),
+
+);
+ 
 </script>
 
 <script>
     $('#thirdyearbutton').on('click', () => {
         $.ajax({
             type: "POST",
-            url: "{%url 'firstyear_submission' %}",
+            url: "{%url 'thirdyear_submission' %}",
             data: {
                 'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
                 'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
-                'connection': document.getElementsByClassName("meter-connection")[0].attributes[1].value,
+                'connection': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
                 'loan': loan
 
             },
@@ -704,6 +717,7 @@
                 alert("Your response have been subitted");
             }
         });
+        window.location = "../crossword"
     });
 </script>
 <!-- Script of scores taking from Second year  END ==============================  -->
