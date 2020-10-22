@@ -153,7 +153,7 @@ def logout_view(request):
 def secondyear_submission(request):
     technoplayer2 = Technoplayer2.objects.filter(user=request.user).first()
     if request.method == "POST":
-        focus = request.POST.get('focus')
+        focus = request.POST.get('focus2')
         print(focus)
         happiness = request.POST.get('happiness2')
         connection = request.POST.get('connection2')
@@ -217,11 +217,11 @@ def thirdyear_submission(request):
 def fourthyear_submission(request):
     technoplayer4 = Technoplayer4.objects.filter(user=request.user).first()
     if request.method == "POST":
-        focus = request.POST.get('focus')
+        focus = request.POST.get('focus4')
         print(focus)
-        happiness = request.POST.get('happiness')
-        connection = request.POST.get('connection')
-        loan = request.POST.get('loan')
+        happiness = request.POST.get('happiness4')
+        connection = request.POST.get('connection4')
+        loan = request.POST.get('loan4')
         if technoplayer4 is not None:
             pass
             # technoplayer1.happiness = happiness
@@ -296,19 +296,13 @@ def crossword_submission(request):
         agesum = request.POST.get('is_agesum_solved')
         letter_sum = request.POST.get('is_lettersum_solved')
         puzzle_score = request.POST.get('puzzle_score')
-        if crossword_player is None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
+        if crossword_player is  None:
             crossword_player = Crosswordplayer()
             crossword_player.user = request.user
             crossword_player.agesum = agesum
             crossword_player.letter_sum = letter_sum
             crossword_player.puzzle_score = puzzle_score
+            crossword_player.submittedCrossword = crossword
             crossword_player.save()
 
         # thirdyear = Thirdyear(puzzle_score=puzzle_score, age_sum=agesum_solved, letter_sum=letter_sum_solved)
@@ -324,13 +318,6 @@ def mysteryroom_submission(request):
         jsonanswer = request.POST.get('JSONanswer')
         print(jsonanswer)
         if mysteryroom_player is None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
             mysteryroom_player = Mysteryplayer()
             mysteryroom_player.user = request.user
             mysteryroom_player.answers = jsonanswer

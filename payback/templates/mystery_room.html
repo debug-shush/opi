@@ -289,8 +289,9 @@
         </div>
     </div>
 </div>
-<button type="button" id="submit" class="green" style="margin-left: 40%;margin-top: 12%;"><a
+<button type="button" id="submit" class="green" style="margin-left: 25%;margin-top: 42%;"><a
         href="{% url 'graduation' %}">SUBMIT</a></button>
+
 <script>
 
     $(document).ready(function () {
@@ -308,7 +309,7 @@
     }
     $('#painting_close1').on('click', () => {
         modal1.style.display = "none";
-    })
+    });
 
     var modal2 = document.getElementById("painting2_final_modal");
     var img2 = document.getElementById("painting2_final");
@@ -399,6 +400,8 @@
         }
 
     }
+
+    
 
 
     var modal10 = document.getElementById("cabinetmodal2");
@@ -509,9 +512,10 @@
     //   }
     // }
 </script>
+
 <script>
     var jsonanswer;
-    $('#final_submit').on('click', () => {
+    $('#submit').on('click', () => {
         var locker1 = $('#locker1q1').value
         var locker2 = $('#locker2q1').value
         var locker3 = $('#doorq1').value
@@ -521,7 +525,7 @@
             // console.log(submittedCrossword);
             $.ajax({
                 type: "POST",
-                url: "{%url 'crossword_submission' %}",
+                url: "{%url 'mysteryroom_submission' %}",
                 data: {
                     'JSONanswer':jsonanswer,
                     csrfmiddlewaretoken: '{{ csrf_token }}',

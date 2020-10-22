@@ -757,10 +757,10 @@ $('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].data
             type: "POST",
             url: "{%url 'secondyear_submission' %}",
             data: {
-                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
-                'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
-                'connection': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
-                'loan': loan
+                'happiness2': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
+                'focus2': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
+                'connection2': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
+                'loan2': loan
 
             },
             dataType: 'json',

@@ -68,10 +68,11 @@ class Mastermindplayer(models.Model):
 
 class Crosswordplayer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    puzzle_score = models.CharField(max_length=10, blank=True, null=True)
-    age_sum = models.BooleanField(max_length=10, blank=True)
-    letter_sum = models.BooleanField(max_length=10, blank=True)
     submittedCrossword = jsonfield.JSONField()
+    puzzle_score = models.CharField(max_length=10, blank=True, null=True)
+    age_sum = models.BooleanField(max_length=10, blank=True , null = True)
+    letter_sum = models.BooleanField(max_length=10, blank=True , null = True)
+    
 
 class Mysteryplayer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)

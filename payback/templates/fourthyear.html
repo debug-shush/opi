@@ -664,10 +664,10 @@ $('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].data
             type: "POST",
             url: "{%url 'fourthyear_submission' %}",
             data: {
-                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
-                'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
-                'connection': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
-                'loan': loan
+                'happiness4': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
+                'focus4': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
+                'connection4': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
+                'loan4': loan
 
             },
             dataType: 'json',

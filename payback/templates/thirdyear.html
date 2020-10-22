@@ -143,7 +143,7 @@
                 <div id="happid" class="value" style="background: rgb(1, 182, 173); width: 50%;"></div>
             </div>
         </div>
-        <div class="barWrapper meter-loans" data-value="50000">
+        <div class="barWrapper meter-loans" data-value="{{loan2}}">
             <div class="tooltip" style="opacity: 0; top: -61px;">
                 <div class="textWrapper">
                     <div class="text">Debt:</div>
@@ -706,10 +706,10 @@ $('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].data
             type: "POST",
             url: "{%url 'thirdyear_submission' %}",
             data: {
-                'happiness': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
-                'focus': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
-                'connection': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
-                'loan': loan
+                'happiness3': document.getElementsByClassName("meter-happiness")[0].attributes[1].value , csrfmiddlewaretoken: '{{ csrf_token }}',
+                'focus3': document.getElementsByClassName("meter-focus")[0].attributes[1].value,
+                'connection3': document.getElementsByClassName("meter-connections")[0].attributes[1].value,
+                'loan3': loan
 
             },
             dataType: 'json',
