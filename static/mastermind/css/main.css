@@ -124,13 +124,12 @@ body.lost { background-color: #E22D2D; }
   margin: 0 auto;
 }
 
-header {
- ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(1, 157, 149);;
 }
 
 li {
@@ -145,17 +144,20 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li a:hover {
   background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
-}
 }
 
 hr {
   border-top: 2px dotted #fff;
+}
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
 }
 
 .container {
@@ -437,7 +439,6 @@ button.primary {
 
 .right_board{
   float: right;
-  overflow-y: scroll;
 }
 
 .left_board{

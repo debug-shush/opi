@@ -1,35 +1,48 @@
-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.full_page{
+  background: url(/static/payback/images/firstyear/images/highschool-texture.png);
+}
+
+
+
+
+.header {
   overflow: hidden;
-  background-color: rgb(1, 157, 149);;
+  background-color: #019d95;
+  padding: 10px 10px;
+  height:60px;
 }
 
-li {
+.header a {
   float: left;
-}
-
-li a {
-  display: block;
-  color: white;
+  color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px;
   text-decoration: none;
+  font-size: 18px; 
+  line-height: 15px;
+  border-radius: 4px;
 }
 
-li a:hover {
-  background-color: #111;
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-hr {
-  border-top: 2px dotted #fff;
+.header a.active {
+  background-color: black;
+  color: red;
 }
 
+.header-right {
+  float: right;
+}
 
-
-
-
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
 
 #puzzle {
     width:100%;

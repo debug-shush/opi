@@ -40,30 +40,30 @@ def tangram(request):
 
 def secondyear(request):
     technoplayer1 = Technoplayer1.objects.filter(user=request.user).first()
-    loan1 = technoplayer1.loan
-    connection1 = technoplayer1.connection
-    happiness1 = technoplayer1.happiness
-    focus1 = technoplayer1.focus
+    loan1 = technoplayer1.loan1
+    connection1 = technoplayer1.connection1
+    happiness1 = technoplayer1.happiness1
+    focus1 = technoplayer1.focus1
     return render(request, 'secondyear.html',
                   {'loan1': loan1, 'connection1': connection1, 'happiness1': happiness1, 'focus1': focus1})
 
 
 def thirdyear(request):
     technoplayer2 = Technoplayer2.objects.filter(user=request.user).first()
-    loan2 = technoplayer2.loan
-    connection2 = technoplayer2.connection
-    happiness2 = technoplayer2.happiness
-    focus2 = technoplayer2.focus
+    loan2 = technoplayer2.loan2
+    connection2 = technoplayer2.connection2
+    happiness2 = technoplayer2.happiness2
+    focus2 = technoplayer2.focus2
     return render(request, 'thirdyear.html',
                   {'loan2': loan2, 'connection2': connection2, 'happiness2': happiness2, 'focus2': focus2})
 
 
 def fourthyear(request):
     technoplayer3 = Technoplayer3.objects.filter(user=request.user).first()
-    loan3 = technoplayer3.loan
-    connection3 = technoplayer3.connection
-    happiness3 = technoplayer3.happiness
-    focus3 = technoplayer3.focus
+    loan3 = technoplayer3.loan3
+    connection3 = technoplayer3.connection3
+    happiness3 = technoplayer3.happiness3
+    focus3 = technoplayer3.focus3
     return render(request, 'fourthyear.html',
                   {'loan3': loan3, 'connection3': connection3, 'happiness3': happiness3, 'focus3': focus3})
 
@@ -229,7 +229,7 @@ def fourthyear_submission(request):
             # technoplayer1.loan = loan
             # technoplayer1.save()
         else:
-            technoplayer1 = Technoplayer4()
+            technoplayer4 = Technoplayer4()
             technoplayer4.user = request.user
             technoplayer4.happiness4 = happiness
             technoplayer4.connection4 = connection
@@ -246,7 +246,7 @@ def fourthyear_submission(request):
 
 
 def kenken_submission(request):
-    kenken_player = Kenkenplayer.objects.filter(user=request.user).first()
+    kenken_player = Kenkenplayer().objects.filter(user=request.user).first()
     if request.method == "POST":
         kenken_solver = request.POST.get('kenken_solver')
         print(kenken_solver)
