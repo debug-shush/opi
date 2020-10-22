@@ -3,7 +3,6 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
-from payback.models import Technoplayer
 from .models import *
 import xlrd
 import os
