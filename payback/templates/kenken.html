@@ -208,8 +208,8 @@
 {#    {#}
 {#    #}
 {#</script>#}
-<button class="button skip">SKIP</button>
-<button class="button submit">SUBMIT</button>
+<button class="button" id="skip">SKIP</button>
+<button class="button" id="submit">SUBMIT</button>
 {#        <input id = "task3" type="button" value="task3" onClick="redirect3();"/>#}
 {#        <script type="text/javascript">#}
 {#        function redirect3()}#}
@@ -217,18 +217,19 @@
 {#        }#}
 {#        </script> -->#}
 <script>
-    var kenken_array = new array(81);
+    var kenken_array = new Array(81);
     var json_kenken;
 
     function kenken_data() {
 
+
         for (var i = 0; i < 81; i++) {
-            kenken_array[i] = -100;
+            kenken_array[i] = 0;
         }
 
         for (var i = 0; i < 81; i++) {
             kenken_array[i] = ("#" + (i + 11).toString()).value;
-            json_kenken = JSON.stringify(json_kenken);
+            json_kenken = JSON.stringify(kenken_array);
         }
     }
 

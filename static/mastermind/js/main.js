@@ -1,5 +1,3 @@
-(function () {
-  'use strict';
 
   var code = new Array(4).fill(0).map(() => new Array(4).fill(0)), // Color sequence the player needs to guess
     guess = new Array(4).fill(0).map(() => new Array(4).fill(0)), // Color sequence of player's guesses
@@ -247,4 +245,3 @@
   }
 
   gameSetup(); // Run the game
-}());

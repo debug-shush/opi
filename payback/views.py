@@ -250,14 +250,9 @@ def kenken_submission(request):
     if request.method == "POST":
         kenken_solver = request.POST.get('kenken_solver')
         print(kenken_solver)
-        if kenken_player is not None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
+        print(1)
+        if kenken_player is None:
+            print(2)
             kenken_player = Kenkenplayer()
             kenken_player.user = request.user
             kenken_player.kenken_solver = kenken_solver
@@ -276,14 +271,9 @@ def mastermind_submission(request):
     if request.method == "POST":
         mastermind_solver = request.POST.get('mastermind_solver')
         print(mastermind_solver)
-        if mastermind_player is not None:
-            pass
-            # technoplayer1.happiness = happiness
-            # technoplayer1.connection = connection
-            # technoplayer1.focus = focus
-            # technoplayer1.loan = loan
-            # technoplayer1.save()
-        else:
+        print(1)
+        if mastermind_player is None:
+            print(2)
             mastermind_player = Mastermindplayer()
             mastermind_player.user = request.user
             mastermind_player.mastermind_solver = mastermind_solver
@@ -305,7 +295,7 @@ def crossword_submission(request):
         agesum = request.POST.get('is_agesum_solved')
         letter_sum = request.POST.get('is_lettersum_solved')
         puzzle_score = request.POST.get('puzzle_score')
-        if crossword_player is not None:
+        if crossword_player is None:
             pass
             # technoplayer1.happiness = happiness
             # technoplayer1.connection = connection
@@ -332,7 +322,7 @@ def mysteryroom_submission(request):
     if request.method == "POST":
         jsonanswer = request.POST.get('JSONanswer')
         print(jsonanswer)
-        if mysteryroom_player is not None:
+        if mysteryroom_player is None:
             pass
             # technoplayer1.happiness = happiness
             # technoplayer1.connection = connection
