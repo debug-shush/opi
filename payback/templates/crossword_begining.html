@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Crossword Puzzle</title>
+    <title>CAMPUS LA VIE</title>
     <link rel="stylesheet" href='{% static "crossword_puzzle/Crossword/crossword.css" %}'>
     <style type="text/css">
         p.MsoNormal, li.MsoNormal, div.MsoNormal {
@@ -354,22 +354,14 @@
             <td colspan="2">
                 <form name="settingsForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
                       onsubmit="return false;" id="settingsForm">
-                    <p>Difficulty setting: <select name="Difficulty" onchange="buttonNew()">
+                    <p>Difficulty: <select name="Difficulty" onchange="buttonNew()">
                         <option selected>
                             Normal
                         </option>
-                        <option>
-                            Hard
-                        </option>
-                        <option>
-                            Real hard
-                        </option>
-                        <option>
-                            Master
-                        </option>
+                        
                     </select>
                         <!-- <input type="button" value="New" onclick="buttonNew()" title="Start a new game"> -  -->
-                        <button onclick="buttonNew(); puzzleStart();" value="New" class="green"  id="puzzle_start">START</button>
+                        <button onclick="buttonNew(); puzzleStart();" value="New" class="green"  id="puzzle_start" style="cursor: pointer;">START</button>
                         <!-- <button onclick="buttonUndo(1);" value="Restart" id="puzzle_restart">Restart</button> -->
                 </form>
             </td>
@@ -480,7 +472,7 @@ since last reload
                     </table>
                     <div>
                         <p><input type="button" value="Hint" onclick="buttonHint()"></p>
-                        <button id="puzzle_check" class="green">Submit Puzzle</button>
+                        <button id="puzzle_check" class="green" disabled style="cursor: pointer;">Submit Puzzle</button>
                     </div>
                 </form>
             </td>
@@ -728,6 +720,7 @@ since last reload
 
     function puzzleStart() {
         console.log("Puzzle Started");
+        $('#puzzle_check').prop('disabled', false);
         start_button_clicked += 1;
         console.log(start_button_clicked);
         if (start_button_clicked == 3) {
