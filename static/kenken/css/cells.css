@@ -1,653 +1,1059 @@
 #td11 {
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-  padding-top: 3px;
-  padding-bottom: 5px;
-   padding-right: 20px;
-   padding-left: 20px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+
+
+
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 #td12 {
-    border-top: 5px solid black;
-    border-left: 5px solid black;
+    border-top: 3px solid black;
+    border-right: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+
     padding-top: 3px;
-  padding-bottom: 5px;
-   padding-right: 20px;
-   padding-left: 20px;
-    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+
 }
 #td13 {
-    border-top: 5px solid black;
+    border-top: 3px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black; 
+
+  
+
     padding-top: 5px;
-  padding-bottom: 5px;
-   padding-right: 20px;
-   padding-left: 20px;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 #td14 {
-    border-top: 5px solid black;
-    border-left: 5px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 1px solid black; 
+
+    
     padding-top: 3px;
     padding-bottom: 5px;
-     padding-right: 20px;
-     padding-left: 20px;
-    border-bottom: 5px solid black;
+    padding-right: 20px;
+    padding-left: 20px;
+
 }
 #td15 {
-    border-top: 5px solid black;
+    border-top: 3px solid black;
+    border-right: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+
+    
     padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
 }
 #td16 {
-    border-top: 5px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 1px solid black; 
+
+    
     padding-top: 3px;
-  padding-bottom: 5px;
-   padding-right: 20px;
-   padding-left: 20px;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+
 }
-#td17 {padding-top: 5px;
+#td17 {
+    border-top: 3px solid black;
+    border-right: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td18 {padding-top: 3px;
+#td18 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 1px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td19 {padding-top: 5px;
+#td19 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 1px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td21 {padding-top: 5px;
+#td21 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+
+
+}
+#td22 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td22 {padding-top: 3px;
+#td23 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
 }
-#td23 {padding-top: 5px;
+#td24 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td24 {padding-top: 5px;
+#td25 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td25 {padding-top: 3px;
+#td26 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td26 {padding-top: 3px;
+#td27 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td27 {padding-top: 5px;
+#td28 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td28 {padding-top: 3px;
+#td29 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td29 {padding-top: 3px;
+#td31 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td31 {padding-top: 3px;
+#td32 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td32 {padding-top: 5px;
+#td33 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td33 {padding-top: 3px;
+#td34 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td34 {padding-top: 5px;
+#td35 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td35 {padding-top: 5px;
+#td36 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td36 {padding-top: 3px;
+#td37 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td37 {padding-top: 5px;
+#td38 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td38 {padding-top: 5px;
+#td39 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
 }
-#td39 {padding-top: 5px;
+#td41 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td41 {padding-top: 3px;
+#td42 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td42 {padding-top: 5px;
+#td43 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td43 {padding-top: 3px;
+#td44 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td44 {padding-top: 3px;
+#td45 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td45 {padding-top: 3px;
+#td46 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
+
 }
-#td46 {padding-top: 3px;
+#td47 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td47 {padding-top: 3px;
+#td48 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td48 {padding-top: 5px;
+#td49 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    /*  */
+
+
 }
-#td49 {padding-top: 5px;
+#td51 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td51 {padding-top: 3px;
+#td52 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td52 {padding-top: 5px;
+#td53 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
 }
-#td53 {padding-top: 5px;
+#td54 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+
+
+
 }
-#td54 {padding-top: 5px;
+#td55 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
-}
-#td55 {padding-top: 5px;
-    padding-bottom: 5px;
-     padding-right: 20px;
-     padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
 #td56 {
-    border-top:5px solid black;padding-top: 3px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+
+    border-top:5px solid black;
+    padding-top: 3px;
     padding-bottom: 5px;
-     padding-right: 20px;
-     padding-left: 20px;  
-    border-left: 5px solid black;
+    padding-right: 20px;
+    padding-left: 20px;  
+
 }
-#td57 {padding-top: 5px;
+#td57 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td58 {padding-top: 3px;
+#td58 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td59 {padding-top: 3px;
+#td59 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td61 {padding-top: 3px;
+#td61 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td62 {padding-top: 5px;
+#td62 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td63 {padding-top: 5px;
+#td63 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td64 {padding-top: 3px;
+#td64 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td65 {padding-top: 5px;
+#td65 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td66 {padding-top: 5px;
+#td66 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td67 {padding-top: 3px;
+#td67 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td68 {padding-top: 5px;
+#td68 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td69 {padding-top: 5px;
+#td69 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td71 {padding-top: 3px;
+#td71 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td72 {padding-top: 3px;
+#td72 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td73 {padding-top: 3px;
+#td73 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
+
 }
-#td74 {padding-top: 3px;
+#td74 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td75 {padding-top: 5px;
+#td75 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
 }
-#td76 {padding-top: 5px;
+#td76 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td77 {padding-top: 5px;
+#td77 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td78 {padding-top: 3px;
+#td78 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td79 {padding-top: 5px;
+#td79 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td81 {padding-top: 5px;
+#td81 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td82 {padding-top: 5px;
+#td82 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+
+
 }
-#td83 {padding-top: 5px;
+#td83 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td84 {padding-top: 3px;
+#td84 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td85 {padding-top: 5px;
+#td85 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
+    
+
 }
-#td86 {padding-top: 3px;
+#td86 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td87 {padding-top: 3px;
+#td87 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td88 {padding-top: 5px;
+#td88 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td89 {padding-top: 3px;
+#td89 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    
+
+
 }
-#td91 {padding-top: 3px;
+#td91 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td92 {padding-top: 5px;
+#td92 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td93 {padding-top: 3px;
+#td93 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td94 {padding-top: 5px;
+#td94 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td95 {padding-top: 5px;
+#td95 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td96 {padding-top: 5px;
+#td96 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
-#td97 {padding-top: 3px;
+#td97 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 3px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td98 {padding-top: 5px;
+#td98 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    
+
+
 }
-#td99 {padding-top: 5px;
+#td99 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+    padding-top: 5px;
     padding-bottom: 5px;
      padding-right: 20px;
      padding-left: 20px;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+
+
+
 }
 #solution
 {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black; 
+
     display: none;
 }

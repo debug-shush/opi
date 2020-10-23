@@ -201,7 +201,7 @@
                     <p class="skw-page__description">
                         {%if request.user.is_authenticated %}
                         <p>Hello {{request.user.first_name}}</p>
-                        <a href="{% url 'firstyear' %}">Start Your Journey</a>
+                        <a style="" href="{% url 'firstyear' %}">Start Your Journey</a>
                         {%else%}
                         <p>To Start your Journey</p>
                         <a href="{% url 'login'%}">Login Here</a>
@@ -222,6 +222,12 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+
 <script>
     $('#loginbt').on('click', () => {
         $.ajax({

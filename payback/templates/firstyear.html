@@ -932,19 +932,46 @@
     
 </script> -->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+
+
+
+<script>
+    function scroll_exp(){
+        var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+        ];
+        var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+        html.data('scroll-position', scrollPosition);
+        html.data('previous-overflow', html.css('overflow'));
+        html.css('overflow', 'hidden');
+        window.scrollTo(scrollPosition[0], scrollPosition[1]);  
+        }
+</script>
+
+<script>
+$(window).on("load" , scroll_exp() );
+</script>
+
 <script>
     //     $('body').bind("mousewheel", function() {
     //     return false;
     // });
 
-    $(window).on('wheel', function () {
-        return false;
-    },);
+    // $(window).on('wheel', function () {
+    //     return false;
+    // },);
+
+    // lock scroll position, but retain settings for later
+    
+
     // $(window).on('mousewheel DOMMouseScroll', function() {
     //     return false;
     // } , { passive: false });
 
 </script>
+
+
 <script src="{% static 'payback/js/firstyear/shop/libraries.js' %}"></script>
 <script src="{% static 'payback/js/firstyear/shop/ap.js' %}"></script>
 <script>
