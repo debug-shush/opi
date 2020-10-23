@@ -10,6 +10,7 @@
  #links {
 	 float: right;
 }
+
  #matchSpace {
 	 display: inline-block;
 	 top: 10em;
@@ -62,17 +63,13 @@
 	 font-size: 1em;
 }
 /* other elements */
- header {
-	 z-index: 1;
-	 max-width: 36em;
-	 position: absolute;
-}
+
  body {
 	 font-family: 'Black Ops One', cursive;
 	 background-color: transparent;
 	 position: relative;
 	 height: 44em;
-	 width: 55em;
+	 width: 880px;
 	 overflow: auto;
 	 margin: 0 auto;
 }
