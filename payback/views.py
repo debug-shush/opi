@@ -86,7 +86,7 @@ def crossword(request):
 
 @login_required(login_url='/login')
 def mysteryroom(request):
-    return render(request, 'mystery_room.html')
+    return render(request, 'mystery_room2.html')
 
 
 def firstyear_submission(request):
