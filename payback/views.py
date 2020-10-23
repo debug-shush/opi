@@ -290,22 +290,18 @@ def mysteryroom_submission(request):
 def append_user(excel_data):
     wb = load_workbook(filename=BytesIO(excel_data))
     sheet = wb.active
-    r = 60
+    r = 58
     for i in  range(r):
         name_val = sheet.cell(row=i+2, column=1).value
         print(name_val)
-        name = name_val.split()
-        first_name = name[0]
-        if len(name) >=2:
-            last_name = name[1]
+        #name = name_val.split()
         contact = sheet.cell(row=i+2, column=2).value
         email = sheet.cell(row=i+2, column=3).value
-        username = str(email)
         roll = str(sheet.cell(row=i+2, column=4).value)
+        username = str(roll)
         password = str(sheet.cell(row=i+2, column=5).value)
         user = User.objects.create_user(username=username, email=email, password=password)
-        user.first_name = first_name
-        user.last_name = last_name
+        user.first_name = name_val
         user.roll_no = roll
         user.contact = contact
         user.save()
