@@ -291,7 +291,8 @@
 </div>
 
 <div class="full_page">
-  <br>
+<button>1</button>
+<br>
   <div>
     <table border="0" cellpadding="0" cellspacing="5">
         <tr>
@@ -313,7 +314,7 @@
                         </option>
                     </select>
                         <!-- <input type="button" value="New" onclick="buttonNew()" title="Start a new game"> -  -->
-                        <button onclick="buttonNew(); puzzleStart();" value="New" id="puzzle_start">START</button>
+                        <button onclick="buttonNew(); puzzleStart();" value="New" class="green"  id="puzzle_start">START</button>
                         <!-- <button onclick="buttonUndo(1);" value="Restart" id="puzzle_restart">Restart</button> -->
                 </form>
             </td>
@@ -424,7 +425,7 @@ since last reload
                     </table>
                     <div>
                         <p><input type="button" value="Hint" onclick="buttonHint()"></p>
-                        <button id="puzzle_check">Submit Puzzle</button>
+                        <button id="puzzle_check" class="green">Submit Puzzle</button>
                     </div>
                 </form>
             </td>
@@ -447,6 +448,11 @@ since last reload
         </tr>
     </table>
 </div>
+<br>
+<hr>
+<button>2</button>
+<br>
+<br>
 <div class="container">
     <p> Fifteen Years Back my neighbor Mrs. Sareen had three daughters Sudha, Seema and Reema -- and their combined ages
         were half of hers. During the next five years Sonny was born and Mrs. Sareen's age equaled the total of her
@@ -457,21 +463,26 @@ since last reload
     <p>What is the sum of ages of all of them?</p>
     <br>
     <input type="text" id="answer_agesum">
-    <button onclick="agesumcheckAnswer();">Submit</button>
+    <button onclick="agesumcheckAnswer();" class="green">Submit</button>
 
     <div id="agesum_result"></div>
 
-    <br>
-
+<br><hr>
+<button>3</button>
+<br>   
+<br> 
     <p>What is the sum of values of letters in the missing word? (If A-1, B-2, C-3, ... so on) </p>
     <h4> ONE OVER SIX MINUS FIFTEEN = DIMS </h4>
     <h4>EIGHT ADDED TO SEVENTY TWO = _ _ _ _</h4>
     <br>
     <input type="text" id="answer_lettersum">
-    <button onclick="lettersumcheckAnswer();">Submit</button>
-
+    <button onclick="lettersumcheckAnswer();" class="green">Submit</button>
     <div id="lettersum_result"></div>
 </div>
+<br><hr>
+<button>4</button>
+<br>
+<br>
 <div class="Crossword container">
     <h3>PARAGRAPH AND THE PATTERN</h3>
     <div class="pattern">
@@ -576,9 +587,10 @@ since last reload
         <button id="clear_all">Clear All</button>
         <button id="check">Check</button>
     </div>
-</div>
+</div><br><hr>
+<br>
 <div style="position: relative; left: 50%;">
-    <button id="final_submit">Final Submit</button>
+    <button id="final_submit" class="green">Final Submit</button>
 </div>
 </p>
 <script src='{% static "crossword_puzzle/Crossword/crossword.js" %}'></script>

@@ -1,10 +1,11 @@
 .full_page{
+  width:992px;
+  margin:0 auto;
+  padding:25px;
   background: url(/static/payback/images/firstyear/images/highschool-texture.png);
 }
 
-
-
-
+.green{background: #019d95;}
 .header {
   overflow: hidden;
   background-color: #019d95;
@@ -30,11 +31,12 @@
 
 .header a.active {
   background-color: black;
-  color: red;
+  color: white;
 }
 
 .header-right {
   float: right;
+  color: white;
 }
 
 footer {
