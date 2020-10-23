@@ -228,7 +228,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="clickOutcome('left', 0, event, this); document.getElementById('psecondyear').scrollIntoView();transport(0);"
+                     onclick="transport(0); document.getElementById('psecondyear').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">TAKE THE FLIGHT
                 </div>
                 <div class="optDebt">₹5000</div>
@@ -245,7 +245,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="clickOutcome('down', 1, event, this);document.getElementById('psecondyear').scrollIntoView();transport(1);"
+                     onclick="document.getElementById('psecondyear').scrollIntoView();transport(1);"
                      data-direction="down" data-outcome="223" data-challenge="28">Take the Train
                 </div>
                 <div class="optDebt">₹1000</div>
@@ -256,7 +256,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="clickOutcome('right', 2, event, this);document.getElementById('presearch').scrollIntoView();transport(2);"
+                     onclick="document.getElementById('presearch').scrollIntoView();transport(2);"
                      data-direction="right" data-outcome="221" data-challenge="28">Stay At Campus
                 </div>
                 <div class="optDebt">₹0</div>
@@ -301,11 +301,11 @@
                 <div class="questionShadow"></div>
             </div>
             <div class="optionWrap left-opt">
-                <div class="opt options"
-                     onclick="document.getElementById('p4').scrollIntoView(); clickOutcome('left', 0, event, this)"
+                <!-- <div class="opt options"
+                     onclick="document.getElementById('p4').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">Take the Bus
                 </div>
-                <div class="optDebt">₹585</div>
+                <div class="optDebt">₹585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%"
@@ -319,7 +319,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();clickOutcome('down', 1, event, this);research(0);"
+                     onclick="document.getElementById('psecondyear').scrollIntoView();research(0);"
                      data-direction="down" data-outcome="223" data-challenge="28">Make your bonding strong with professor
                 </div>
                 <div class="optDebt">₹585</div>
@@ -330,7 +330,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();clickOutcome('right', 2, event, this);research(1);"
+                     onclick="document.getElementById('psecondyear').scrollIntoView();research(1);"
                      data-direction="right" data-outcome="221" data-challenge="28">I don't want to do it.
                 </div>
                 <div class="optDebt">₹585</div>
@@ -376,7 +376,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pclub').scrollIntoView();clickOutcome('left', 0, event, this);laptop(0);"
+                     onclick="document.getElementById('pclub').scrollIntoView();laptop(0);"
                      data-direction="left" data-outcome="222" data-challenge="28">Only the Best!
                 </div>
                 <div class="optDebt">₹60000</div>
@@ -393,7 +393,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pclub').scrollIntoView();clickOutcome('down', 1, event, this);laptop(1);"
+                     onclick="document.getElementById('pclub').scrollIntoView();laptop(1);"
                      data-direction="down" data-outcome="223" data-challenge="28">Not so Fancy One.
                 </div>
                 <div class="optDebt">₹25000</div>
@@ -404,7 +404,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pclub').scrollIntoView();clickOutcome('right', 2, event, this);laptop(2);"
+                     onclick="document.getElementById('pclub').scrollIntoView();laptop(2);"
                      data-direction="right" data-outcome="221" data-challenge="28">Cheapest
                 </div>
                 <div class="optDebt">₹5000</div>
@@ -520,7 +520,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('p8').scrollIntoView();interiit(0)"
+                     onclick="document.getElementById('p9').scrollIntoView();interiit(0)"
                      data-direction="left" data-outcome="222" data-challenge="28">Exicted for Inter IIT
                 </div>
                 <!-- <div class="optDebt">₹585</div> -->
@@ -537,7 +537,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('p8').scrollIntoView();interiit(1)"
+                     onclick="document.getElementById('p9').scrollIntoView();interiit(1)"
                      data-direction="down" data-outcome="223" data-challenge="28">Recently my Grades are low , let me focus on it .
                 </div>
                 <!-- <div class="optDebt">₹585</div> -->
