@@ -282,326 +282,366 @@
 
 <body>
 <div class="header">
-  <a class="logo">
-  <img src="https://technothlon.techniche.org.in/images/technothlon.png" class="img-responsive" style="height: 30px; width:125px; margin: auto; margin-top: 0%; margin-bottom: 2.5%">
-  </a>
-  <div class="header-right">
-    <a class="active">Rules</a>
-   </div>
+    <a class="logo">
+        <img src="https://technothlon.techniche.org.in/images/technothlon.png" class="img-responsive"
+             style="height: 30px; width:125px; margin: auto; margin-top: 0%; margin-bottom: 2.5%">
+    </a>
+    <div class="header-right">
+        <a class="active">Rules</a>
+    </div>
 </div>
 
 <div class="full_page">
-<button>1</button>
-<br>
-  <div>
-    <table border="0" cellpadding="0" cellspacing="5">
-        <tr>
-            <td colspan="2">
-                <form name="settingsForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
-                      onsubmit="return false;" id="settingsForm">
-                    <p>Difficulty setting: <select name="Difficulty" onchange="buttonNew()">
-                        <option selected>
-                            Normal
-                        </option>
-                        <option>
-                            Hard
-                        </option>
-                        <option>
-                            Real hard
-                        </option>
-                        <option>
-                            Master
-                        </option>
-                    </select>
-                        <!-- <input type="button" value="New" onclick="buttonNew()" title="Start a new game"> -  -->
-                        <button onclick="buttonNew(); puzzleStart();" value="New" class="green"  id="puzzle_start">START</button>
-                        <!-- <button onclick="buttonUndo(1);" value="Restart" id="puzzle_restart">Restart</button> -->
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form name="playForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
-                      onsubmit="return false;" id="playForm">
-                    <table border="0" cellpadding="0" cellspacing="0" id="cell">
-                        <tr>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('0-0')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('1-0')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('2-0')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('3-0')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('4-0')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('5-0')"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('0-1')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('1-1')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('2-1')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('3-1')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('4-1')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('5-1')"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('0-2')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('1-2')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('2-2')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('3-2')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('4-2')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('5-2')"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('0-3')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('1-3')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('2-3')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('3-3')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('4-3')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('5-3')"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('0-4')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('1-4')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('2-4')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('3-4')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('4-4')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('5-4')"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('0-5')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('1-5')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('2-5')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('3-5')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('4-5')"></td>
-                            <td><input class="play" type="button" value="0" onclick="buttonMove('5-5')"></td>
-                        </tr>
-                    </table>
-                </form>
-            </td>
-            <td>
-                <form name="scoreForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
-                      onsubmit="return false;" id="scoreForm">
-                    <p>
+    <button>1</button>
+    <br>
+    <div>
+        <table border="0" cellpadding="0" cellspacing="5">
+            <tr>
+                <td colspan="2">
+                    <form name="settingsForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
+                          onsubmit="return false;" id="settingsForm">
+                        <p>Difficulty setting: <select name="Difficulty" onchange="buttonNew()">
+                            <option selected>
+                                Normal
+                            </option>
+                            <option>
+                                Hard
+                            </option>
+                            <option>
+                                Real hard
+                            </option>
+                            <option>
+                                Master
+                            </option>
+                        </select>
+                            <!-- <input type="button" value="New" onclick="buttonNew()" title="Start a new game"> -  -->
+                            <button onclick="buttonNew(); puzzleStart();" value="New" class="green" id="puzzle_start">
+                                START
+                            </button>
+                            <!-- <button onclick="buttonUndo(1);" value="Restart" id="puzzle_restart">Restart</button> -->
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="playForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
+                          onsubmit="return false;" id="playForm">
+                        <table border="0" cellpadding="0" cellspacing="0" id="cell">
+                            <tr>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('0-0')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('1-0')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('2-0')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('3-0')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('4-0')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('5-0')"></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('0-1')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('1-1')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('2-1')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('3-1')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('4-1')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('5-1')"></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('0-2')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('1-2')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('2-2')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('3-2')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('4-2')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('5-2')"></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('0-3')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('1-3')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('2-3')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('3-3')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('4-3')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('5-3')"></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('0-4')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('1-4')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('2-4')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('3-4')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('4-4')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('5-4')"></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('0-5')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('1-5')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('2-5')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('3-5')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('4-5')"></td>
+                                <td><input class="play" type="button" value="0" onclick="buttonMove('5-5')"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+                <td>
+                    <form name="scoreForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
+                          onsubmit="return false;" id="scoreForm">
+                        <p>
             <textarea name="Scores" rows="11" cols="18" readonly>
 Highscores
 
 since last reload
 
 </textarea></p>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form name="clicksForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
-                      onsubmit="return false;" id="clicksForm">
-                    <p>Clicks used: <input type="text" name="Clicks" value="0" size="3" id="clickused" readonly></p>
-                </form>
-            </td>
-            <td>
-                <form name="CounterForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
-                      onsubmit="return false;" id="CounterForm">
-                    <p>Current score: <input type="text" name="Counter" value="0" size="6" id="score" readonly></p>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form name="hintForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
-                      onsubmit="return false;" id="hintForm">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td><input class="play" type="button" value=" "></td>
-                            <td><input class="play" type="button" value=" "></td>
-                            <td><input class="play" type="button" value=" "></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value=" "></td>
-                            <td><input class="play" type="button" value=" "></td>
-                            <td><input class="play" type="button" value=" "></td>
-                        </tr>
-                        <tr>
-                            <td><input class="play" type="button" value=" "></td>
-                            <td><input class="play" type="button" value=" "></td>
-                            <td><input class="play" type="button" value=" "></td>
-                        </tr>
-                    </table>
-                    <div>
-                        <p><input type="button" value="Hint" onclick="buttonHint()"></p>
-                        <button id="puzzle_check" class="green">Submit Puzzle</button>
-                    </div>
-                </form>
-            </td>
-            <!-- <td>
-              <form name="solveForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="solveForm">
-                <p>Solve speed: <select name="SolveSpeed">
-                  <option value="500">
-                    Fast
-                  </option>
-                  <option value="900" selected>
-                    Normal
-                  </option>
-                  <option value="1300">
-                    Slow
-                  </option>
-                </select></p>
-                <p><input type="button" value="Solve" onclick="buttonSolve()"></p>
-              </form>
-            </td> -->
-        </tr>
-    </table>
-</div>
-<br>
-<hr>
-<button>2</button>
-<br>
-<br>
-<div class="container">
-    <p> Fifteen Years Back my neighbor Mrs. Sareen had three daughters Sudha, Seema and Reema -- and their combined ages
-        were half of hers. During the next five years Sonny was born and Mrs. Sareen's age equaled the total of her
-        children’s ages. </p>
-    <p>After Some years Kishu was born and then Sudha was as old as Reema and Sonny together. And now, the combined age
-        of all the children is double Mrs. Sareen’s age, which is, as matter of fact, only equal to that of Sudha and
-        Seema together. Sudha’s age is also equal to that of two sons. </p>
-    <p>What is the sum of ages of all of them?</p>
-    <br>
-    <input type="text" id="answer_agesum">
-    <button onclick="agesumcheckAnswer();" class="green">Submit</button>
-
-    <div id="agesum_result"></div>
-
-<br><hr>
-<button>3</button>
-<br>   
-<br> 
-    <p>What is the sum of values of letters in the missing word? (If A-1, B-2, C-3, ... so on) </p>
-    <h4> ONE OVER SIX MINUS FIFTEEN = DIMS </h4>
-    <h4>EIGHT ADDED TO SEVENTY TWO = _ _ _ _</h4>
-    <br>
-    <input type="text" id="answer_lettersum">
-    <button onclick="lettersumcheckAnswer();" class="green">Submit</button>
-    <div id="lettersum_result"></div>
-</div>
-<br><hr>
-<button>4</button>
-<br>
-<br>
-<div class="Crossword container">
-    <h3>PARAGRAPH AND THE PATTERN</h3>
-    <div class="pattern">
-        <ol>
-            <li>Alphabets are considered to be in a cyclic manner i.e after z comes a etc.</li>
-            <li>All the letters of the word to be reversed.</li>
-            <li>Each letter corresponding to the new position will be shifted (by the same rank which it stands on) to
-                right of left depending on the number of letters the word possesses.
-            </li>
-            <li>The letters will be shifted to the right if the number of letters in a word are odd and to the left if
-                the number of letters in a word are even.
-            </li>
-            <li>E.g.: consider a word FUTURE, it's reverse is ERUTUF, it contains 6 letters, i.e letters are to left.
-                rank of E-1, R-2, U-3, T-4, U-5, F-6<br>now each letter will be shifted by respective rank they possess.
-                Final encrypted word will be: DPRPPZ
-            </li>
-        </ol>
-    </div>
-    <div class="paragraph">
-        <h5 style="font-weight: bold;">PARAGRAPH AND THE WORD THAT ARE TO BE ENCRYPTED BY ABOVE PATTERN:</h5>
-        <p>The campus of IIT Guwahati is on the northern banks of Brahmaputra and abuts the North Guwahati town of
-            Amingaon. The campus is on a seven hundred acres plot of land around twenty <span style="font-weight: bold"
-                                                                                              id="kilometers">*****</span>
-            from the heart of the city. It has the Brahmaputra on one side and hills and vast open spaces on others. It
-            is often considered as the most beautiful campus in India.<br>
-
-            IIT Guwahati is a prestigious institute of higher learning producing meritorious students with excellent
-            career growth and universal recognition. The students go to get the best of opportunities in the form of
-            highly advanced courses, eminent faculty members, well-equipped laboratories, library, hostels and immense
-            facilities to excel in research and development. The faculty and students are thriving every year to add to
-            the list of bejeweled achievements of the institute in the form of research publications, projects,
-            fellowships and industrial exposure.<br>
-
-
-            IIT Guwahati is a fully residential campus. All the students live in hostels on the campus. The hostels are
-            named after rivers and tributaries of North-East India: Manas, Dihing, Kapili, Siang, Kameng, Barak,
-            Subansiri, Umiam, Dibang, Brahmaputra, Dhansiri, Lohit and Disang. Apart from these, there is a married
-            scholars' hostel for married postgraduates. Every student at IIT Guwahati is given a separate room. Each
-            room comes equipped with requisite basic <span style="font-weight: bold" id="amenities">*****</span>. The
-            toilets and bathrooms are shared. Every hostel has a mess, a canteen, a juice center, a stationary shop, a
-            library, a TV room, an indoor sports room, and laundry facilities. The hostels are provided with nonstop
-            Internet facility. The boy's hostels are single seated.<br>
-
-
-            Every year the students and administration of IIT Guwahati come together to organize a number of festivals
-            and competitions. The major festivals include Alcheringa, the annual cultural festival, Techniche, the
-            annual techno-management festival, Udgam, the annual entrepreneurship summit and Research <span
-                    style="font-weight: bold" id="Conclave">*****</span>. Apart from these the Students of IIT Guwahati
-            participate in the annual Inter IIT Sports Meet. Apart from these the General Championship is widely
-            celebrated across the hostel communities in the institute, the combined score in the inter hostel meets
-            Kriti - Technical, Manthan - Cultural and Spardha - Sports, is used to decide the winning hostel.<br>
-
-
-            Alcheringa, popularly known as "Alcher", is the annual cultural extravaganza of the IIT Guwahati. It started
-            in 1996 as a student-run nonprofit organization catering primarily to the youth of the nation. Held for
-            three days and four nights, Alcheringa's 2018 edition witnessed an estimated footfall of one lakh people.
-            <span style="font-weight: bold" id="Alcheringa">*****</span> has hosted famous Indian and international
-            artists.<br>
-
-            Alcheringa 2018, titled "Echoes of Innocence", the twenty-second edition of the festival starred Bollywood
-            dynamic duo, Vishal-Shekhar, Portuguese House producer, Diego Miranda and Australian House producers, Mashd
-            N Kutcher, alternative rock band from Chennai, The F16's and classical music maestros and brothers, Ganesh
-            and Kumaresh and legendary Padma Shri Awardee Shahid Parvez. Alcheringa 2020 starred Bollywood Singer Jubin
-            Nautiyal and was sponsored by The Red Chief.<br>
-
-            Techniche is the <span style="font-weight: bold" id="techno">*****</span> management festival of IIT
-            Guwahati. Techniche is held in September every year over three days. Techniche hosts various events,
-            competitions, exhibitions and workshops.<br>
-
-            Beginning its journey in two rooms within the Technology Complex of IIT Guwahati, Techniche has grown <span
-                    style="font-weight: bold" id="exponentially">*****</span> over the years, spreading its wings to
-            nearly 50K participants from varied colleges, schools and institutions all across India, UAE, Bangladesh and
-            Singapore. It has been successful in promoting and honing scientific and entrepreneurial skills in academia.<br>
-
-            The symbol of Techniche is two pixelated saplings, orange and blue in color. The saplings are the portrayal
-            of how Techniche <span style="font-weight: bold" id="integrates">*****</span> the youth from all around the
-            country While the blue color stands for the management face, the orange represents the technological front
-            of Techniche.<br>
-
-            Techniche conducts Technothlon and provides students from schools and colleges across India a platform to
-            <span style="font-weight: bold" id="interact">*****</span> with many experts in subject areas through its
-            lecture series. It has been attended by R. Chidambaram, Kiran Bedi, H. C. Verma, Mike Fincke, John C. Mather
-            and others.<br>
-
-            Technothlon, more than just an exam, is a family that binds school students and IIT Guwahati. A family that
-            grows every year multifold. We are overwhelmed to have you aboard. </p>
-    </div>
-
-    <div id="puzzle_container">
-        <table id="puzzle">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="clicksForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
+                          onsubmit="return false;" id="clicksForm">
+                        <p>Clicks used: <input type="text" name="Clicks" value="0" size="3" id="clickused" readonly></p>
+                    </form>
+                </td>
+                <td>
+                    <form name="CounterForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
+                          onsubmit="return false;" id="CounterForm">
+                        <p>Current score: <input type="text" name="Counter" value="0" size="6" id="score" readonly></p>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="hintForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get"
+                          onsubmit="return false;" id="hintForm">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td><input class="play" type="button" value=" "></td>
+                                <td><input class="play" type="button" value=" "></td>
+                                <td><input class="play" type="button" value=" "></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value=" "></td>
+                                <td><input class="play" type="button" value=" "></td>
+                                <td><input class="play" type="button" value=" "></td>
+                            </tr>
+                            <tr>
+                                <td><input class="play" type="button" value=" "></td>
+                                <td><input class="play" type="button" value=" "></td>
+                                <td><input class="play" type="button" value=" "></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <p><input type="button" value="Hint" onclick="buttonHint()"></p>
+                            <button id="puzzle_check" class="green">Submit Puzzle</button>
+                        </div>
+                    </form>
+                </td>
+                <!-- <td>
+                  <form name="solveForm" action="http://www.brainmetrix.com/games/buttonmania.htm" method="get" onsubmit="return false;" id="solveForm">
+                    <p>Solve speed: <select name="SolveSpeed">
+                      <option value="500">
+                        Fast
+                      </option>
+                      <option value="900" selected>
+                        Normal
+                      </option>
+                      <option value="1300">
+                        Slow
+                      </option>
+                    </select></p>
+                    <p><input type="button" value="Solve" onclick="buttonSolve()"></p>
+                  </form>
+                </td> -->
+            </tr>
         </table>
     </div>
+    <br>
+    <hr>
+    <button>2</button>
+    <br>
+    <br>
+    <div class="container">
+        <p> Fifteen Years Back my neighbor Mrs. Sareen had three daughters Sudha, Seema and Reema -- and their combined
+            ages
+            were half of hers. During the next five years Sonny was born and Mrs. Sareen's age equaled the total of her
+            children’s ages. </p>
+        <p>After Some years Kishu was born and then Sudha was as old as Reema and Sonny together. And now, the combined
+            age
+            of all the children is double Mrs. Sareen’s age, which is, as matter of fact, only equal to that of Sudha
+            and
+            Seema together. Sudha’s age is also equal to that of two sons. </p>
+        <p>What is the sum of ages of all of them?</p>
+        <br>
+        <input type="text" id="answer_agesum">
+        <button onclick="agesumcheckAnswer();" class="green">Submit</button>
 
-    <div id="hints_container">
-        <h3>Vertical</h3>
-        <div id="vertical_hints_container"></div>
-        <h3>Horizontal</h3>
-        <div id="horizontal_hints_container"></div>
-    </div>
+        <div id="agesum_result"></div>
 
-    <div id="buttons_container">
-        <button id="clear_all">Clear All</button>
-        <button id="check">Check</button>
+        <br>
+        <hr>
+        <button>3</button>
+        <br>
+        <br>
+        <p>What is the sum of values of letters in the missing word? (If A-1, B-2, C-3, ... so on) </p>
+        <h4> ONE OVER SIX MINUS FIFTEEN = DIMS </h4>
+        <h4>EIGHT ADDED TO SEVENTY TWO = _ _ _ _</h4>
+        <br>
+        <input type="text" id="answer_lettersum">
+        <button onclick="lettersumcheckAnswer();" class="green">Submit</button>
+        <div id="lettersum_result"></div>
     </div>
-</div><br><hr>
-<br>
-<div style="position: relative; left: 50%;">
-    <button id="final_submit" class="green">Final Submit</button>
-</div>
-</p>
-<script src='{% static "crossword_puzzle/Crossword/crossword.js" %}'></script>
+    <br>
+    <hr>
+    <button>4</button>
+    <br>
+    <br>
+    <div class="Crossword container">
+        <h3>PARAGRAPH AND THE PATTERN</h3>
+        <div class="pattern">
+            <ol>
+                <li>Alphabets are considered to be in a cyclic manner i.e after z comes a etc.</li>
+                <li>All the letters of the word to be reversed.</li>
+                <li>Each letter corresponding to the new position will be shifted (by the same rank which it stands on)
+                    to
+                    right of left depending on the number of letters the word possesses.
+                </li>
+                <li>The letters will be shifted to the right if the number of letters in a word are odd and to the left
+                    if
+                    the number of letters in a word are even.
+                </li>
+                <li>E.g.: consider a word FUTURE, it's reverse is ERUTUF, it contains 6 letters, i.e letters are to
+                    left.
+                    rank of E-1, R-2, U-3, T-4, U-5, F-6<br>now each letter will be shifted by respective rank they
+                    possess.
+                    Final encrypted word will be: DPRPPZ
+                </li>
+            </ol>
+        </div>
+        <div class="paragraph">
+            <h5 style="font-weight: bold;">PARAGRAPH AND THE WORD THAT ARE TO BE ENCRYPTED BY ABOVE PATTERN:</h5>
+            <p>The campus of IIT Guwahati is on the northern banks of Brahmaputra and abuts the North Guwahati town of
+                Amingaon. The campus is on a seven hundred acres plot of land around twenty <span
+                        style="font-weight: bold"
+                        id="kilometers">*****</span>
+                from the heart of the city. It has the Brahmaputra on one side and hills and vast open spaces on others.
+                It
+                is often considered as the most beautiful campus in India.<br>
+
+                IIT Guwahati is a prestigious institute of higher learning producing meritorious students with excellent
+                career growth and universal recognition. The students go to get the best of opportunities in the form of
+                highly advanced courses, eminent faculty members, well-equipped laboratories, library, hostels and
+                immense
+                facilities to excel in research and development. The faculty and students are thriving every year to add
+                to
+                the list of bejeweled achievements of the institute in the form of research publications, projects,
+                fellowships and industrial exposure.<br>
+
+
+                IIT Guwahati is a fully residential campus. All the students live in hostels on the campus. The hostels
+                are
+                named after rivers and tributaries of North-East India: Manas, Dihing, Kapili, Siang, Kameng, Barak,
+                Subansiri, Umiam, Dibang, Brahmaputra, Dhansiri, Lohit and Disang. Apart from these, there is a married
+                scholars' hostel for married postgraduates. Every student at IIT Guwahati is given a separate room. Each
+                room comes equipped with requisite basic <span style="font-weight: bold" id="amenities">*****</span>.
+                The
+                toilets and bathrooms are shared. Every hostel has a mess, a canteen, a juice center, a stationary shop,
+                a
+                library, a TV room, an indoor sports room, and laundry facilities. The hostels are provided with nonstop
+                Internet facility. The boy's hostels are single seated.<br>
+
+
+                Every year the students and administration of IIT Guwahati come together to organize a number of
+                festivals
+                and competitions. The major festivals include Alcheringa, the annual cultural festival, Techniche, the
+                annual techno-management festival, Udgam, the annual entrepreneurship summit and Research <span
+                        style="font-weight: bold" id="Conclave">*****</span>. Apart from these the Students of IIT
+                Guwahati
+                participate in the annual Inter IIT Sports Meet. Apart from these the General Championship is widely
+                celebrated across the hostel communities in the institute, the combined score in the inter hostel meets
+                Kriti - Technical, Manthan - Cultural and Spardha - Sports, is used to decide the winning hostel.<br>
+
+
+                Alcheringa, popularly known as "Alcher", is the annual cultural extravaganza of the IIT Guwahati. It
+                started
+                in 1996 as a student-run nonprofit organization catering primarily to the youth of the nation. Held for
+                three days and four nights, Alcheringa's 2018 edition witnessed an estimated footfall of one lakh
+                people.
+                <span style="font-weight: bold" id="Alcheringa">*****</span> has hosted famous Indian and international
+                artists.<br>
+
+                Alcheringa 2018, titled "Echoes of Innocence", the twenty-second edition of the festival starred
+                Bollywood
+                dynamic duo, Vishal-Shekhar, Portuguese House producer, Diego Miranda and Australian House producers,
+                Mashd
+                N Kutcher, alternative rock band from Chennai, The F16's and classical music maestros and brothers,
+                Ganesh
+                and Kumaresh and legendary Padma Shri Awardee Shahid Parvez. Alcheringa 2020 starred Bollywood Singer
+                Jubin
+                Nautiyal and was sponsored by The Red Chief.<br>
+
+                Techniche is the <span style="font-weight: bold" id="techno">*****</span> management festival of IIT
+                Guwahati. Techniche is held in September every year over three days. Techniche hosts various events,
+                competitions, exhibitions and workshops.<br>
+
+                Beginning its journey in two rooms within the Technology Complex of IIT Guwahati, Techniche has grown
+                <span
+                        style="font-weight: bold" id="exponentially">*****</span> over the years, spreading its wings to
+                nearly 50K participants from varied colleges, schools and institutions all across India, UAE, Bangladesh
+                and
+                Singapore. It has been successful in promoting and honing scientific and entrepreneurial skills in
+                academia.<br>
+
+                The symbol of Techniche is two pixelated saplings, orange and blue in color. The saplings are the
+                portrayal
+                of how Techniche <span style="font-weight: bold" id="integrates">*****</span> the youth from all around
+                the
+                country While the blue color stands for the management face, the orange represents the technological
+                front
+                of Techniche.<br>
+
+                Techniche conducts Technothlon and provides students from schools and colleges across India a platform
+                to
+                <span style="font-weight: bold" id="interact">*****</span> with many experts in subject areas through
+                its
+                lecture series. It has been attended by R. Chidambaram, Kiran Bedi, H. C. Verma, Mike Fincke, John C.
+                Mather
+                and others.<br>
+
+                Technothlon, more than just an exam, is a family that binds school students and IIT Guwahati. A family
+                that
+                grows every year multifold. We are overwhelmed to have you aboard. </p>
+        </div>
+
+        <div id="puzzle_container">
+            <table id="puzzle">
+            </table>
+        </div>
+
+        <div id="hints_container">
+            <h3>Vertical</h3>
+            <div id="vertical_hints_container"></div>
+            <h3>Horizontal</h3>
+            <div id="horizontal_hints_container"></div>
+        </div>
+
+        <div id="buttons_container">
+            <button id="clear_all">Clear All</button>
+            <button id="check">Check</button>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="position: relative; left: 50%;">
+        <button id="final_submit" class="green"><a
+                href="{% url 'fourthyear' %}">Final Submit</a></button>
+    </div>
+    </p>
+    <script src='{% static "crossword_puzzle/Crossword/crossword.js" %}'></script>
 </div>
 <footer>
-  
-  <p>Technothlon<br>
-  Copyright &copy 2019-20
-<br>All rights reserved.</p>
 
-  </footer>
+    <p>Technothlon<br>
+        Copyright &copy 2019-20
+        <br>All rights reserved.</p>
+
+</footer>
 
 </body>
 
@@ -707,7 +747,7 @@ since last reload
             type: "POST",
             url: "{%url 'crossword_submission' %}",
             data: {
-                'submittedCrossword': JSON.stringify(submittedCrossword), 
+                'submittedCrossword': JSON.stringify(submittedCrossword),
                 csrfmiddlewaretoken: '{{ csrf_token }}',
                 'puzzle_score': puzzle_score,
                 'puzzle_click_used': puzzle_click_used,
