@@ -285,9 +285,22 @@
   <a class="logo">
   <img src="https://technothlon.techniche.org.in/images/technothlon.png" class="img-responsive" style="height: 30px; width:125px; margin: auto; margin-top: 0%; margin-bottom: 2.5%">
   </a>
-  <div class="header-right">
-    <a class="active">Rules</a>
-   </div>
+
+    <div>
+        <div class="header-right" id="painting1_final">
+            <a class="active">Rules</a>
+        </div>
+        <div id="painting1_final_modal" class="modal">
+            <div class="modal-content">
+                <span id="painting_close1"  style="cursor: pointer;font-size: 25px;">&times;</span>
+                <div class="modal-body">
+                    <p>
+                        THESE ARE RULES
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="full_page">
@@ -590,6 +603,53 @@ since last reload
     </div>
 </div><br><hr>
 <br>
+
+
+<!-- <div class="row">
+    <div class="col-xs-12" id="painting1_final" style="height:50 px"><img style="width: 150px;height: 150px;position: relative;top: 0%;left: 180%;margin-top: -80px;" 
+            src="/static/mystery_rooms/images/painting1_final.png" class="img-fluid img-thumbnail"></div>
+</div>
+<div id="painting1_final_modal" class="modal">
+    <div class="modal-content">
+        <span id="painting_close1"  style="cursor: pointer;font-size: 25px;">&times;</span>
+        <div class="modal-body">
+            <p>
+                THESE ARE RULES
+            </p>
+
+        </div>
+    </div>
+</div> -->
+
+<!-- <div>
+    <div class="header-right" id="painting1_final">
+        <a class="active">Rules</a>
+    </div>
+    <div id="painting1_final_modal" class="modal">
+        <div class="modal-content">
+            <span id="painting_close1"  style="cursor: pointer;font-size: 25px;">&times;</span>
+            <div class="modal-body">
+                <p>
+                    THESE ARE RULES
+                </p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<script>
+    var modal1 = document.getElementById("painting1_final_modal");
+    var img1 = document.getElementById("painting1_final");
+    // var span1 = document.getElementsByClassName("close")[0];
+    img1.onclick = function () {
+        modal1.style.display = "block";
+
+    }
+    $('#painting_close1').on('click', () => {
+        modal1.style.display = "none";
+    });
+</script>
+
 <div style="position: relative; left: 45%;">
     <button id="final_submit" class="green"><a href="{% url 'fourthyear' %}">Final Submit</a></button>
 </div>
