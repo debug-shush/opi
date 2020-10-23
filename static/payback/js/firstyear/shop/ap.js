@@ -6901,13 +6901,13 @@ function seniors(x){
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#focid').css({"background" : "#9e2145" });
-			$v = $("#focid")
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#focid').css({"background" : "#01b6ad" });
-			$v = $("#focid")
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -6931,13 +6931,13 @@ function seniors(x){
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#focid').css({"background" : "#9e2145" });
-			$v = $("#focid")
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#focid').css({"background" : "#01b6ad" });
-			$v = $("#focid")
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7093,13 +7093,13 @@ function job(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7124,13 +7124,13 @@ function job(x){
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7190,14 +7190,6 @@ function bbq(x){
 		if($va_data < 0)
 		{
 			$va_data= 0;
-		}
-		if($va_data>=1000)
-		{
-			$va_data=1000
-		}
-		if($va_data < 0)
-		{
-			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
@@ -7307,10 +7299,6 @@ function bbq(x){
 		{
 			$va_data=1000
 		}
-		if($va_data < 0)
-		{
-			$va_data = 0
-		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -7319,13 +7307,13 @@ function bbq(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#conid').css({"background" : "#9e2145" });
-			$v = $("#conid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#conid').css({"background" : "#01b6ad" });
-			$v = $("#conid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7384,13 +7372,13 @@ function bbq(x){
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#conid').css({"background" : "#9e2145" });
-			$v = $("#conid")
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#conid').css({"background" : "#01b6ad" });
-			$v = $("#conid")
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7421,10 +7409,6 @@ function kriti(x){
 		if($va_data>=1000)
 		{
 			$va_data=1000
-		}
-		if($va_data < 0)
-		{
-			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -7579,13 +7563,13 @@ function kriti(x){
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#focid').css({"background" : "#9e2145" });
-			$v = $("#focid")
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#focid').css({"background" : "#01b6ad" });
-			$v = $("#focid")
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7609,13 +7593,13 @@ function kriti(x){
 		}, 2000);
 		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#focid').css({"background" : "#9e2145" });
-			$v = $("#focid")
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#focid').css({"background" : "#01b6ad" });
-			$v = $("#focid")
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -7941,10 +7925,6 @@ function research(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += (0.2*$va_data)
-		if($va_data>=500)
-		{
-			$va_data=500;
-		}
 		if($va_data>=1000)
 		{
 			$va_data=1000
@@ -8007,7 +7987,7 @@ function research(x){
 		// Happiness code  ======================
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += (0.3*$va_data)
+		$va_data -= (0.3*$va_data)
 		
 		if($va_data>=1000)
 		{
@@ -8018,7 +7998,7 @@ function research(x){
 			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -8042,24 +8022,34 @@ function research(x){
 	}
 	else if(x ==1){
 		// Focus code =====================
-		// var $var = document.getElementsByClassName("meter-focus")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data -= 200
-		// $var[0].attributes[1].value = $va_data
-		// if($va_data>=1000)
-		// {
-		// 	$va_data = 1000
-		// }
-		// if($va_data < 0)
-		// {
-		// 	$va_data = 0
-		// }
-		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#foid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#foid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		var $var = document.getElementsByClassName("meter-focus")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data -= 200
+		$var[0].attributes[1].value = $va_data
+		if($va_data>=1000)
+		{
+			$va_data = 1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#foid").css({"opacity" : "0"});
+		}, 2000);
+		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
+		}
+		else{
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Connections code =====================
@@ -8083,38 +8073,35 @@ function research(x){
 		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
 		// Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data += (0.3*$va_data)
-		// if($va_data>=500)
-		// {
-		// 	$va_data=500
-		// }
-		// $var[0].attributes[1].value = $va_data
-		// if($va_data>=1000)
-		// {
-		// 	$va_data = 1000
-		// }
-		// if($va_data < 0)
-		// {
-		// 	$va_data = 0
-		// }
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
-		// }
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.3*$va_data)
+
+		$var[0].attributes[1].value = $va_data
+		if($va_data>=1000)
+		{
+			$va_data = 1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Loan =================
@@ -8554,13 +8541,13 @@ function interiit(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -8758,13 +8745,13 @@ function takecare(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -8837,7 +8824,7 @@ function takecare(x){
 
 // ===  credit card func ===
 
-function creditcard(x){
+function creditcard(x , debt){
 	// console.log(x);
 	//New books
 	if ( x == 0){
@@ -8936,8 +8923,8 @@ function creditcard(x){
 		// }
 
 		// Money code
-		calculateLoanAndApplyChange(loan + 10000);
-		loan = loan + 10000;
+		calculateLoanAndApplyChange(debt + 10000);
+		loan = debt + 10000;
 		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
@@ -9009,8 +8996,8 @@ function creditcard(x){
 
 
 		// Loan =================
-		calculateLoanAndApplyChange(loan+2000);
-		loan = loan+2000
+		calculateLoanAndApplyChange(debt+2000);
+		loan = debt+2000
 		$("#loid")[0].children[0].innerHTML = "+" + 2000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
@@ -9099,8 +9086,8 @@ function creditcard(x){
 		// }
 
 		// Loan =======================
-		calculateLoanAndApplyChange(loan + 2000);
-		loan = loan + 2000;
+		calculateLoanAndApplyChange(debt + 2000);
+		loan = debt + 2000;
 		$("#loid")[0].children[0].innerHTML = "+" + 10000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
@@ -9242,13 +9229,13 @@ function techniche(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -9272,13 +9259,13 @@ function techniche(x){
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 		// Happiness code  ======================
@@ -9372,13 +9359,13 @@ function techniche(x){
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -9556,13 +9543,13 @@ function stayinout(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -9762,13 +9749,13 @@ function report(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -10209,7 +10196,7 @@ function chill(x){
 
 // START OF FOURTH YEAR ==================================
 
-function jobloss(x){
+function jobloss(x , debt){
 	// console.log(x);
 	//New books
 	if ( x == 0){
@@ -10308,9 +10295,9 @@ function jobloss(x){
 		}
 
 		// Money code
-		calculateLoanAndApplyChange(loan - 10000);
-		loan = loan - 10000;
-		$("#loid")[0].children[0].innerHTML = "-" + 10000; 
+		calculateLoanAndApplyChange(debt + 20000);
+		loan = debt + 20000;
+		$("#loid")[0].children[0].innerHTML = "+" + 20000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#loid").css({"opacity" : "0"});
@@ -10362,7 +10349,7 @@ function jobloss(x){
 		// Happiness code  ======================
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
-		$va_data += 50
+		$va_data += 100
 		if($va_data>=1000)
 		{
 			$va_data=1000
@@ -10391,13 +10378,13 @@ function jobloss(x){
 
 
 		// Loan =================
-		// calculateLoanAndApplyChange(loan+3500);
-		// loan = loan+3500
-		// $("#loid")[0].children[0].innerHTML = "+" + 3500; 
-		// $("#loid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#loid").css({"opacity" : "0"});
-		// }, 2000);
+		calculateLoanAndApplyChange(debt + 15000);
+		loan = debt + 15000
+		$("#loid")[0].children[0].innerHTML = "+" + 15000; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 	else if(x ==2){
 		// Focus code =====================
@@ -10481,13 +10468,13 @@ function jobloss(x){
 		}
 
 		// Loan =======================
-		// calculateLoanAndApplyChange(loan + 12000);
-		// loan = loan + 12000;
-		// $("#loid")[0].children[0].innerHTML = "+" + 12000; 
-		// $("#loid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#loid").css({"opacity" : "0"});
-		// }, 2000);
+		calculateLoanAndApplyChange(debt + 9500);
+		loan = debt + 9500;
+		$("#loid")[0].children[0].innerHTML = "+" + 9500; 
+		$("#loid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#loid").css({"opacity" : "0"});
+		}, 2000);
 	}
 
 }
@@ -11018,13 +11005,13 @@ function celeb(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -11140,13 +11127,13 @@ function celeb(x){
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#9e2145" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#conid').css({"background" : "#01b6ad" });
+			$v = $("#conid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
@@ -11322,13 +11309,13 @@ function dress(x){
 		}, 2000);
 		$('#focid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
-			$('#happid').css({"background" : "#9e2145" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#9e2145" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#8a1c3d";
 		}
 		else{
-			$('#happid').css({"background" : "#01b6ad" });
-			$v = $("#happid")
+			$('#focid').css({"background" : "#01b6ad" });
+			$v = $("#focid")
 			$v[0].parentNode.style.backgroundColor = "#019d95" ;
 		}
 
