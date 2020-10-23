@@ -32,7 +32,7 @@
             color: white;
             padding-right: 40px;
         }
-        
+
         .modal {
             position: fixed;
             top: 0;
@@ -102,10 +102,10 @@
         <div class="modal-content">
             <span id="painting_close1"  style="cursor: pointer;font-size: 25px;">&times;</span>
             <div class="modal-body"  >
-               <strong>HOW TO PLAY:-  </strong>    <br> <br> 
+               <strong>HOW TO PLAY:-  </strong>    <br> <br>
 
         <strong> a)  </strong>  Fill these boxes with digits 1-9 such that each row
-        and each column has all 9 digits.  <br>  
+        and each column has all 9 digits.  <br>
 
         <strong> b)   </strong> You should also satisfy the subgrid condition.   <br>  <br>  <br>
         <strong>
@@ -115,7 +115,7 @@
         <strong>  ↠   </strong>    <strong>-</strong> Indicates difference,  <br>
         <strong>  ↠   </strong>    <strong>* </strong>Indicates product, <br>
         <strong>  ↠   </strong>    <strong>/</strong> Indicates quotient,  <br>
-        <strong>  ↠   </strong>    <strong>%</strong> Indicates modulus--means  
+        <strong>  ↠   </strong>    <strong>%</strong> Indicates modulus--means
         reminder when one of the digit is divided by other digit.   <br>
 
             </div>
@@ -170,7 +170,7 @@
                 3
             <td id='td12'>
                 <label>x216</label>&nbsp;&nbsp;
-                <input id="12"  size="1">&nbsp;&nbsp;</td>  
+                <input id="12"  size="1">&nbsp;&nbsp;</td>
             <td id='td13'>&nbsp;&nbsp;<input id="13"  size="1">&nbsp;&nbsp;</td>
             <td id='td14'>&nbsp;&nbsp;<input id="14"  size="1">&nbsp;&nbsp;</td>
             <td id='td15'><label>-2</label>&nbsp;&nbsp;<input id="15"  size="1">&nbsp;&nbsp;</td>
@@ -304,25 +304,24 @@
 
 
 <script type="text/javascript">
-    function redirect1() 
+    function redirect1()
     {
         window.location = "{% url 'secondyear' %}";
     }
-    
+
 </script>
 
 <script type="text/javascript">
     function redirect2() {
         window.location = "{% url 'secondyear' %}";
     }
-    
+
 </script>
 
 
   <!-- <button  onclick="kenken_data()" >save</button> -->
-  <button id="skip"><a href="{% url 'secondyear' %}">Skip</a></button>
-  <button id="submit"><a href="{% url 'secondyear' %}">Submit</a></button>
-
+<button id="submit"><a href="{% url 'secondyear' %}">Submit</a></button>
+<button id="skip"><a href="{% url 'secondyear' %}">Skip</a></button>
 
 <script>
     var modal1 = document.getElementById("painting1_final_modal");
@@ -340,7 +339,7 @@
 
 
 <script>
-    
+
 
     function kenken_data() {
         var kenken_array = new Array(200);
@@ -359,7 +358,7 @@
             }
             catch(err) {
                 kenken_array[i] = 0;
-            }   
+            }
         }
         console.log(kenken_array)
         return kenken_array;
@@ -380,7 +379,7 @@ $('#submit').on('click', () => {
     //     }
     // console.log(submittedCrossword);
 
-    
+
 
     $.ajax({
         type: "POST",
@@ -398,14 +397,14 @@ $('#submit').on('click', () => {
 
 </script>
 <footer>
-  
+
   <p>Technothlon<br>
   Copyright &copy 2019-20
 <br>All rights reserved.</p>
 
 </footer>
 
- 
+
 </body>
 
 </html>
