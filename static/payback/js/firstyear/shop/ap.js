@@ -7632,12 +7632,24 @@ function kriti(x){
 
 
 
+//   CODE TO RENDER LOAN 
+
+
+function rendloan(){
+	return parseInt($("#l")[0].dataset.value)
+}
+
+
+// CODE TO RENDER LOAN END 
+
+
+
 // ===================   SECOND YEAR ===========================================
 
 //  Transport FUNCTION (p3) ========================
 
 
-function transport(x){
+function transport(x , debt){
 	// console.log(x);
 	if ( x == 0){
 
@@ -7740,8 +7752,8 @@ function transport(x){
 		}
 
 		// Money code
-		calculateLoanAndApplyChange(loan + 5000);
-		loan = loan + 5000;
+		calculateLoanAndApplyChange(debt + 5000);
+		loan = debt + 5000;
 		$("#loid")[0].children[0].innerHTML = "+" + 5000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {
@@ -7823,8 +7835,8 @@ function transport(x){
 
 
 		// Loan =================
-		calculateLoanAndApplyChange(loan+3000);
-		loan+=3000;
+		calculateLoanAndApplyChange(debt +3000);
+		loan  =  debt + 3000;
 		$("#loid")[0].children[0].innerHTML = "+" + 3000; 
 		$("#loid").css({"opacity" : "1"})
 		setTimeout(function () {

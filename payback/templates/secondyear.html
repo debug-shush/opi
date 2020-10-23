@@ -203,7 +203,7 @@
             </div> 
     <div class="button mascotPlaceholder" style="display: none;">Continue</div>
     <div class="button mascotBtn" data-direction="down" data-panel="panel-0"
-         style="display: inline-block; opacity: 1;margin-left: 40%;margin-top: 100px;"
+         style="display: inline-block; opacity: 1;margin-left: 40%;margin-top: 150px;"
          onclick="document.getElementById('ptransport').scrollIntoView(); ">Continue
     </div>
 
@@ -228,7 +228,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="transport(0); document.getElementById('presearch').scrollIntoView();"
+                     onclick="transport(0 , rendloan() ); document.getElementById('presearch').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">TAKE THE FLIGHT
                 </div>
                 <div class="optDebt">₹5000</div>
@@ -721,6 +721,7 @@
 <div id="f" data-value="{{focus1}}"></div>
 <div id="c" data-value="{{connection1}}"></div>
 <div id="h" data-value="{{happiness1}}"></div>
+<div id="l" data-value="{{loan1}}"></div>
 
 <!-- END OF Second YEAR ============================== -->
 
