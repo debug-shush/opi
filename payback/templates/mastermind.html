@@ -489,9 +489,13 @@
 
         <button id="delete" class="">&#8672;</button>
         <br>
-          <button type="button" id="newGame" class="green" style="margin-left: 10%;margin-top: 12%;"><a
-                        href="{% url 'thirdyear' %}">SUBMIT</a></button>
-                <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="{% url 'thirdyear' %}">SKIP</a>
+
+          <button type="button" id="newGame" class="green1" style="margin-left: 10%;margin-top: 12%; color: #333;"><a
+                        href="#">SUBMIT</a></button>
+                <button type="button" class="green2" style="margin-left: 40%;margin-top: 12%; color: #333;"><a href="{% url 'thirdyear' %}">SKIP</a>
+
+         
+
                 <!-- <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
                         href="#">SUBMIT</a></button> -->
                 <!-- <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a> -->
@@ -517,12 +521,7 @@
 
   </footer>
 
-<div id="modalOverlay">
-    <div id="modalMessage">
-        <button class="large">OK</button>
-        <button class="large primary">Restart</button>
-    </div>
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="{% static 'mastermind/js/main.js' %}"></script>

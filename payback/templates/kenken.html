@@ -294,7 +294,7 @@
     </p>
     
 </div>-->
-<input id="skip" type="button" value="SKIP" onclick="redirect1();"/>
+<input id="skip" type="button" value="Skip" onclick="redirect1();"/>
 
 
 <script type="text/javascript">
@@ -304,16 +304,17 @@
     }
     
 </script>
-<input id="submit" type="button" value="SUBMIT" onClick="redirect2();"/>
+
 <script type="text/javascript">
     function redirect2() {
         window.location = "{% url 'secondyear' %}";
     }
     
 </script>
-<button class="button" id="skip"><a href="{% url 'secondyear' %}">SKIP</a></button>
-<button class="button" id="submit"><a href="{% url 'secondyear' %}">SUBMIT</a></button>
 
+
+  <!-- <button  onclick="kenken_data()" >save</button> -->
+  <button id="submit">Submit</button>
 
 
 <script>
@@ -328,6 +329,7 @@
         modal1.style.display = "none";
     });
 </script>
+
 
 
 <script>
@@ -388,13 +390,13 @@ $('#submit').on('click', () => {
 });
 
 </script>
-<div class="footer">
+<footer>
   
   <p>Technothlon<br>
   Copyright &copy 2019-20
 <br>All rights reserved.</p>
 
-</div>
+</footer>
 
  
 </body>
