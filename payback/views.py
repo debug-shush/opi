@@ -296,10 +296,11 @@ def append_user(excel_data):
         print(name_val)
         name = name_val.split()
         first_name = name[0]
-        last_name = name[1]
-        username = str(first_name.lower()+last_name.lower())
+        if len(name) >=2:
+            last_name = name[1]
         contact = sheet.cell(row=i+2, column=2).value
         email = sheet.cell(row=i+2, column=3).value
+        username = str(email)
         roll = str(sheet.cell(row=i+2, column=4).value)
         password = str(sheet.cell(row=i+2, column=5).value)
         user = User.objects.create_user(username=username, email=email, password=password)
