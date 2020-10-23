@@ -120,15 +120,21 @@ body.lost { background-color: #E22D2D; }
 
 .wrapper {
   display: block;
-  width: 810px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .header {
   overflow: hidden;
-  background-color: #019d95;
+  background: #019d95;
   padding: 10px 10px;
   height:50px;
+  position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .header a {
@@ -155,6 +161,7 @@ body.lost { background-color: #E22D2D; }
 .header-right {
   float: right;
   color: white;
+  padding-right: 40px;
 }
 
 
@@ -173,6 +180,7 @@ footer {
   display:inline-block;
 }
 section.one{
+  overflow-wrap: 100px;
   position:relative;
   &:after{
     content:"";
@@ -182,11 +190,14 @@ section.one{
 }
 .right_board{
   float: right;
+  padding-right: 225px;
+  padding-top: 75px;
 }
 
 .left_board{
   position: fixed;
   top: 400px;
+padding-left: 225px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

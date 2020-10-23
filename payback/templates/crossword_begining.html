@@ -291,6 +291,8 @@
 </div>
 
 <div class="full_page">
+    <br>
+    <br>
 <button>1</button>
 <br>
   <div>
@@ -472,8 +474,8 @@ since last reload
 <br>   
 <br> 
     <p>What is the sum of values of letters in the missing word? (If A-1, B-2, C-3, ... so on) </p>
-    <h4> ONE OVER SIX MINUS FIFTEEN = DIMS </h4>
-    <h4>EIGHT ADDED TO SEVENTY TWO = _ _ _ _</h4>
+    <h5 style="text-align: center;"> ONE OVER SIX MINUS FIFTEEN = DIMS </h5>
+    <h5 style="text-align: center;">EIGHT ADDED TO SEVENTY TWO = _ _ _ _</h5>
     <br>
     <input type="text" id="answer_lettersum">
     <button onclick="lettersumcheckAnswer();" class="green">Submit</button>
@@ -482,9 +484,8 @@ since last reload
 <br><hr>
 <button>4</button>
 <br>
-<br>
 <div class="Crossword container">
-    <h3>PARAGRAPH AND THE PATTERN</h3>
+    <h3 style="text-align: center;">PARAGRAPH AND THE PATTERN</h3>
     <div class="pattern">
         <ol>
             <li>Alphabets are considered to be in a cyclic manner i.e after z comes a etc.</li>
@@ -501,6 +502,7 @@ since last reload
             </li>
         </ol>
     </div>
+    <br>
     <div class="paragraph">
         <h5 style="font-weight: bold;">PARAGRAPH AND THE WORD THAT ARE TO BE ENCRYPTED BY ABOVE PATTERN:</h5>
         <p>The campus of IIT Guwahati is on the northern banks of Brahmaputra and abuts the North Guwahati town of
@@ -583,14 +585,13 @@ since last reload
         <div id="horizontal_hints_container"></div>
     </div>
 
-    <div id="buttons_container">
-        <button id="clear_all">Clear All</button>
-        <button id="check">Check</button>
+    <div id="buttons_container" style="padding-left: 170px;">
+        <button id="clear_all" >Clear All</button>
     </div>
 </div><br><hr>
 <br>
-<div style="position: relative; left: 50%;">
-    <button id="final_submit" class="green">Final Submit</button>
+<div style="position: relative; left: 45%;">
+    <button id="final_submit" class="green"><a href="{% url 'fourthyear' %}">Final Submit</a></button>
 </div>
 </p>
 <script src='{% static "crossword_puzzle/Crossword/crossword.js" %}'></script>

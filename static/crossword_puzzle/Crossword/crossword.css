@@ -8,9 +8,15 @@
 .green{background: #019d95;}
 .header {
   overflow: hidden;
-  background-color: #019d95;
+  background: #019d95;
   padding: 10px 10px;
-  height:60px;
+  height:65px;
+  position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .header a {
@@ -37,6 +43,7 @@
 .header-right {
   float: right;
   color: white;
+  padding-right: 40px;
 }
 
 footer {

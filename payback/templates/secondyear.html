@@ -194,13 +194,13 @@
 
     <div class="year-text"
          style="margin-left: 42%;background: #fff0d2;color: black;font-size: 2.5rem;line-height: 3.75rem;letter-spacing: .04em;margin-bottom: 50px;">
-        Year 2:
+        Year 2:<br>SUMMER VACATION
     </div>
     <!-- <svg version="1.1" id="Layer_1" style="margin-top: -400px;margin-left:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 530.2 530.2" preserveAspectRatio="xMidYMin slice"><circle class="path" cx="265.1" cy="265.1" r="264.1" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></circle><circle class="line" cx="265.1" cy="265.1" r="264.1"></circle></svg>
          -->
-            <div style="background: #fff0d2;" >
-                <img src="{%static 'payback/images/firstyear/images/college-sophomore.png' %}" style="background: #fff0d2;max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">
-            </div> 
+{#            <div style="background: #fff0d2;" >#}
+{#                <img src="{%static 'payback/images/firstyear/images/college-sophomore.png' %}" style="background: #fff0d2;max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">#}
+{#            </div> #}
     <div class="button mascotPlaceholder" style="display: none;">Continue</div>
     <div class="button mascotBtn" data-direction="down" data-panel="panel-0"
          style="display: inline-block; opacity: 1;margin-left: 40%;margin-top: 180px;"
@@ -228,7 +228,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="transport(0); document.getElementById('psecondyear').scrollIntoView();"
+                     onclick="transport(0);document.getElementById('psecondyear').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">TAKE THE FLIGHT
                 </div>
                 <div class="optDebt">₹5000</div>
@@ -245,7 +245,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();transport(1);"
+                     onclick="transport(1);document.getElementById('psecondyear').scrollIntoView();"
                      data-direction="down" data-outcome="223" data-challenge="28">Take the Train
                 </div>
                 <div class="optDebt">₹1000</div>
@@ -256,7 +256,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('presearch').scrollIntoView();transport(2);"
+                     onclick="transport(2);document.getElementById('presearch').scrollIntoView();"
                      data-direction="right" data-outcome="221" data-challenge="28">Stay At Campus
                 </div>
                 <div class="optDebt">₹0</div>
@@ -319,7 +319,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();research(0);"
+                     onclick="research(0);document.getElementById('psecondyear').scrollIntoView();"
                      data-direction="down" data-outcome="223" data-challenge="28">Make your bonding strong with professor
                 </div>
                 <div class="optDebt">₹585</div>
@@ -330,7 +330,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();research(1);"
+                     onclick="research(1);document.getElementById('psecondyear').scrollIntoView();"
                      data-direction="right" data-outcome="221" data-challenge="28">I don't want to do it.
                 </div>
                 <div class="optDebt">₹585</div>
@@ -357,6 +357,28 @@
 
 <!-- Page 3 end ================================ -->
 
+<!-- Page 4 start ================================ -->
+<section id="psecondyear">
+<div style="padding-top: 200px;padding-bottom: 100px;background: #fff0d2;">
+
+    <div class="year-text"
+         style="margin-left: 42%;background: #fff0d2;color: black;font-size: 2.5rem;line-height: 3.75rem;letter-spacing: .04em;margin-bottom: 50px;">
+        Year 2:
+    </div>
+    <!-- <svg version="1.1" id="Layer_1" style="margin-top: -400px;margin-left:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 530.2 530.2" preserveAspectRatio="xMidYMin slice"><circle class="path" cx="265.1" cy="265.1" r="264.1" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></circle><circle class="line" cx="265.1" cy="265.1" r="264.1"></circle></svg>
+         -->
+            <div style="background: #fff0d2;" >
+                <img src="{%static 'payback/images/firstyear/images/college-sophomore.png' %}" style="background: #fff0d2;max-width: 700px;max-height: 700px;margin-left: 24%;" alt="">
+            </div>
+    <div class="button mascotPlaceholder" style="display: none;">Continue</div>
+    <div class="button mascotBtn" data-direction="down" data-panel="panel-0"
+         style="display: inline-block; opacity: 1;margin-left: 40%;margin-top: 180px;"
+         onclick="document.getElementById('plaptop').scrollIntoView(); ">Continue
+    </div>
+
+</div>
+</section>
+<!-- Page 4 end ================================ -->
 
 <!-- Page 5 ===================================== -->
 <section class="bck-1" id="plaptop">
@@ -376,7 +398,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pclub').scrollIntoView();laptop(0);"
+                     onclick="laptop(0);document.getElementById('pclub').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">Only the Best!
                 </div>
                 <div class="optDebt">₹60000</div>
@@ -393,7 +415,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pclub').scrollIntoView();laptop(1);"
+                     onclick="laptop(1);document.getElementById('pclub').scrollIntoView();"
                      data-direction="down" data-outcome="223" data-challenge="28">Not so Fancy One.
                 </div>
                 <div class="optDebt">₹25000</div>
@@ -404,7 +426,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pclub').scrollIntoView();laptop(2);"
+                     onclick="laptop(2);document.getElementById('pclub').scrollIntoView();"
                      data-direction="right" data-outcome="221" data-challenge="28">Cheapest
                 </div>
                 <div class="optDebt">₹5000</div>
@@ -464,7 +486,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pinteriit').scrollIntoView();takecare(0)"
+                     onclick="takecare(0);document.getElementById('pinteriit').scrollIntoView();"
                      data-direction="down" data-outcome="223" data-challenge="28">Become AN Ra
                 </div>
                 <!-- <div class="optDebt">$585</div> -->
@@ -475,7 +497,7 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('pinteriit').scrollIntoView();takecare(1)"
+                     onclick="takecare(1);document.getElementById('pinteriit').scrollIntoView();"
                      data-direction="right" data-outcome="221" data-challenge="28">No Thanks
                 </div>
                 <!-- <div class="optDebt">$585</div> -->
@@ -520,7 +542,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('p9').scrollIntoView();interiit(0)"
+                     onclick="interiit(0);document.getElementById('p9').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">Exicted for Inter IIT
                 </div>
                 <!-- <div class="optDebt">₹585</div> -->
@@ -537,7 +559,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('p9').scrollIntoView();interiit(1)"
+                     onclick="interiit(1);document.getElementById('p9').scrollIntoView();"
                      data-direction="down" data-outcome="223" data-challenge="28">Recently my Grades are low , let me focus on it .
                 </div>
                 <!-- <div class="optDebt">₹585</div> -->
@@ -681,7 +703,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div id="secondyearbutton" class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down"
+                <div id="secondyearbutton" class="opt options" onclick="{% url 'mastermind' %}" data-direction="down"
                      data-outcome="223" data-challenge="28">   Start The Exam  
                 </div>
                 <!-- <div class="optDebt">$585</div> -->

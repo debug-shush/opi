@@ -28,7 +28,19 @@
     </style>
 </head>
 <body>
-<h1 id='myh1' align="center"></h1>
+<div class="header">
+  <a class="logo">
+  <img src="https://technothlon.techniche.org.in/images/technothlon.png" class="img-responsive" style="height: 30px; width:125px; margin: auto; margin-top: 0%; margin-bottom: 2.5%">
+  </a>
+  <div class="header-right">
+    <a class="active">Rules</a>
+   </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- <label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label> -->
 <!-- <script>
   var hoursLabel = document.getElementById("hours");
@@ -187,7 +199,7 @@
 
 <p id="demo" align='center'></p>
 <button align='center' style="display: none;" onclick="checker()">solution</button>
-<div id="instructions">
+<!--<div id="instructions">
     <p id="title">HOW TO PLAY</p>
     <p>
         a)fill these boxes with digits 1-9 such that each row
@@ -199,36 +211,27 @@
         reminder when one of the digit is divided by other digit.
     </p>
     
-</div>
-<input id="skip" type="button" value="SKIP" onclick="redirect1();"/>
-
-<!--
-<script type="text/javascript">
-    function redirect1() }
-        window.location = "{% url 'secondyear' %}";
-    }
-    
-</script>
-<input id="submit" type="button" value="SUBMIT" onClick="redirect2();"/>
-<script type="text/javascript">
-    function redirect2() }
-        window.location = "{% url 'secondyear' %}";
-    }
-    
-</script>
-<button class="button" id="skip">SKIP</button>
-<button class="button" id="submit">SUBMIT</button>
-        <input id = "task3" type="button" value="task3" onClick="redirect3();"/>
-        <script type="text/javascript">
-        function redirect3()}
-          window.location="http://127.0.0.1:8000/kenken/tiles/";
-        }
-  
-  </script> -->
+</div>-->
+{#<input id="skip" type="button" value="SKIP" onclick="redirect1();"/>#}
+{##}
+{##}
+{#<script type="text/javascript">#}
+{#    function redirect1() }#}
+{#        window.location = "{% url 'secondyear' %}";#}
+{#    }#}
+{#    #}
+{#</script>#}
+{#<input id="submit" type="button" value="SUBMIT" onClick="redirect2();"/>#}
+{#<script type="text/javascript">#}
+{#    function redirect2() }#}
+{#        window.location = "{% url 'secondyear' %}";#}
+{#    }#}
+{#    #}
+{#</script>#}
+<button class="button" id="skip"><a href="{% url 'secondyear' %}">SKIP</a></button>
+<button class="button" id="submit"><a href="{% url 'secondyear' %}">SUBMIT</a></button>
 
 
-  <!-- <button  onclick="kenken_data()" >save</button> -->
-  <button id="submit">submit</button>
 
 <script>
     
@@ -289,5 +292,15 @@ $('#submit').on('click', () => {
 });
 
 </script>
+<div class="footer">
+  
+  <p>Technothlon<br>
+  Copyright &copy 2019-20
+<br>All rights reserved.</p>
+
+</div>
+
+ 
 </body>
+
 </html>

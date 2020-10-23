@@ -32,7 +32,11 @@
 <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="header">
+
+
+ 
+  <div class="wrapper">
+    <div class="header">
   <a class="logo">
   <img src="https://technothlon.techniche.org.in/images/technothlon.png" class="img-responsive" style="height: 30px; width:125px; margin: auto; margin-top: 0%; margin-bottom: 2.5%">
   </a>
@@ -40,9 +44,6 @@
     <a class="active">Rules</a>
    </div>
 </div>
-
-  <br>
-  <div class="wrapper">
 <section class="one clearfix">
     <div class="right_board">
         <div id="guesses">
@@ -420,7 +421,7 @@
         <button id="delete" class="">&#8672;</button>
         <br>
           <button type="button" id="newGame" class="green" style="margin-left: 10%;margin-top: 12%;"><a
-                        href="#">SUBMIT</a></button>
+                        href="{% url 'thirdyear' %}">SUBMIT</a></button>
                 <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="{% url 'thirdyear' %}">SKIP</a>
                 <!-- <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
                         href="#">SUBMIT</a></button> -->

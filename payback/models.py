@@ -17,7 +17,6 @@ class User(AbstractUser):
 
 
 class Technoplayer1(models.Model):
-    # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     focus1 = models.IntegerField(blank=True, null=True)
     connection1 = models.IntegerField(blank=True, null=True)
@@ -27,7 +26,6 @@ class Technoplayer1(models.Model):
 
 
 class Technoplayer2(models.Model):
-    # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     focus2 = models.IntegerField(blank=True, null=True)
     connection2 = models.IntegerField(blank=True, null=True)
@@ -37,7 +35,6 @@ class Technoplayer2(models.Model):
 
 
 class Technoplayer3(models.Model):
-    # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     focus3 = models.IntegerField(blank=True, null=True)
     connection3 = models.IntegerField(blank=True, null=True)
@@ -47,7 +44,6 @@ class Technoplayer3(models.Model):
 
 
 class Technoplayer4(models.Model):
-    # user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     focus4 = models.IntegerField(blank=True, null=True)
     connection4 = models.IntegerField(blank=True, null=True)
@@ -68,7 +64,7 @@ class Mastermindplayer(models.Model):
 
 class Crosswordplayer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    submittedCrossword = jsonfield.JSONField()
+    submittedCrossword = jsonfield.JSONField(default='')
     puzzle_score = models.CharField(max_length=10, blank=True, null=True)
     age_sum = models.BooleanField(max_length=10, blank=True , null = True)
     letter_sum = models.BooleanField(max_length=10, blank=True , null = True)

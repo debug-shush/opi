@@ -14,8 +14,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+BASE_DIR = (Path(__file__).resolve().parent.parent).as_posix()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -26,7 +25,7 @@ SECRET_KEY = 'u_w8_71tpk4rwf%(km_8d6+dsuc*i%3hzyi=@f3y0bp#=xgr%7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -61,7 +60,7 @@ ROOT_URLCONF = 'opi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [os.path.join(BASE_DIR,'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -84,7 +83,7 @@ WSGI_APPLICATION = 'opi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
     }
 }
 
