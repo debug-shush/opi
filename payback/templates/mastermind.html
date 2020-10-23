@@ -32,14 +32,19 @@
 <![endif]-->
 
   <!-- Add your site or application content here -->
-  <header>
-      <ul>
-  <li><a class="active" href="#instructions">Rules</a></li>
-</ul>
- </header>
+  <div class="header">
+  <a class="logo">
+  <img src="https://technothlon.techniche.org.in/images/technothlon.png" class="img-responsive" style="height: 30px; width:125px; margin: auto; margin-top: 0%; margin-bottom: 2.5%">
+  </a>
+  <div class="header-right">
+    <a class="active">Rules</a>
+   </div>
+</div>
+
   <br>
   <div class="wrapper">
-    <div class="container right_board">
+<section class="one clearfix">
+    <div class="right_board">
         <div id="guesses">
             <div class="code row">
                 <div class="secret socket">?</div>
@@ -389,58 +394,58 @@
     <div class="left_board">
         <div id="options" class="container">
             <button value="1" id="green_one" class="option green_one"></button>
-            <button value="2" id="green_two" class="option green_two"></button>
-            <button value="3" id="green_three" class="option green_three"></button>
-        </div>
-        <div id="options" class="container">
             <button value="4" id="purple_one" class="option purple_one"></button>
-            <button value="5" id="purple_two" class="option purple_two"></button>
-            <button value="6" id="purple_three" class="option purple_three"></button>
-
-        </div>
-        <div id="options" class="container">
             <button value="7" id="red_one" class="option red_one"></button>
-            <button value="8" id="red_two" class="option red_two"></button>
-            <button value="9" id="red_three" class="option red_three"></button>
-
-        </div>
-        <div id="options" class="container">
             <button value="10" id="yellow_one" class="option yellow_one"></button>
-            <button value="11" id="yellow_two" class="option yellow_two"></button>
-            <button value="12" id="yellow_three" class="option yellow_three"></button>
-
-        </div>
-        <div id="options" class="container">
             <button value="13" id="blue_one" class="option blue_one"></button>
-            <button value="14" id="blue_two" class="option blue_two"></button>
-            <button value="15" id="blue_three" class="option blue_three"></button>
-
+            <button value="16" id="brown_one" class="option brown_one"></button>
         </div>
         <div id="options" class="container">
-            <button value="16" id="brown_one" class="option brown_one"></button>
+            <button value="2" id="green_two" class="option green_two"></button>
+            <button value="5" id="purple_two" class="option purple_two"></button>
+            <button value="8" id="red_two" class="option red_two"></button>
+            <button value="11" id="yellow_two" class="option yellow_two"></button>
+            <button value="14" id="blue_two" class="option blue_two"></button>
             <button value="17" id="brown_two" class="option brown_two"></button>
+        </div>
+        <div id="options" class="container">
+            <button value="3" id="green_three" class="option green_three"></button>
+            <button value="6" id="purple_three" class="option purple_three"></button>
+            <button value="9" id="red_three" class="option red_three"></button>
+            <button value="12" id="yellow_three" class="option yellow_three"></button>
+            <button value="15" id="blue_three" class="option blue_three"></button>
             <button value="18" id="brown_three" class="option brown_three"></button>
-
         </div>
 
         <button id="delete" class="">&#8672;</button>
         <br>
-        <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
-                href=""></a></button>
+          <button type="button" id="newGame" class="green" style="margin-left: 10%;margin-top: 12%;"><a
+                        href="#">SUBMIT</a></button>
                 <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="{% url 'thirdyear' %}">SKIP</a>
                 <!-- <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
                         href="#">SUBMIT</a></button> -->
                 <!-- <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a> -->
         
-        <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a>
-        </button>
+        
         <!-- <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SKIP</a></button> -->
 
 
         </button>
+        <br><br><br>
+<br>
+<br>
     </div>
+</section>
 </div>
+<br>
 
+<footer>
+  
+  <p>Technothlon<br>
+  Copyright &copy 2019-20
+<br>All rights reserved.</p>
+
+  </footer>
 
 <div id="modalOverlay">
     <div id="modalMessage">
