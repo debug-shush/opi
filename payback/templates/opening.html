@@ -138,8 +138,8 @@
         <div class="skw-page__half skw-page__half--right">
             <div class="skw-page__skewed">
                 <div class="skw-page__content">
-                    <h2 class="skw-page__heading">WELCOME TO IIT GUWAHATI!</h2>
-                    <p class="skw-page__description">Just scroll down</p>
+                    <h2 class="skw-page__heading" style="font-size: 300%">WELCOME TO CAMPUS LA VIE</h2>
+                    <p class="skw-page__description">Scroll down</p>
                 </div>
             </div>
         </div>
@@ -149,7 +149,7 @@
             <div class="skw-page__skewed">
                 <div class="skw-page__content">
                     <h2 class="skw-page__heading">CONGRATULATIONS FOR QUALIFYING TECHNOTHLON</h2>
-                    <p class="skw-page__description">Nothing to do here, continue scrolling.</p>
+                    <p class="skw-page__description"></p>
                 </div>
             </div>
         </div>
@@ -168,8 +168,8 @@
         <div class="skw-page__half skw-page__half--right">
             <div class="skw-page__skewed">
                 <div class="skw-page__content">
-                    <h2 class="skw-page__heading">YOUR ARE ENROLLED IN TECHNOTECH</h2>
-                    <p class="skw-page__description">The end is near, I promise!</p>
+                    <h2 class="skw-page__heading">EXCITED!</h2>
+                    <p class="skw-page__description"></p>
                 </div>
             </div>
         </div>
@@ -179,7 +179,7 @@
             <div class="skw-page__skewed">
                 <div class="skw-page__content">
                     <h2 class="skw-page__heading">YOUR FOUR YEAR JOURNEY BEGINS!</h2>
-                    <p class="skw-page__description">Ok, ok, just one more scroll!</p>
+                    <p class="skw-page__description"></p>
                 </div>
             </div>
         </div>
@@ -200,11 +200,11 @@
                 <div class="skw-page__content">
                     <p class="skw-page__description">
                         {%if request.user.is_authenticated %}
-                        <p>Hello {{request.user.first_name}}</p>
-                        <a style="" href="{% url 'firstyear' %}">Start Your Journey</a>
+                        <p>Hello{{request.user.first_name}} !</p>
+                        <a style="font-size: 200%;color: white;" href="{% url 'firstyear' %} ">Start Your Journey</a>
                         {%else%}
-                        <p>To Start your Journey</p>
-                        <a href="{% url 'login'%}">Login Here</a>
+                        <p style="font-size: 200%;color: white;">To Start your Journey</p>
+                        <a href="{% url 'login'%}" style="font-size: 200%;color: white">Login Here</a>
                         {%endif%}
                         <!-- <div class="login-page">
                             <div class="form">

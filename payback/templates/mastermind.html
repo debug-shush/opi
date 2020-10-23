@@ -491,7 +491,7 @@
         <br>
 
           <button type="button" id="newGame" class="green1" style="margin-left: 10%;margin-top: 12%; color: #333;"><a
-                        href="#">SUBMIT</a></button>
+                        href="{% url 'thirdyear' %}">SUBMIT</a></button>
                 <button type="button" class="green2" style="margin-left: 40%;margin-top: 12%; color: #333;"><a href="{% url 'thirdyear' %}">SKIP</a>
 
          
@@ -563,7 +563,7 @@
             },
             dataType: 'json',
             success: function (data) {
-                alert("Your response have been subitted");
+                alert("Your response have been submitted");
             }
         });
     });

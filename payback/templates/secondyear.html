@@ -219,7 +219,7 @@
                 <div class="question">
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">ALL STUDENTS ARE RETURNING HOME!<br>You have three options.
+                    <div class="text label" style="background: #fff0d2;">RETURN TO CAMPUS FROM HOME!<br>You have three options.
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -255,11 +255,11 @@
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options"
+                <div class="opt options options-hidden"
                      onclick="document.getElementById('presearch').scrollIntoView();transport(2);"
                      data-direction="right" data-outcome="221" data-challenge="28">Stay At Campus
                 </div>
-                <div class="optDebt">₹0</div>
+                <div class="optDebt"></div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%"
@@ -292,8 +292,8 @@
                 <div class="question">
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">Since You have stayed in Campus.
-                        <br> Here is a opportunity of research intern with a professor with a stipend of 5000 rupees
+                    <div class="text label" style="background: #fff0d2;">
+                         Here is a opportunity of research intern with a professor with a stipend of 5000 rupees
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -785,7 +785,7 @@ $('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].data
             },
             dataType: 'json',
             success: function (data) {
-                alert("Your response have been subitted");
+                alert("Your response have been submitted");
             }
         });
         window.location = "../mastermind";
