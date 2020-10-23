@@ -108,19 +108,23 @@
                     <span id="painting_close1" style="cursor: pointer;font-size: 25px;">&times;</span>
                     <div class="modal-body">
                         <p>
-                        <h3>How to play</h3>
-                        <p><strong>Goal:</strong> Guess the pattern, in both order and color</p>
-                        <p>Insert your guess sequence into the empty sockets</p>
-                        <p>Feedback is provided on the right side in the form of black and white pegs.
-                        <ul>
-                            <li>Black peg corresponds to one peg from your color sequence that is both the right color
-                                and in the right position
-                            </li>
-                            <li>White peg corresponds to one peg from your color sequence that is the right color but
-                                NOT in the right position
-                            </li>
-                        </ul>
-                        </p>
+                        Guess the pattern in terms of color, position and number.
+
+                        Insert your guess sequence into empty socket from bottom.
+
+                        Feedback is provided on right side in form of black, red and white pegs.
+
+                        Black peg corresponds to one peg from your sequence that is right in all color, position and
+                        number
+
+                        Red peg corresponds to one peg from your sequence that is correct in any 2 among color, position
+                        and number
+
+                        White peg corresponds to one peg from your sequence that is correct only with number or color
+
+                        Priority order for getting hint pegs is black>red>white. If a guess peg in your sequence gets
+                        black peg it is not eligible for red or white peg.
+                        Then, if a guess in your sequence gets red peg it is not eligible for white peg.
                         </p>
                     </div>
                 </div>
@@ -507,16 +511,18 @@
             <button id="delete" class="">&#8672;</button>
             <br>
 
-            <button type="button" id="newGame" class="green1" style="margin-left: 10%;margin-top: 12%; color: #333;"><a href="{% url 'thirdyear' %}">SUBMIT</a></button>
-            <button type="button" class="green2" style="margin-left: 40%;margin-top: 12%; color: #333;" ><a href="{% url 'thirdyear' %}">SKIP</a></button>
+            <button type="button" id="newGame" class="green1" style="margin-left: 10%;margin-top: 12%; color: #333;"><a
+                    href="{% url 'thirdyear' %}">SUBMIT</a></button>
+            <button type="button" class="green2" style="margin-left: 40%;margin-top: 12%; color: #333;"><a
+                    href="{% url 'thirdyear' %}">SKIP</a></button>
 
 
-                <!-- <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
-                        href="#">SUBMIT</a></button> -->
-                <!-- <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a> -->
+            <!-- <button type="button" id="newGame" class="green" style="margin-left: 40%;margin-top: 12%;"><a
+                    href="#">SUBMIT</a></button> -->
+            <!-- <button id="submit" type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SUBMIT</a> -->
 
 
-                <!-- <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SKIP</a></button> -->
+            <!-- <button type="button" class="green" style="margin-left: 40%;margin-top: 12%;"><a href="#">SKIP</a></button> -->
 
 
             </button>
