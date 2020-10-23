@@ -127,7 +127,7 @@ var introAnimation, //timeline for intro animation
 	whackAMoleTimerMax = 1250,
 	shop_money = 0,
 	scor = ""
-	loan = 100000,
+	loan = 50000,
 	sh_v = 0
 	first_year_score_storing_array = [0,0,0,0]// focus , conn, happ , debt ;
 	shoppingCartItems = [{
