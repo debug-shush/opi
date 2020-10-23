@@ -6016,7 +6016,15 @@ function end_to_start(){
 	console.log(3);
 	var $var = document.getElementsByClassName("meter-focus")
 	var $va_data =  parseInt($var[0].attributes[1].value);
-	$var[0].attributes[1].value = $va_data
+	if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
+		$var[0].attributes[1].value = $va_data
 	$('#focid').css({ "width" : $va_data/10+ "%"});
 	if ($va_data < 200){
 		$('#focid').css({"background" : "#9e2145" });
@@ -6032,7 +6040,15 @@ function end_to_start(){
 
 	var $var = document.getElementsByClassName("meter-connections")
 	var $va_data =  parseInt($var[0].attributes[1].value);
-	$var[0].attributes[1].value = $va_data
+	if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
+		$var[0].attributes[1].value = $va_data
 	$('#conid').css({"width" : $va_data/10+ "%"});
 	if ($va_data < 200){
 		$('#conid').css({"background" : "#9e2145" });
@@ -6049,7 +6065,15 @@ function end_to_start(){
 
 	var $var = document.getElementsByClassName("meter-happiness")
 	var $va_data =  parseInt($var[0].attributes[1].value);
-	$var[0].attributes[1].value = $va_data
+	if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
+		$var[0].attributes[1].value = $va_data
 	$('#happid').css({"width" : $va_data/10+ "%"});
 	if ($va_data < 200){
 		$('#happid').css({"background" : "#9e2145" });
@@ -6166,6 +6190,14 @@ function meals(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6192,8 +6224,16 @@ function meals(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -6214,6 +6254,14 @@ function meals(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -6248,6 +6296,14 @@ function meals(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -6261,8 +6317,16 @@ function meals(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -6273,6 +6337,14 @@ function meals(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -6295,6 +6367,14 @@ function meals(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 100
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -6318,8 +6398,16 @@ function meals(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -6329,6 +6417,14 @@ function meals(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -6376,6 +6472,14 @@ function books(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -6400,8 +6504,16 @@ function books(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -6422,6 +6534,14 @@ function books(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -6456,6 +6576,14 @@ function books(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -6469,8 +6597,16 @@ function books(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -6480,6 +6616,14 @@ function books(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -6503,6 +6647,14 @@ function books(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 175
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6526,8 +6678,16 @@ function books(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -6537,6 +6697,14 @@ function books(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -6582,6 +6750,14 @@ function seniors(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 250
 		
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6606,6 +6782,14 @@ function seniors(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#coid").css({"opacity" : "1"})
@@ -6630,10 +6814,14 @@ function seniors(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 
 		$va_data += 150
-		// if($va_data>=500)
-		// {
-		// 	$va_data = 500
-		// }		
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -6666,6 +6854,14 @@ function seniors(x){
 		// {
 		// 	$va_data=0
 		// }
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -6689,6 +6885,14 @@ function seniors(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#coid").css({"opacity" : "1"})
@@ -6711,6 +6915,14 @@ function seniors(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -6751,6 +6963,14 @@ function job(x){
 		// {
 		// 	$va_data=500;
 		// }
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6775,6 +6995,14 @@ function job(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#coid").css({"opacity" : "1"})
@@ -6803,6 +7031,14 @@ function job(x){
 		// {
 		// 	$va_data = 500
 		// }		
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -6841,6 +7077,14 @@ function job(x){
 		// {
 		// 	$va_data=0
 		// }
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -6864,6 +7108,14 @@ function job(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#coid").css({"opacity" : "1"})
@@ -6886,6 +7138,14 @@ function job(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -6931,6 +7191,14 @@ function bbq(x){
 		{
 			$va_data= 0;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -6955,9 +7223,14 @@ function bbq(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -6983,12 +7256,17 @@ function bbq(x){
 		var $va_data =  parseInt($var[0].attributes[1].value);
 
 		$va_data += 100
-		if($va_data>=500)
+
+		if($va_data>=1000)
 		{
-			$va_data = 500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -7025,6 +7303,14 @@ function bbq(x){
 		{
 			$va_data=0
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -7052,6 +7338,14 @@ function bbq(x){
 		{
 			$va_data=0
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#coid").css({"opacity" : "1"})
@@ -7074,6 +7368,14 @@ function bbq(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 175
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -7116,6 +7418,14 @@ function kriti(x){
 		{
 			$va_data=0;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -7140,9 +7450,14 @@ function kriti(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -7173,6 +7488,14 @@ function kriti(x){
 		// 	$va_data = 500
 		// }
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7206,6 +7529,14 @@ function kriti(x){
 		// 	$va_data=500
 		// }
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7232,6 +7563,14 @@ function kriti(x){
 		{
 			$va_data=0
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#coid").css({"opacity" : "1"})
@@ -7254,6 +7593,14 @@ function kriti(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 175
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -7303,6 +7650,14 @@ function transport(x){
 		// 	$va_data=500;
 		// }
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7327,8 +7682,16 @@ function transport(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -7349,12 +7712,17 @@ function transport(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		
 		if($va_data>=1000)
 		{
 			$va_data=1000
 		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -7387,6 +7755,14 @@ function transport(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7400,38 +7776,50 @@ function transport(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
 		// $('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
 		// // Happiness code  ======================
-		// var $var = document.getElementsByClassName("meter-happiness")
-		// var $va_data =  parseInt($var[0].attributes[1].value);
-		// $va_data += (0.3*$va_data)
-		// if($va_data>=500)
-		// {
-		// 	$va_data=500
-		// }
-		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
-		// setTimeout(function () {
-		// 	$("#haid").css({"opacity" : "0"});
-		// }, 2000);
-		// $('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
-		// if ($va_data < 200){
-		// 	$('#happid').css({"background" : "#9e2145" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
-		// }
-		// else{
-		// 	$('#happid').css({"background" : "#01b6ad" });
-		// 	$v = $("#happid")
-		// 	$v[0].parentNode.style.backgroundColor = "#019d95" ;
-		// }
+		var $var = document.getElementsByClassName("meter-happiness")
+		var $va_data =  parseInt($var[0].attributes[1].value);
+		$va_data += (0.1*$va_data)
+		$var[0].attributes[1].value = $va_data
+		if($va_data>=1000)
+		{
+			$va_data = 1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#haid").css({"opacity" : "1"})
+		setTimeout(function () {
+			$("#haid").css({"opacity" : "0"});
+		}, 2000);
+		$('#happid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
+		if ($va_data < 200){
+			$('#happid').css({"background" : "#9e2145" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#8a1c3d"  ;
+		}
+		else{
+			$('#happid').css({"background" : "#01b6ad" });
+			$v = $("#happid")
+			$v[0].parentNode.style.backgroundColor = "#019d95" ;
+		}
 
 
 		// Loan =================
@@ -7448,6 +7836,14 @@ function transport(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -7471,8 +7867,16 @@ function transport(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
-		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		// $("#haid").css({"opacity" : "1"})
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
+		// $("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		// $("#coid").css({"opacity" : "1"})
 		// setTimeout(function () {
 		// 	$("#haid").css({"opacity" : "0"});
 		// }, 2000);
@@ -7483,6 +7887,14 @@ function transport(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 150
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7521,8 +7933,16 @@ function research(x){
 		{
 			$va_data=500;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#foid").css({"opacity" : "0"});
@@ -7545,11 +7965,19 @@ function research(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += (0.3*$va_data)
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -7568,12 +7996,17 @@ function research(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += (0.3*$va_data)
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#haid").css({"opacity" : "0"});
@@ -7601,6 +8034,14 @@ function research(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7614,6 +8055,14 @@ function research(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7630,6 +8079,14 @@ function research(x){
 		// 	$va_data=500
 		// }
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7668,6 +8125,14 @@ function laptop(x){
 		{
 			$va_data=1000;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -7697,6 +8162,14 @@ function laptop(x){
 		// 	$va_data=500
 		// }
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7719,9 +8192,14 @@ function laptop(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -7758,6 +8236,14 @@ function laptop(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7771,6 +8257,14 @@ function laptop(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7782,9 +8276,14 @@ function laptop(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 50
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -7823,6 +8322,14 @@ function laptop(x){
 		{
 			$va_data=0;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -7846,6 +8353,14 @@ function laptop(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -7857,6 +8372,14 @@ function laptop(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -7899,6 +8422,14 @@ function interiit(x){
 		{
 			$va_data=0;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -7923,15 +8454,20 @@ function interiit(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -7953,6 +8489,14 @@ function interiit(x){
 		if($va_data<0)
 		{
 			$va_data=0
+		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -7982,6 +8526,14 @@ function interiit(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -8005,6 +8557,14 @@ function interiit(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8021,6 +8581,14 @@ function interiit(x){
 		// 	$va_data=500
 		// }
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8058,6 +8626,14 @@ function takecare(x){
 		{
 			$va_data=0;
 		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -8082,15 +8658,20 @@ function takecare(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -8112,6 +8693,14 @@ function takecare(x){
 		if($va_data<0)
 		{
 			$va_data=0
+		}
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
@@ -8141,6 +8730,14 @@ function takecare(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -8163,11 +8760,19 @@ function takecare(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 
@@ -8175,9 +8780,14 @@ function takecare(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
-		if($va_data>=500)
+		
+		if($va_data>=1000)
 		{
-			$va_data=500
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
 		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
@@ -8225,6 +8835,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8249,6 +8867,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8272,6 +8898,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8305,6 +8939,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8318,6 +8960,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8330,6 +8980,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8353,6 +9011,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8375,6 +9041,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8387,6 +9061,14 @@ function creditcard(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 150
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8428,6 +9110,14 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -8453,6 +9143,14 @@ function techniche(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8475,6 +9173,14 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 100
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -8508,6 +9214,14 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -8530,11 +9244,19 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -8551,6 +9273,14 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -8585,6 +9315,14 @@ function techniche(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8606,11 +9344,19 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -8628,6 +9374,14 @@ function techniche(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 100
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -8670,6 +9424,14 @@ function stayinout(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -8694,11 +9456,19 @@ function stayinout(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -8717,6 +9487,14 @@ function stayinout(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -8750,6 +9528,14 @@ function stayinout(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -8774,6 +9560,14 @@ function stayinout(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8785,6 +9579,14 @@ function stayinout(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -8828,6 +9630,14 @@ function report(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -8853,6 +9663,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8876,6 +9694,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8908,6 +9734,14 @@ function report(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -8932,6 +9766,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8944,6 +9786,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8967,6 +9817,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -8989,6 +9847,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9001,6 +9867,14 @@ function report(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 150
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9042,6 +9916,14 @@ function chill(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9066,6 +9948,14 @@ function chill(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9088,6 +9978,14 @@ function chill(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 50
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9122,6 +10020,14 @@ function chill(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9135,6 +10041,14 @@ function chill(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9146,6 +10060,14 @@ function chill(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9180,6 +10102,14 @@ function chill(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9202,6 +10132,14 @@ function chill(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9213,6 +10151,14 @@ function chill(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 250
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9261,6 +10207,14 @@ function jobloss(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9285,6 +10239,14 @@ function jobloss(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9307,6 +10269,14 @@ function jobloss(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 50
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9341,6 +10311,14 @@ function jobloss(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9354,6 +10332,14 @@ function jobloss(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9365,6 +10351,14 @@ function jobloss(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 50
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9398,6 +10392,14 @@ function jobloss(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -9421,6 +10423,14 @@ function jobloss(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9432,6 +10442,14 @@ function jobloss(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -9472,6 +10490,14 @@ function luck(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9496,6 +10522,14 @@ function luck(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9519,6 +10553,14 @@ function luck(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 50
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9561,6 +10603,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9585,6 +10635,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9607,6 +10665,14 @@ function re_li(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 50
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -9641,6 +10707,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 200
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9654,6 +10728,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9665,6 +10747,14 @@ function re_li(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9699,6 +10789,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9721,6 +10819,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9733,6 +10839,14 @@ function re_li(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 50
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9772,6 +10886,14 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 175
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -9796,11 +10918,19 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 125
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -9819,6 +10949,14 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -9852,6 +10990,14 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
@@ -9876,6 +11022,14 @@ function celeb(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -9887,6 +11041,14 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -9920,6 +11082,14 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#foid").css({"opacity" : "1"})
@@ -9942,11 +11112,19 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-connections")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 175
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
-		$("#haid").css({"opacity" : "1"})
+		$("#coid")[0].lastChild.previousSibling.childNodes[0].data = "+"
+		$("#coid").css({"opacity" : "1"})
 		setTimeout(function () {
-			$("#haid").css({"opacity" : "0"});
+			$("#coid").css({"opacity" : "0"});
 		}, 2000);
 		$('#conid').css({"transition" : "width 2s" , "width" : $va_data/10+ "%"});
 		if ($va_data < 200){
@@ -9964,6 +11142,14 @@ function celeb(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})
@@ -10005,6 +11191,14 @@ function dress(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= (0.1*$va_data)
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -10029,6 +11223,14 @@ function dress(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -10052,6 +11254,14 @@ function dress(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -10084,8 +11294,16 @@ function dress(x){
 		var $var = document.getElementsByClassName("meter-focus")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 100
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
-		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "-"
+		$("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#foid").css({"opacity" : "1"})
 		setTimeout(function () {
 			$("#foid").css({"opacity" : "0"});
@@ -10108,6 +11326,14 @@ function dress(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -10119,6 +11345,14 @@ function dress(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data -= 150
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		$("#haid").css({"opacity" : "1"})
@@ -10153,6 +11387,14 @@ function dress(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data += 100
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#foid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		// $("#foid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -10175,6 +11417,14 @@ function dress(x){
 		// var $va_data =  parseInt($var[0].attributes[1].value);
 		// $va_data -= 125
 		// $var[0].attributes[1].value = $va_data
+		// if($va_data>=1000)
+		// {
+		// 	$va_data = 1000
+		// }
+		// if($va_data < 0)
+		// {
+		// 	$va_data = 0
+		// }
 		// $("#haid")[0].lastChild.previousSibling.childNodes[0].data = "-"
 		// $("#haid").css({"opacity" : "1"})
 		// setTimeout(function () {
@@ -10186,6 +11436,14 @@ function dress(x){
 		var $var = document.getElementsByClassName("meter-happiness")
 		var $va_data =  parseInt($var[0].attributes[1].value);
 		$va_data += 200
+		if($va_data>=1000)
+		{
+			$va_data=1000
+		}
+		if($va_data < 0)
+		{
+			$va_data = 0
+		}
 		$var[0].attributes[1].value = $va_data
 		$("#haid")[0].lastChild.previousSibling.childNodes[0].data = "+"
 		$("#haid").css({"opacity" : "1"})

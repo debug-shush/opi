@@ -219,7 +219,7 @@
                 <div class="question">
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">ALL STUDENTS ARE RETURNING HOME!<br>You have three options.
+                    <div class="text label" style="background: #fff0d2;">RETURN TO CAMPUS FROM HOME!<br>You have three options.
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -228,7 +228,7 @@
             </div>
             <div class="optionWrap left-opt">
                 <div class="opt options"
-                     onclick="transport(0); document.getElementById('psecondyear').scrollIntoView();"
+                     onclick="transport(0); document.getElementById('presearch').scrollIntoView();"
                      data-direction="left" data-outcome="222" data-challenge="28">TAKE THE FLIGHT
                 </div>
                 <div class="optDebt">₹5000</div>
@@ -245,7 +245,7 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();transport(1);"
+                     onclick="document.getElementById('presearch').scrollIntoView();transport(1);"
                      data-direction="down" data-outcome="223" data-challenge="28">Take the Train
                 </div>
                 <div class="optDebt">₹1000</div>
@@ -255,11 +255,11 @@
                 </div>
             </div>
             <div class="optionWrap right-opt">
-                <div class="opt options"
+                <div class="opt options options-hidden"
                      onclick="document.getElementById('presearch').scrollIntoView();transport(2);"
                      data-direction="right" data-outcome="221" data-challenge="28">Stay At Campus
                 </div>
-                <div class="optDebt">₹0</div>
+                <div class="optDebt"></div>
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%"
@@ -292,8 +292,8 @@
                 <div class="question">
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #fff0d2;">Since You have stayed in Campus.
-                        <br> Here is a opportunity of research intern with a professor with a stipend of 5000 rupees
+                    <div class="text label" style="background: #fff0d2;">
+                         Here is a opportunity of research intern with a professor with a stipend of 5000 rupees
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -319,10 +319,10 @@
             </div>
             <div class="optionWrap down-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();research(0);"
+                     onclick="document.getElementById('plaptop').scrollIntoView();research(0);"
                      data-direction="down" data-outcome="223" data-challenge="28">Make your bonding strong with professor
                 </div>
-                <div class="optDebt">₹585</div>
+                <!-- <div class="optDebt">₹585</div> -->
                 <div class="svg-opt-anim svg-anim">
                     <!-- <svg version="1.1" id="option-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 3 100" preserveAspectRatio="xMidYMin slice"><line id="straight-down-path" class="path" x1="1.5" y1="0" x2="1.5" y2="100" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line id="straight-down" class="line" x1="1.5" y1="0" x2="1.5" y2="100"></line></svg>
                 -->
@@ -330,10 +330,10 @@
             </div>
             <div class="optionWrap right-opt">
                 <div class="opt options"
-                     onclick="document.getElementById('psecondyear').scrollIntoView();research(1);"
+                     onclick="document.getElementById('plaptop').scrollIntoView();research(1);"
                      data-direction="right" data-outcome="221" data-challenge="28">I don't want to do it.
                 </div>
-                <div class="optDebt">₹585</div>
+                <!-- <div class="optDebt">₹585</div> -->
                 <div class="svg-opt-anim">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%"
@@ -681,7 +681,7 @@
                 </div>
             </div>
             <div class="optionWrap down-opt">
-                <div id="secondyearbutton" class="opt options" onclick="clickOutcome('down', 1, event, this)" data-direction="down"
+                <div id="secondyearbutton" class="opt options" onclick="" data-direction="down"
                      data-outcome="223" data-challenge="28">   Start The Exam  
                 </div>
                 <!-- <div class="optDebt">$585</div> -->
@@ -739,6 +739,26 @@
 <!-- shop js here -->
 
 
+<script>
+    function scroll_exp(){
+        var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+        ];
+        var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+        html.data('scroll-position', scrollPosition);
+        html.data('previous-overflow', html.css('overflow'));
+        html.css('overflow', 'hidden');
+        window.scrollTo(scrollPosition[0], scrollPosition[1]);  
+        }
+</script>
+
+<script>
+$(window).on("load" , scroll_exp() );
+</script>
+
+
+
 <!-- Script of scores taking from First year  =============================== -->
 <script>
 // $( window ).on( "load", end_to_start());
@@ -765,7 +785,7 @@ $('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].data
             },
             dataType: 'json',
             success: function (data) {
-                alert("Your response have been subitted");
+                alert("Your response have been submitted");
             }
         });
         window.location = "../mastermind";
