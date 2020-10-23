@@ -200,7 +200,7 @@
                 <div class="skw-page__content">
                     <p class="skw-page__description">
                         {%if request.user.is_authenticated %}
-                        <p>Hello{{request.user.first_name}} !</p>
+                        <p>Hello {{request.user.first_name}} !</p>
                         <a style="font-size: 200%;color: white;" href="{% url 'firstyear' %} ">Start Your Journey</a>
                         {%else%}
                         <p style="font-size: 200%;color: white;">To Start your Journey</p>
@@ -229,22 +229,7 @@
 
 
 <script>
-    $('#loginbt').on('click', () => {
-        $.ajax({
-            type: "POST",
-            url: "{%url 'login' %}",
-            data: {
-                'rollno': document.getElementById("rollno").value,
-                csrfmiddlewaretoken: '{{ csrf_token }}',
-                'password': document.getElementById("password").value
-            },
-            dataType: 'json',
-            success: function (data) {
-                alert("Your response have been subitted");
-                window.location.href='/payback/firstyear/';
-            }
-        });
-    });
+
 
 </script>
 </body>
