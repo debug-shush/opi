@@ -331,27 +331,7 @@ padding-left: 225px;
   visibility: hidden;
 }
 
-#modalOverlay.won {
-  background-color: rgba(143, 190, 0, .5);
-  visibility: visible;
-  opacity: 1;
-}
 
-#modalOverlay.won #modalMessage {
-  background-color: #8FBE00;
-  border: 5px solid #fff;
-}
-
-#modalOverlay.lost {
-  background-color: rgba(226, 45, 45, .5);
-  visibility: visible;
-  opacity: 1;
-}
-
-#modalOverlay.lost #modalMessage {
-  background-color: #E22D2D;
-  border: 5px solid #fff;
-}
 
 #options {
   margin: 0 auto;
@@ -454,13 +434,7 @@ button {
   vertical-align: middle;
 }
 
-button.large {
-  padding: 15px 20px;
-}
 
-button.primary {
-  color: #8FBE00;
-}
 
 #delete {
   font-size: 21px;
@@ -551,7 +525,35 @@ button.primary {
   content: "3";
 }
 
-.green { background: #8FBE00;}
+button.green1 { 
+  background: #8FBE00;
+    size:10;
+    padding: 7px 7px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width:90px;
+    color: white;
+    background-color: #019d95;
+    box-shadow: 0 8px 16px 0 rgba(117, 76, 14, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+button.green2 { 
+  background: #8FBE00;
+    size:10;
+    padding: 7px 7px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width:80px;
+    color: white;
+    background-color: #019d95;
+    box-shadow: 0 8px 16px 0 rgba(117, 76, 14, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
 .white { background: #fff; }
 .black { background: #191919; }
 
