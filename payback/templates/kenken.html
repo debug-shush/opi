@@ -300,7 +300,7 @@
     </p>
     
 </div>-->
-<input id="skip" type="button" value="Skip" onclick="redirect1();"/>
+{#<input id="skip" type="button" value="Skip" onclick="redirect1();"/>#}
 
 
 <script type="text/javascript">
@@ -320,8 +320,8 @@
 
 
   <!-- <button  onclick="kenken_data()" >save</button> -->
-<button id="submit"><a href="{% url 'secondyear' %}"></a>Submit</button>
-<button id="skip"><a href={% url 'secondyear' %}">Skip</a></button>
+<button id="submit"><a href="{% url 'secondyear' %}">Submit</a></button>
+<button id="skip"><a href="{% url 'secondyear' %}">Skip</a></button>
 
 <script>
     var modal1 = document.getElementById("painting1_final_modal");
