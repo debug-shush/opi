@@ -6,6 +6,9 @@
     <title>CAMPUS LA VIE</title>
     <link rel="stylesheet" href='{% static "crossword_puzzle/Crossword/crossword.css" %}'>
     <style type="text/css">
+    *{
+        overflow-x: hidden;
+    }
         p.MsoNormal, li.MsoNormal, div.MsoNormal {
             margin: 0;
             margin-bottom: .0001pt;
@@ -685,6 +688,11 @@ since last reload
 <div style="position: relative; left: 45%;">
     <button id="final_submit" class="green"><a href="{% url 'fourthyear' %}">Final Submit</a></button>
 </div>
+<div style="position: relative; left: 35%;margin-top: -3%;">
+    <button id="skip" class="green"><a href="{% url 'fourthyear' %}">Skip</a></button>
+</div>
+
+
 </p>
 <script src='{% static "crossword_puzzle/Crossword/crossword.js" %}'></script>
 </div>

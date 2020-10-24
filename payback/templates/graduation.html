@@ -68,7 +68,10 @@
                 <div class="question" >
                     <div class="borderTop"></div>
                     <div class="borderLeft"></div>
-                    <div class="text label" style="background: #313d4c;">Give Them Report here .
+                    <div class="text label" style="background: #313d4c;">Congratulations !! .  <br>
+                        You finished your college-graduation .  <br>
+                        Thanks for playing the Game :)  <br>
+
                     </div>
                 </div>
                 <div class="borderRight"></div>
@@ -111,13 +114,28 @@
 
 <!-- Page 2 end ================================ -->
 
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
 
 
 
 
+<script>
+    function scroll_exp(){
+        var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+        ];
+        var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+        html.data('scroll-position', scrollPosition);
+        html.data('previous-overflow', html.css('overflow'));
+        html.css('overflow', 'hidden');
+        window.scrollTo(scrollPosition[0], scrollPosition[1]);  
+        }
+</script>
 
-
-
+<script>
+    window.on('load' , scroll_exp())
+</script>
 
 
 <!-- shop js here -->
