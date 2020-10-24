@@ -76,6 +76,47 @@
             cursor: pointer;
             font-size: 25px;
         }
+        .header-right {
+            float: right;
+            color: white;
+            padding-right: 40px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            display: none;
+            overflow: hidden;
+            outline: 0;
+        }
+        .modal-content {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            pointer-events: auto;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .3rem;
+            outline: 0;
+        }
+        .modal-body {
+            position: relative;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -318,6 +359,40 @@
        	</div>
            <button type="button" id="submit" style="position: fixed; bottom: 2%; right: 3%">Submit</button>
            <button type="button" onclick="window.location = '../graduation'" id="submit" style="position: fixed; bottom: 2%; right: 9%">Skip</button>
+           <div class="header-right" id="painting10_final" style="position: fixed; bottom: 2%; right: 13%">
+                <a class="active">Rules</a>
+            </div>
+            <div id="painting10_final_modal" class="modal">
+                <div class="modal-content">
+                    <span id="painting_close10"  style="cursor: pointer;font-size: 25px;">&times;</span>
+                    <div class="modal-body"  >
+                        <strong>HOW TO PLAY:-  </strong>    <br> <br>
+
+
+                     <strong>  ↠   </strong> 1. Click on objects to view their contents. <br>
+                     <strong>  ↠   </strong> 2.Enter capital letters only (wherever applicable)  <br>
+                     <strong>  ↠   </strong> 3. Look out for clues hidden in puzzle images , they may be useful later. <br>
+                     <strong>  ↠   </strong> 4. You can take hints at certain points during the game , but keep in mind that points will be deducted on usage of hints . <br>
+                     <strong>  ↠   </strong> 5 . The main aim of the game is to escape the room through the door . Don't try guessing , it won't work 🙂 <br>
+                     <strong>  ↠   </strong> 6. Submitting each correct code will be rewarded with respective points. <br>
+                    </div>
+                </div>
+            </div>
+
+
+<script>
+    var modal123 = document.getElementById("painting10_final_modal");
+    var img123 = document.getElementById("painting10_final");
+    // var span1 = document.getElementsByClassName("close")[0];
+    img123.onclick = function () {
+        modal123.style.display = "block";
+
+    }
+    $('#painting_close10').on('click', () => {
+        modal123.style.display = "none";
+    });
+</script>
+
 
 <script>
 	var locker1 = "Not_answered";
@@ -325,6 +400,8 @@
     var locker3 = "Not_answered";
     var locker4 = "Not_answered";
     var locker5 = "Not_answered";
+
+
 
     var modal1 = document.getElementById("painting1_final_modal");
     var img1 = document.getElementById("painting1_final");
@@ -547,5 +624,9 @@
         }
     );
 </script>	
+
+
+
+
 </body>
 </html>
