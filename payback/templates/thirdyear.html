@@ -174,7 +174,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div style="background:#313d4c" id="meter-loan-value" class="value">50,000</div>
+                    <div style="background:#313d4c" id="meter-loan-value" class="value">{{loan2}}</div>
                 </div>
                 <div style="background:#313d4c" class="value-text desktop-only">IN<br>DEBT</div>
                 <div class="value-text mobile-only">IN DEBT</div>
@@ -239,7 +239,7 @@
                 </div>
             </div>
             <div class="optionWrap right-opt" >
-                <div class="opt options" onclick="creditcard(2);document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Give Me All the Cards</div>
+                <div class="opt options" onclick="creditcard(2 ,rendloan());document.getElementById('p3').scrollIntoView();" data-direction="right" data-outcome="221" data-challenge="28">Give Me All the Cards</div>
                 <!-- <div class="optDebt">$585</div> -->
                 <div class="svg-opt-anim">
                     <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 100 3" preserveAspectRatio="xMidYMin slice"><line class="path" x1="0" y1="1.5" x2="100" y2="1.5" style="stroke-dashoffset: 1e-05; stroke-dasharray: none;"></line><line class="line" x1="0" y1="1.5" x2="100" y2="1.5"></line></svg>
@@ -672,6 +672,7 @@
 <div id="f" data-value="{{focus2}}"></div>
 <div id="c" data-value="{{connection2}}"></div>
 <div id="h" data-value="{{happiness2}}"></div>
+<div id="l" data-value="{{loan2}}"></div>
 
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
@@ -711,7 +712,7 @@ console.log(1),
 $('#focid').css({"transition" : "width 2s" , "width" : parseInt($("#f")[0].dataset.value)/10+ "%"}),
 $('#conid').css({"transition" : "width 2s" , "width" : parseInt($("#c")[0].dataset.value)/10+ "%"}),
 $('#happid').css({"transition" : "width 2s" , "width" : parseInt($("#h")[0].dataset.value)/10+ "%"}),
-
+end_to_start(),
 );
  
 </script>
