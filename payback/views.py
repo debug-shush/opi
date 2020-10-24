@@ -290,7 +290,7 @@ def mysteryroom_submission(request):
 def append_user(excel_data):
     wb = load_workbook(filename=BytesIO(excel_data))
     sheet = wb.active
-    r = 58
+    r = 114
     for i in  range(r):
         name_val = sheet.cell(row=i+2, column=1).value
         print(name_val)
