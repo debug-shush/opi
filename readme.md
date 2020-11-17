@@ -18,10 +18,11 @@
 </p>
 <h3> 
   Official Repo of The Technothlon Mains Event Campus La Vie hosted on 24th October 2020.<br>
+  </h3>
+  <h4>
   It was logic based game played by top 100 contestants selected by Technothlon Prelims Exam
-</h3><br>
-<h3>
-This game comprised of miniature version of four years a student spend in IIT Guwahati with 
-</h3>
+<br>
+This game comprised of miniature version of four years a student spends in IIT Guwahati with puzzles at the end of each year
+</h4>
 
   This Website was developed in Django and sqlite.<br>
