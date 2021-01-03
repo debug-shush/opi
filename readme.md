@@ -1,4 +1,19 @@
 # 
+<h2>
+  CAMPUS LA VIE
+</h2>
+<h3> 
+  Technothlon Mains Event Campus La Vie played by top 100 students selected through Technothlon Prelims.<br>
+  </h3>
+  <h4>
+  This game was developed by [Shridam Mahajan](https://github.com/shridam1207),  [Abhay Kandhve](https://github.com/KANDHVE950) ,[Tushar Bajaj](https://github.com/bajajtushar094), [Sushant Reddy Manda](https://github.com/SushanthReddyManda), [Shrusti Jain](https://github.com/debug-shush),
+<br>
+  Ideation of events were done by [Gitanjit Medhi](https://github.com/Gitanjit),[Sankalp Aggarwal](https://github.com/agrawalsankalp),[Sree Rakhi](https://github.com/sreerakhi9),[Navya](https://github.com/navyasri02)
+<br>
+This game comprised of miniature version of four years a student spends in IIT Guwahati with puzzles at the end of each year
+</h4>
+
+  This Website was developed in Django and sqlite.<br>
 <p align="center">
 <img src="./readmeimages/1.jpeg" width="100%" >
   <span>&nbsp; &nbsp; &nbsp; </span>
@@ -23,13 +38,4 @@
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
 
 </p>
-<h3> 
-  Official Repo of The Technothlon Mains Event Campus La Vie hosted on 24th October 2020.<br>
-  </h3>
-  <h4>
-  It was logic based game played by top 100 contestants selected by Technothlon Prelims Exam
-<br>
-This game comprised of miniature version of four years a student spends in IIT Guwahati with puzzles at the end of each year
-</h4>
 
-  This Website was developed in Django and sqlite.<br>
