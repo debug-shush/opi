@@ -11,8 +11,10 @@ This game comprised of miniature version of four years a student spends in IIT G
 </h4>
 
   This Website was developed in Django and SQLite.<br>
-<p align="center">
+<p>
+ <h4>
 This was the introduction page of Campus La Vie, which introduces students to game and all of its instructions.
+</h4>
 <img src="./readmeimages/1.jpeg" width="100%" >
   <span>&nbsp; &nbsp; &nbsp; </span>
   <span>&nbsp; &nbsp; &nbsp; </span>
