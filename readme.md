@@ -39,4 +39,4 @@ This game comprised of miniature version of four years a student spends in IIT G
 ## Contributors
 This game was developed by [Shridam Mahajan](https://github.com/shridam1207),  [Abhay Kandhve](https://github.com/KANDHVE950) ,[Tushar Bajaj](https://github.com/bajajtushar094), [Sushant Reddy Manda](https://github.com/SushanthReddyManda), [Shrusti Jain](https://github.com/debug-shush),
 <br>
-  Ideation of events were done by [Gitanjit Medhi](https://github.com/Gitanjit),[Sankalp Aggarwal](https://github.com/agrawalsankalp),[Sree Rakhi](https://github.com/sreerakhi9),[Navya](https://github.com/navyasri02)
+  Ideation of events were also assisted by [Gitanjit Medhi](https://github.com/Gitanjit),[Sankalp Aggarwal](https://github.com/agrawalsankalp),[Sree Rakhi](https://github.com/sreerakhi9),[Navya](https://github.com/navyasri02)
