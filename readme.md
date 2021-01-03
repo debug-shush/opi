@@ -10,30 +10,51 @@
 This game comprised of miniature version of four years a student spends in IIT Guwahati with puzzles at the end of each year
 </h4>
 
-  This Website was developed in Django and sqlite.<br>
+  This Website was developed in Django and SQLite.<br>
 <p align="center">
+This was the introduction page of Campus La Vie, which introduces students to game and all of its instructions.
 <img src="./readmeimages/1.jpeg" width="100%" >
   <span>&nbsp; &nbsp; &nbsp; </span>
+  <span>&nbsp; &nbsp; &nbsp; </span>
+  <span>&nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/2.jpeg" width="100%" >
   <span>&nbsp; &nbsp; &nbsp; </span>
+    <span>&nbsp; &nbsp; &nbsp; </span>
+      <span>&nbsp; &nbsp; &nbsp; </span>
+ <hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/3.jpeg" width="100%" >
-</br>
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/4.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/5.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/6.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/7.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/8.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/9.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 <img src="./readmeimages/10.jpeg" width="100%">
 <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
-
+<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+<hr style="display: block; height: 1px;border: 0; border-top: 1px solid #ccc;margin: 1em 0; padding: 0; ">
 </p>
 
 ## Contributors
