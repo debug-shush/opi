@@ -1,4 +1,3 @@
-![Enigme-de-Confiance](https://socialify.git.ci/vajjalavikram/Enigme-de-Confiance/image?font=Source%20Code%20Pro&forks=1&language=1&pattern=Circuit%20Board&stargazers=1&theme=Light)
 # Campus La Vie
 
 ## What is this?
