@@ -11,6 +11,13 @@ Campus La Vie was built for the [**Mains Event of Technothlon'20**](https://tech
 ![Alt-text](https://i.ibb.co/N7wb0Gc/Untitled-design-1.png)
 We used JavaScript, along with basic HTML and CSS, for the front-end and Django for the backend.
 
+## ScreenShots from Game.
+<img src="./readmeimages/1.jpeg" width="60%" height="50%" >
+<img src="./readmeimages/2.jpeg" width="60%" height="50%">
+<img src="./readmeimages/6.jpeg" width="60%" height="50%" >
+<img src="./readmeimages/4.jpeg" width="60%" height="50%" >
+
+
 ## Contributors
 This game was developed by [Shridam Mahajan](https://github.com/shridam1207),  [Abhay Kandhve](https://github.com/KANDHVE950) ,[Tushar Bajaj](https://github.com/bajajtushar094), [Sushant Reddy Manda](https://github.com/SushanthReddyManda), [Shrusti Jain](https://github.com/debug-shush),
 <br> 
