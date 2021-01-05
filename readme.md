@@ -19,7 +19,7 @@ We used JavaScript, along with basic HTML and CSS, for the front-end and Django 
 
 
 ## Contributors
-This game was developed by [Shridam Mahajan](https://github.com/shridam1207),  [Abhay Kandhve](https://github.com/KANDHVE950) ,[Tushar Bajaj](https://github.com/bajajtushar094), [Sushant Reddy Manda](https://github.com/SushanthReddyManda), [Shrusti Jain](https://github.com/debug-shush),
+This game was developed by [Shridam Mahajan](https://github.com/shridam1207),  [Abhay Kandhve](https://github.com/KANDHVE950) ,[Tushar Bajaj](https://github.com/bajajtushar094), [Sushant Reddy Manda](https://github.com/SushanthReddyManda), [Shrusti Jain](https://github.com/debug-shush),[Anant Shankhdhar](https://github.com/AnantShankhdhar),
 <br> 
 Ideation for Mystery Room was done by [Gitanjit Medhi](https://github.com/Gitanjit) and [Gyanendra Prakash](https://github.com/Gyaniultimate)
 <br>
